@@ -1,24 +1,12 @@
-# README
+# PROJECT ABOUT VISUALS BEHIND MUSIC RELEASES
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository represents the techinical realization of the media service about visual behind music releases.
+Here you can read about stories behind making of your favourite music video, album cover or artist photo shoot as well as hear from and communicate with developing young creative professionals turning musical concepts into visuals.
 
-Things you may want to cover:
+Now let's get techical 🛠️:
 
-* Ruby version
+* Ruby version 3.2.2
 
-* System dependencies
+* Other stuff to add is yet to be discovered
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Here's the cover pic of the month tho:

@@ -6,4 +6,5 @@ class Post < ApplicationRecord
     validates :body, :presence => true, :length => { :minimum => 30 }
 
     has_many :comments
+    belongs_to :issue
 end

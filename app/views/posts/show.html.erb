@@ -8,3 +8,9 @@
 
   <%= button_to "Destroy this post", [@artist, @post.issue, @post], method: :delete %>
 </div>
+
+<h2>Comments</h2>
+<%= render @post.comments %>
+
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>

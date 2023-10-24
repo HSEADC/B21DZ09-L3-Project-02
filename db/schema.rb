@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_24_175900) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_24_230044) do
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "commenter"
+    t.text "body"
+    t.integer "post_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
   create_table "issues", force: :cascade do |t|
@@ -37,6 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_24_175900) do
     t.index ["issue_id"], name: "index_posts_on_issue_id"
   end
 
+  add_foreign_key "comments", "posts"
   add_foreign_key "issues", "artists"
   add_foreign_key "posts", "issues"
 end

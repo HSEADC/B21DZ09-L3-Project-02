@@ -3,8 +3,7 @@
 <%= render @issue %>
 
 <div>
-  <%= link_to "Edit this issue", edit_issue_path(@issue) %> |
+  <%= link_to "Edit this issue", edit_artist_issue_path(@issue) %> |
   <%= link_to "Back to issues", artist_path %>
 
-  <%= button_to "Destroy this issue", @issue, method: :delete %>
 </div>

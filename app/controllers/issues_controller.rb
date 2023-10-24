@@ -9,6 +9,7 @@ class IssuesController < ApplicationController
 
   # GET /issues/1 or /issues/1.json
   def show
+    @artist = Artist.find(params[:artist_id])
   end
 
   # GET /issues/new
@@ -19,6 +20,7 @@ class IssuesController < ApplicationController
 
   # GET /issues/1/edit
   def edit
+    artist = Artist.find(params[:artist_id])
   end
 
   # POST /issues or /issues.json

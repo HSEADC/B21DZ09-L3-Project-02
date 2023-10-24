@@ -6,9 +6,9 @@
   <% @artists.each do |artist| %>
     <%= render artist %>
     <p>
-      <%= link_to "Show this artist", artist %>
+      <%= link_to "Show this artist", artist, class: "link-normal" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New artist", new_artist_path %>
+<%= link_to "New artist", new_artist_path, class: "link-normal" %>

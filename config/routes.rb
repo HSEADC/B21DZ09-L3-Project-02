@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'artists/index'
+  get 'welcome/index'
+  get 'welcome/about'
   root 'artists#index'
   
 end

@@ -6,12 +6,12 @@
 
 <div>
   <h2>Write anything about the release</h2>
-  <%= link_to "New post", new_artist_issue_post_path(@artist, @issue) %>
+  <%= link_to "New post", new_artist_issue_post_path(@artist, @issue), class: "link-normal" %>
 
   <h2> Publications about the release </h2>
   <%= render @issue.posts %>
 
-  <%= link_to "Edit this release", edit_artist_issue_path(@issue) %> |
-  <%= link_to "Back to releases", artist_path(@artist) %>
+  <%= link_to "Edit this release", edit_artist_issue_path(@issue), class: "link-normal" %> |
+  <%= link_to "Back to releases", artist_path(@artist), class: "link-normal" %>
 
 </div>

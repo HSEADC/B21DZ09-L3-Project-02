@@ -6,9 +6,9 @@
   <% @issues.each do |issue| %>
     <%= render issue %>
     <p>
-      <%= link_to "Show this issue", issue %>
+      <%= link_to "Show this release", issue %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New issue", new_issue_path %>
+<%= link_to "New issue", new_issue_path, class: "link-normal" %>

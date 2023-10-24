@@ -3,15 +3,15 @@
 <%= render @artist %>
 
 <div>
-  <%= link_to "Edit this artist", edit_artist_path(@artist) %> |
-  <%= link_to "Back to artists", artists_path %>
+  <%= link_to "Edit this artist", edit_artist_path(@artist), class: "link-normal" %> |
+  <%= link_to "Back to artists", artists_path, class: "link-normal" %>
 
   <h2> Releases by the artist </h2>
   <%= render @artist.issues %>
   
 
   <h2>Add a relevant release to the artist:</h2>
-  <%= link_to "New release", new_artist_issue_path(@artist) %>
+  <%= link_to "New release", new_artist_issue_path(@artist), class: "link-normal" %>
 
   <%= button_to "Destroy this artist", @artist, method: :delete %>
 </div>

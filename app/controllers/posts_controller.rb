@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    @artist = Artist.find(params[:artist_id])
     @issue = Issue.find(params[:issue_id])
   end
 
@@ -54,10 +55,13 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1 or /posts/1.json
   def destroy
+    @artist = Artist.find(params[:artist_id])
+    @issue = Issue.find(params[:issue_id])
+    @post = @issue.posts.find(params[:id])
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
+      format.html { redirect_to artist_issue_url(@artist, @issue), notice: "Post was successfully destroyed." }
       format.json { head :no_content }
     end
   end

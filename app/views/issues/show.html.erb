@@ -2,8 +2,16 @@
 
 <%= render @issue %>
 
+
+
 <div>
-  <%= link_to "Edit this issue", edit_artist_issue_path(@issue) %> |
-  <%= link_to "Back to issues", artist_path %>
+  <h2>Write anything about the release</h2>
+  <%= link_to "New post", new_artist_issue_post_path(@artist, @issue) %>
+
+  <h2> Publications about the release </h2>
+  <%= render @issue.posts %>
+
+  <%= link_to "Edit this release", edit_artist_issue_path(@issue) %> |
+  <%= link_to "Back to releases", artist_path(@artist) %>
 
 </div>

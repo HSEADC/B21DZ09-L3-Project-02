@@ -9,5 +9,5 @@
 </p>
 
 <p>
-	<%= link_to 'Destroy Comment', [comment.post.issue.artist, comment.post.issue, comment.post, comment], :confirm => 'Are you sure?', :method => :delete %>
+	<%= button_to 'Destroy Comment', [comment.post.issue.artist, comment.post.issue, comment.post, comment], :confirm => 'Are you sure?', :method => :delete %>
 </p>

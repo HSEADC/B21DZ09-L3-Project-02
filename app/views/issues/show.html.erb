@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @issue, partial: "issue_inner" %>
+<%= render partial: "issue_inner", locals: { issue: @issue } %>
 
 
 
@@ -11,7 +11,7 @@
   <h2> Publications about the release </h2>
   <%= render @issue.posts %>
 
-  <%= link_to "Edit this release", edit_artist_issue_path(@issue), class: "link-normal" %> |
+  <%= link_to "Edit this release", edit_artist_issue_path(@artist, @issue), class: "link-normal" %> |
   <%= link_to "Back to releases", artist_path(@artist), class: "link-normal" %>
 
 </div>

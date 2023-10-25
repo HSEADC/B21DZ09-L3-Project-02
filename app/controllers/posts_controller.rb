@@ -21,6 +21,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @artist = @post.issue.artist
+    @issue = @post.issue
   end
 
   # POST /posts or /posts.json
@@ -42,9 +44,12 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
+    @artist = Artist.find(params[:artist_id])
+    @issue = Issue.find(params[:issue_id])
+
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to post_url(@post), notice: "Post was successfully updated." }
+        format.html { redirect_to artist_issue_post_path(@artist, @issue, @post), notice: "Post was successfully updated." }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit, status: :unprocessable_entity }

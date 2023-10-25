@@ -1,10 +1,10 @@
 <h1>Editing post</h1>
 
-<%= render "form", post: @post %>
+<%= render "form", artist: @artist, issue: @issue, post: @post %>
 
 <br>
 
 <div>
-  <%= link_to "Show this post", @post %> |
-  <%= link_to "Back to posts", posts_path %>
+  <%= link_to "Show this post", artist_issue_post_path(@artist, @issue, @post), class: "link-normal"  %> |
+  <%= link_to "Back to release", artist_issue_path(@artist, @issue), class: "link-normal"   %>
 </div>

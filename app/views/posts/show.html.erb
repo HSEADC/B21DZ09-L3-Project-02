@@ -1,10 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @post %>
+<%= render partial: "post_inner", locals: { post: @post } %>
 
 <div>
   <%= link_to "Edit this post", edit_artist_issue_post_path(@post), class: "link-normal" %> |
-  <%= link_to "Back to the release", artist_issue_path(@artist, @issue), class: "link-normal" %>
+  <%= link_to "Back to release", artist_issue_path(@artist, @issue), class: "link-normal" %>
 
   <%= button_to "Destroy this post", [@artist, @post.issue, @post], method: :delete %>
 </div>

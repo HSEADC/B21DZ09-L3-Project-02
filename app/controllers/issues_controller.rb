@@ -19,7 +19,7 @@ class IssuesController < ApplicationController
 
   # GET /issues/1/edit
   def edit
-    artist = Artist.find(params[:artist_id])
+    @artist = @issue.artist
   end
 
   # POST /issues or /issues.json
@@ -40,9 +40,11 @@ class IssuesController < ApplicationController
 
   # PATCH/PUT /issues/1 or /issues/1.json
   def update
+    @artist = Artist.find(params[:artist_id])
+    
     respond_to do |format|
       if @issue.update(issue_params)
-        format.html { redirect_to issue_url(@issue), notice: "Issue was successfully updated." }
+        format.html { redirect_to artist_issue_url(@artist, @issue), notice: "Issue was successfully updated." }
         format.json { render :show, status: :ok, location: @issue }
       else
         format.html { render :edit, status: :unprocessable_entity }

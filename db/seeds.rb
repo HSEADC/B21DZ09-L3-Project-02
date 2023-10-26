@@ -82,6 +82,7 @@ raw_text = "Oh-oh-oh-oh-oh, oh-oh-oh-oh, oh-oh-oh
 def seed
     puts "Seeding started"
     reset_db
+    create_users
     create_artists
     create_issues(15)
     create_posts(5)
@@ -132,15 +133,34 @@ def upload_random_artist_image
   uploader
 end
 
+def create_users
+  i = 0
+
+  10.times do
+    user_data = {
+      email: "user_#{i}@email.com",
+      password: 'testtest'
+    }
+
+    user = User.create!(user_data)
+    puts "User created with id #{user.id}"
+
+    i += 1
+  end
+end
+
 def create_artists
+
     i = 0
     
   
     10.times do
+      user = User.all.sample
       artist_data = {
         name: @artists_array.sample,
         description: create_sentence,
-        post_image: upload_random_artist_image
+        post_image: upload_random_artist_image,
+        user_id: user.id
       }
   
       artist = Artist.create!(artist_data)
@@ -155,7 +175,8 @@ def create_issues(quantity)
 
     artists.each do |artist|
         quantity.times do
-          issue = Issue.create(artist_id: artist.id, name: @words.sample, description: (create_sentence + create_sentence), post_image: upload_random_issue_image)
+          user = User.all.sample
+          issue = Issue.create(artist_id: artist.id, name: @words.sample, description: (create_sentence + create_sentence), post_image: upload_random_issue_image, user_id: user.id)
           puts "Issue with id #{issue.id} for artist with id #{issue.artist.id} just created"
         end
       end
@@ -163,9 +184,11 @@ end
 
 def create_posts(quantity)
     issues = Issue.all
+
     issues.each do |issue|
         quantity.times do
-            post = Post.create(name: create_sentence, description: create_sentence, body: create_paragraph, issue_id: issue.id, post_image: upload_random_post_image)
+            user = User.all.sample
+            post = Post.create(name: create_sentence, description: create_sentence, body: create_paragraph, issue_id: issue.id, post_image: upload_random_post_image, user_id: user.id)
             puts "Post with id #{post.id} for release with id #{post.issue.id} just created"
         end
     end
@@ -176,7 +199,8 @@ def create_comments(quantity)
 
   posts.each do |post|
     quantity.to_a.sample.times do
-      comment = Comment.create(post_id: post.id, commenter: create_sentence, body: (create_sentence + create_sentence))
+      user = User.all.sample
+      comment = Comment.create(post_id: post.id, commenter: create_sentence, body: (create_sentence + create_sentence), user_id: user.id)
       puts "Comment with id #{comment.id} for pin with id #{comment.post.id} just created"
     end
   end

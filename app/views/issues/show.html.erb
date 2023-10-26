@@ -1,5 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
+<%= image_tag @issue.post_image.url, class: "image-inner" %>
+
 <%= render partial: "issue_inner", locals: { issue: @issue } %>
 
 

@@ -17,7 +17,7 @@ h1, h2, h3, p {
 }
 
 .menubar-link {
-    font-size: 64px;
+    font-size: 32px;
     color: #404040;
     text-decoration: none;
 }
@@ -32,6 +32,11 @@ h1, h2, h3, p {
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 0 5% 0;
+}
+
+.image-inner {
+    width: 300px;
+    border-radius: 8px;
 }
   
 nav {

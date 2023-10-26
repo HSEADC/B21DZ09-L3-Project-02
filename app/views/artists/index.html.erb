@@ -2,6 +2,8 @@
 
 <h1>Artists</h1>
 
+<%= link_to "New artist", new_artist_path, class: "link-normal" %>
+
 <div id="artists">
   <% @artists.each do |artist| %>
     <%= render artist %>
@@ -10,5 +12,3 @@
     </p>
   <% end %>
 </div>
-
-<%= link_to "New artist", new_artist_path, class: "link-normal" %>

@@ -5,7 +5,9 @@
 <%= render @artist %>
 
 <div>
-  <%= link_to "Edit this artist", edit_artist_path(@artist), class: "link-normal" %> |
+  <% if can? :manage, @artist %>
+    <%= link_to "Edit this artist", edit_artist_path(@artist), class: "link-normal" %>
+  <% end %>
   <%= link_to "Back to artists", artists_path, class: "link-normal" %>
 
   <h2> Releases by the artist </h2>

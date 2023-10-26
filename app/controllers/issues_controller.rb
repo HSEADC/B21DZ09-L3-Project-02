@@ -1,5 +1,6 @@
 class IssuesController < ApplicationController
   before_action :set_issue, only: %i[ show edit update destroy ]
+  load_and_authorize_resource
 
   # GET /issues or /issues.json
   def index

@@ -10,9 +10,19 @@
     <%= javascript_importmap_tags %>
   </head>
 
+<% if not controller_name == "welcome" %>
   <body>
-  <%= render 'menubar' if not controller_name == "welcome"%>
-  <%= yield %>
-  <%= render 'footer' if not controller_name == "welcome"%>
+    <%= render 'menubar' if not controller_name == "welcome"%>
+    <%= yield %>
+    <%= render 'footer' if not controller_name == "welcome"%>
   </body>
+<% end %>
+
+<% if controller_name == "welcome" %>
+  <body class="welcome">
+    <%= render 'menubar' if not controller_name == "welcome"%>
+    <%= yield %>
+    <%= render 'footer' if not controller_name == "welcome"%>
+  </body>
+<% end %>
 </html>

@@ -26,7 +26,7 @@ class IssuesController < ApplicationController
   # POST /issues or /issues.json
   def create
     @artist = Artist.find(params[:artist_id])
-    @issue = Issue.new(name:params[:issue][:name], description: params[:issue][:description], artist_id: @artist.id)
+    @issue = Issue.new(name:params[:issue][:name], description: params[:issue][:description], artist_id: @artist.id, user_id: current_user.id)
 
     respond_to do |format|
       if @issue.save
@@ -73,6 +73,6 @@ class IssuesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def issue_params
-      params.require(:issue).permit(:name, :description, :artist_id)
+      params.require(:issue).permit(:name, :description, :artist_id, :post_image).merge(user_id: current_user.id)
     end
 end

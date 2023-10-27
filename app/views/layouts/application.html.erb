@@ -11,8 +11,8 @@
   </head>
 
   <body>
-  <%= render 'menubar' %>
+  <%= render 'menubar' if not controller_name == "welcome"%>
   <%= yield %>
-  <%= render 'footer' %>
+  <%= render 'footer' if not controller_name == "welcome"%>
   </body>
 </html>

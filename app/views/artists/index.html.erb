@@ -1,9 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Artists</h1>
-<% if can? :create, Artist %>
+
   <%= link_to "New artist", new_artist_path, class: "link-normal" %>
-<% end %>
+
 
 <div id="artists">
   <% @artists.each do |artist| %>

@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   def create
     @artist = Artist.find(params[:artist_id])
     @issue = Issue.find(params[:issue_id])
-    @post = Post.new(name:params[:post][:name], description: params[:post][:description], body: params[:post][:body], issue_id: @issue.id)
+    @post = Post.new(name:params[:post][:name], description: params[:post][:description], body: params[:post][:body], post_image: params[:post][:post_image], issue_id: @issue.id, user_id: current_user.id)
 
     respond_to do |format|
       if @post.save
@@ -80,6 +80,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:name, :description, :body, :issue_id)
+      params.require(:post).permit(:name, :description, :body, :issue_id, :post_image).merge(user_id: current_user.id)
     end
 end

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  resources :subscriptions
-  devise_for :users
-  
+namespace :admin do
   resources :artists do
     resources :issues do
       resources :posts do
@@ -9,6 +7,13 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :subscriptions
+end
+
+  resources :subscriptions, only: [:create, :show]
+
+  devise_for :users
 
   get 'welcome/index'
   get 'welcome/about'

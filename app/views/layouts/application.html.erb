@@ -20,9 +20,9 @@
 
 <% if controller_name == "welcome" %>
   <body class="welcome">
-    <%= render 'menubar' if not controller_name == "welcome"%>
+    <%= render 'menubar' if controller_name == "welcome"%>
     <%= yield %>
-    <%= render 'footer' if not controller_name == "welcome"%>
+    <%= render 'footer' if controller_name == "welcome"%>
   </body>
 <% end %>
 </html>

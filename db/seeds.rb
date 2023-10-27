@@ -82,6 +82,7 @@ raw_text = "Oh-oh-oh-oh-oh, oh-oh-oh-oh, oh-oh-oh
 def seed
     puts "Seeding started"
     reset_db
+    create_admin
     create_users
     create_artists
     create_issues(15)
@@ -131,6 +132,18 @@ def upload_random_artist_image
   uploader = PostImageUploader.new(Artist.new, :post_image)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/artists_covers', '*')).sample))
   uploader
+end
+
+def create_admin
+  user_data = {
+    email: "admin@email.com",
+    password: 'testtest',
+    admin: true
+  }
+
+  user = User.create!(user_data)
+  puts "Admin created with user id #{user.id}"
+
 end
 
 def create_users

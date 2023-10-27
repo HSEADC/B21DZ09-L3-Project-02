@@ -1,0 +1,21 @@
+<div id="<%= dom_id issue %>">
+  <p>
+    <strong>Name:</strong>
+    <%= issue.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= issue.description %>
+  </p>
+
+  <p>
+  <strong>Added by</strong>
+  <%= issue.user.email %>
+  </p>
+
+  <p>
+      <%= link_to "Show this release", admin_artist_issue_path(@artist, issue), class: "link-normal" %>
+  </p>
+
+</div>

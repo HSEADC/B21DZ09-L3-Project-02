@@ -1,12 +1,6 @@
 body {
     font-family: Inter;
     background-color: #CFCFCF;
-    overflow: hidden;
-    width: 100vw;
-    /* display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw; */
   }
 
 h1, h2, h3, p {

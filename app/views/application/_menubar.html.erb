@@ -1,16 +1,15 @@
 <nav>
   <div class="menubar">
-    <%= link_to "Промо", welcome_index_url, class: "menubar-link" %>
-    <%= link_to "О проекте", welcome_about_url, class: "menubar-link"  %>
-    <%= link_to "Артисты", artists_url, class: "menubar-link"  %>
-
+    <%= link_to "Splash", root_url, class: "menubar-link" %>
+    <%= link_to "About", welcome_about_url, class: "menubar-link"  %>
     <% if user_signed_in? %>
-      <%= link_to current_user.email, edit_user_registration_path, class: "menubar-link user-action"  %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "menubar-link user-action"  %>
-    <% else %>
-      <%= link_to "Log in", new_user_session_path, class: "menubar-link user-action"  %>
-      <%= link_to "Register", new_user_registration_path, class: "menubar-link user-action"  %>
+      <%= link_to "Artists", admin_artists_url, class: "menubar-link"  %>
+      <%= link_to "Subscriptions", admin_subscriptions_url, class: "menubar-link"  %>
     <% end %>
+    <% if user_signed_in? %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "menubar-link user-action"  %>
+    <% end %>
+
   </div>
 
 </nav>

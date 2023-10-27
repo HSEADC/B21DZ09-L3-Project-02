@@ -1,0 +1,26 @@
+<div id="<%= dom_id post %>">
+  <p>
+    <strong>Name:</strong>
+    <%= post.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= post.description %>
+  </p>
+
+  <p>
+  <strong>Written by</strong>
+  <%= post.user.email %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= post.body %>
+  </p>
+
+  <p>
+      <%= link_to "Show this post", admin_artist_issue_post_path(@artist, @issue, post), class: "link-normal" %>
+  </p>
+
+</div>

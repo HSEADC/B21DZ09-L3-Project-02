@@ -8,6 +8,8 @@
 	<%= comment.body %>
 </p>
 
-<p>
-	<%= button_to 'Destroy Comment', [comment.post.issue.artist, comment.post.issue, comment.post, comment], :confirm => 'Are you sure?', :method => :delete %>
-</p>
+<% if can? :manage, comment %>
+	<p>
+		<%= button_to 'Destroy Comment', [comment.post.issue.artist, comment.post.issue, comment.post, comment], :confirm => 'Are you sure?', :method => :delete %>
+	</p>
+<% end %>

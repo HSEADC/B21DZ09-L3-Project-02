@@ -8,12 +8,20 @@
 
 <div>
   <h2>Write anything about the release</h2>
-  <%= link_to "New post", new_artist_issue_post_path(@artist, @issue), class: "link-normal" %>
+  <% if can? :create, Post %>
+    <%= link_to "New post", new_artist_issue_post_path(@artist, @issue), class: "link-normal" %>
+  <% end %>
 
   <h2> Publications about the release </h2>
   <%= render @issue.posts %>
 
-  <%= link_to "Edit this release", edit_artist_issue_path(@artist, @issue), class: "link-normal" %> |
-  <%= link_to "Back to releases", artist_path(@artist), class: "link-normal" %>
+  <% if can? :manage, @issue %>
+    <%= link_to "Edit this release", edit_artist_issue_path(@artist, @issue), class: "link-normal" %> 
+  <% end %>
+  <%= link_to "Back to artist", artist_path(@artist), class: "link-normal" %>
+
+  <% if can? :manage, @issue %>
+    <%= button_to "Destroy this release", [@artist, @issue], method: :delete %>
+  <% end %>
 
 </div>

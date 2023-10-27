@@ -56,10 +56,11 @@ class IssuesController < ApplicationController
 
   # DELETE /issues/1 or /issues/1.json
   def destroy
+    @artist = Artist.find(params[:artist_id])
     @issue.destroy
 
     respond_to do |format|
-      format.html { redirect_to issues_url, notice: "Issue was successfully destroyed." }
+      format.html { redirect_to artist_url(@artist), notice: "Issue was successfully destroyed." }
       format.json { head :no_content }
     end
   end

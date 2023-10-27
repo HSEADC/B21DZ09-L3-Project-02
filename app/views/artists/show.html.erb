@@ -15,7 +15,10 @@
   
 
   <h2>Add a relevant release to the artist:</h2>
-  <%= link_to "New release", new_artist_issue_path(@artist), class: "link-normal" %>
-
-  <%= button_to "Destroy this artist", @artist, method: :delete %>
+  <% if can? :create, Issue %>
+    <%= link_to "New release", new_artist_issue_path(@artist), class: "link-normal" %>
+  <% end %>
+  <% if can? :manage, @artist %>
+    <%= button_to "Destroy this artist", @artist, method: :delete %>
+  <% end %>
 </div>

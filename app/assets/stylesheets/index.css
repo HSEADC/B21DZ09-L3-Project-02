@@ -141,6 +141,9 @@
     overflow: hidden;
     margin-bottom: 7%;
 }
+.artist-line-mob{
+    display: none;
+}
 .charli{
     width: 34.01vw;
     border-radius: 30px;
@@ -163,6 +166,30 @@
     align-items: center;
     gap: 49px;
 }
+.die-small {
+    display: flex;
+    flex-direction: row;
+    background-color: #131313;
+    padding: 1.15vw;
+    width: 28.02vw;
+    position: relative;
+    border-radius: 1.6vw;
+    gap: 1.15vw;
+    box-shadow: 0 0 2.60vw #131313;
+    margin-top: -29%;
+    margin-left: 51%;
+}
+.die-image-small {
+    width: 4.84vw;
+    height: 4.84vw;
+    border-radius: 0.89vw;
+    position: relative;
+}
+.names-and-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.31vw;
+}
 .die-big {
     display: flex;
     flex-direction: column;
@@ -173,7 +200,7 @@
     border-radius: 2.29vw;
     gap: 0.8vw;
     box-shadow: 0 0 2.60vw #131313;
-    margin-top: -25%;
+    margin-top: 0%;
     margin-left: -26%;
     rotate: -24deg;
 }
@@ -208,7 +235,7 @@
 .description {
     width: 25.31vw;
 }
-.h4-about {
+.h5-about {
     font-family: "PangramBold";
     font-size: 28px;
     color: #E7E6FF;

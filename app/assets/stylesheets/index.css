@@ -1,0 +1,412 @@
+.welcome{
+    background-color: #131313;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.menu-text {
+    font-family: "PangramSemibold";
+    font-size: 28.63px;
+    text-decoration: none;
+    color: #E7E6FF;
+    text-align: center;
+}
+.promot{
+    width: 97px;
+}
+.aboutt{
+    width: 147px;
+}
+.tgt{
+    width: 237px;
+}
+.menu-text:hover {
+    font-family: "PangramBold";
+    -webkit-text-stroke: 1px;
+}
+.menu-box{
+    top: 0;
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    padding: 2vw 0;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6.41vw;
+    z-index: 1;
+}
+.first-section {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(72, 68, 254, 0.00) 0%, #4844FE 50%);
+}
+.wave-one{
+    width: 69vw;
+}
+.wave-one-box{
+    position: relative;
+    margin-top: 2%;
+    margin-left: -20%;
+}
+.wave-two-box{
+    position: relative;
+    margin-top: -47%;
+    margin-left: 50%;
+}
+.wave-two{
+    width: 60vw;
+}
+.logo{
+    width: 46.56vw;
+}
+.logo-description{
+    position: relative;
+    font-family: "PangramMedium";
+    font-size: 2.92vw;
+    color: #E7E6FF;
+    margin-top: 2%;
+}
+.logo-box{
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    margin-top: -33%;
+}
+.second-section{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+}
+.wave-three{
+    width: 251.93vw;
+}
+.wave-three-box{
+    position: relative;
+    margin-left: -60%;
+    margin-top: -29%;
+    z-index: -1;
+}
+.text-head{
+    font-family: "PangramSemibold";
+    font-size: 80px;
+    color: #E7E6FF;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.text{
+    font-family: "PangramMedium";
+    font-size: 45px;
+    color: #E7E6FF;
+    width: 56.46vw;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.text-box-one{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 29px;
+    width: 100vw;
+    margin-top: -69%;
+    overflow: hidden;
+}
+.poppy{
+    width: 132vw;
+}
+.poppy-box{
+    margin-top: 1%;
+    margin-left: -10%;
+    display: flex;
+    align-items: center;
+}
+.third-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.text-box-two{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 29px;
+    width: 100vw;
+    margin-top: 9%;
+    overflow: hidden;
+    margin-bottom: 7%;
+}
+.charli{
+    width: 34.01vw;
+    border-radius: 30px;
+    box-shadow: 0 0 2.60vw #131313;
+}
+.halsey{
+    width: 34.01vw;
+    border-radius: 30px;
+    box-shadow: 0 0 2.60vw #131313;
+}
+.dorian{
+    width: 39.58vw;
+    border-radius: 30px;
+    box-shadow: 0 0 25px #E7E6FF;
+}
+.artist-line{
+    width: 110.78vw;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 49px;
+}
+.die-big {
+    display: flex;
+    flex-direction: column;
+    background-color: #131313;
+    padding: 1.15vw;
+    width: 25.83vw;
+    position: relative;
+    border-radius: 2.29vw;
+    gap: 0.8vw;
+    box-shadow: 0 0 2.60vw #131313;
+    margin-top: -25%;
+    margin-left: -26%;
+    rotate: -24deg;
+}
+.die-image {
+    width: 25.83vw;
+    height: 16.56vw;
+    border-radius: 1.56vw;
+    position: relative;
+}
+.avatar-image {
+    width: 2.66vw;
+    height: 2.66vw;
+    border-radius: 1.56vw;
+    position: relative;
+}
+.avatar-and-names {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.94vw;
+    width: calc(25.83vw - 2.66vw - 0.94vw);
+    padding-top: 0.9vw;
+}
+.names {
+    display: flex;
+    flex-direction: column;
+}
+.date {
+    text-align: right;
+    width: 25.31vw;
+}
+.description {
+    width: 25.31vw;
+}
+.h4-about {
+    font-family: "PangramBold";
+    font-size: 28px;
+    color: #E7E6FF;
+    line-height: 123.5%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.p-big-about {
+    font-family: "PangramMedium";
+    font-size: 55px;
+    color: #E7E6FF;
+    line-height: 104.3%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.p-medium-about {
+    font-family: "PangramMedium";
+    font-size: 48px;
+    color: #E7E6FF;
+    line-height: 104.3%;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.p-super-small-about {
+    font-family: "PangramMedium";
+    font-size: 14px;
+    color: #E7E6FF;
+    line-height: 150%;
+    opacity: 50%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.p-small-about {
+    font-family: "PangramMedium";
+    font-size: 24px;
+    color: #E7E6FF;
+    line-height: 123.5%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.wave-four{
+    width: 159.11vw;
+}
+.wave-four-box{
+    position: relative;
+    z-index: -1;
+    margin-top: -71%;
+    margin-left: 23%;
+}
+.main-head{
+    font-family: "PangramSemibold";
+    font-size: 4.69vw;
+    color: #E7E6FF;
+    line-height: 104.3%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+}
+.main-head-box{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 18%;
+}
+.nessa{
+    width: 107.39vw;
+}
+.nessa-box{
+    position: relative;
+    margin-top: -32%;
+    margin-left: -54%;
+}
+.jazmin{
+    width: 55vw;
+}
+.jazmin-box{
+    position: relative;
+    margin-top: -67%;
+    margin-left: 13%;
+    z-index: -1;
+}
+.wave-five{
+    position: relative;
+    width: 163.91vw;
+    margin-left: -6%;
+    height: 100%;
+}
+.mail-main{
+    position: static;
+    margin-top: -13%;
+    margin-left: 0%;
+    width: 100vw;
+    height: 68.13vw;
+    overflow: hidden;
+}
+.text-box-three{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 29px;
+    width: 100vw;
+    margin-top: -56%;
+    overflow: hidden;
+}
+.your-mail{
+    font-family: "PangramLight";
+    font-size: 30px;
+    color: #4844FE;
+    opacity: 70%;
+    line-height: 104.3%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.send{
+    font-family: "PangramSemibold";
+    font-size: 30px;
+    color: #4844FE;
+    line-height: 104.3%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.mail-input{
+    margin-top: 3%;
+    display: flex;
+    width: 37.24vw;
+    padding: 25px 50px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 42px;
+    background: #E7E6FF;
+}
+.footer-section{
+    margin-top: -6%;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 3vw;
+}
+.logo-footer{
+    width: 500px;
+}
+.adc-logo-box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.33vw;
+}
+.adc-logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.89vw;
+}
+.adc-logo{
+    width: 28px;
+}
+.adc-text{
+    font-family: "PangramMedium";
+    font-size: 24px;
+    color: #E7E6FF;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.adc-year{
+    font-family: "PangramMedium";
+    font-size: 24px;
+    color: #E7E6FF;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.credits{
+    display: flex;
+    align-items: flex-start;
+    gap: 3.33vw;
+    padding-right: 3vw;
+}
+.authors{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.63vw;
+}
+.authors-head{
+    font-family: "PangramMedium";
+    font-size: 12px;
+    color: #E7E6FF;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.authors-text{
+    font-family: "PangramMedium";
+    font-size: 24px;
+    color: #E7E6FF;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}

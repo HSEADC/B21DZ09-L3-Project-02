@@ -71,10 +71,9 @@
 <div class="text-box-three">
 <h2 class="text-head">Узнай первым о запуске!</h2>
 <p class="text">Подпишись на&nbsp;рассылку и&nbsp;стань одним из&nbsp;первых пользователей</p>
-<div class="mail-input">
-<p class="your-mail">Твой E-mail</p>
-<p class="send">Отправить</p>
-</div>
+<%= turbo_frame_tag dom_id(@subscription) do %>
+    <%= render "subscriptions/form", subscription: @subscription %>
+<% end %>
 </div>
 </div>
 </section>

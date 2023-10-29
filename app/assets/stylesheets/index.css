@@ -346,6 +346,8 @@
     font-family: "PangramLight";
     font-size: 30px;
     color: #4844FE;
+    background: none;
+    border: none;
     opacity: 70%;
     line-height: 104.3%;
     margin-block-start: 0;
@@ -355,6 +357,8 @@
     font-family: "PangramSemibold";
     font-size: 30px;
     color: #4844FE;
+    background: none;
+    border: none;
     line-height: 104.3%;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -436,4 +440,10 @@
     color: #E7E6FF;
     margin-block-start: 0;
     margin-block-end: 0;
+}
+
+.thanks {
+    font-family: "PangramMedium";
+    font-size: 45px;
+    color: #E7E6FF;
 }

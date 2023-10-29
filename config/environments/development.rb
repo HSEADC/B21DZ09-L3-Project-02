@@ -17,6 +17,18 @@ Rails.application.configure do
   # Enable server timing
   config.server_timing = true
 
+    # Disable Rails's static asset server (Apache or nginx will already do this)  
+config.serve_static_assets = false
+
+# Compress JavaScripts and CSS  
+config.assets.compress = true
+
+# Generate digests for assets URLs  
+config.assets.digest = true
+
+  # Do not fallback to assets pipeline if a precompiled asset is missed.
+  config.assets.compile = true
+
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join("tmp/caching-dev.txt").exist?

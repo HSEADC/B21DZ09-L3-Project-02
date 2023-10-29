@@ -166,7 +166,7 @@
     align-items: center;
     gap: 49px;
 }
-.die-small {
+.die-small-promo {
     display: flex;
     flex-direction: row;
     background-color: #131313;
@@ -190,7 +190,7 @@
     flex-direction: column;
     gap: 0.31vw;
 }
-.die-big {
+.die-big-promo {
     display: flex;
     flex-direction: column;
     background-color: #131313;

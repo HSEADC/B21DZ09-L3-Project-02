@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module SampleProject2023
   class Application < Rails::Application
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.assets.paths << Rails.root.join('app', 'assets', 'images', 'about')
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 

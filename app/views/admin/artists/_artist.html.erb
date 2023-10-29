@@ -1,4 +1,5 @@
-<div id="<%= dom_id artist %>">
+<div id="<%= dom_id artist %>", class="outer-card">
+  <%= image_tag artist.post_image.url, class: "image-outer"  %>
   <p>
     <strong>Name:</strong>
     <%= artist.name %>

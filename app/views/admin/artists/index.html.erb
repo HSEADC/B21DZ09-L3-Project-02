@@ -2,14 +2,14 @@
 
 <h1>Artists</h1>
 
-  <%= link_to "New artist", new_admin_artist_path, class: "link-normal" %>
+  <%= link_to "New artist", new_admin_artist_path, class: "link-normal action-button center-text", style: "margin: 0; width: 100px;" %>
 
 
 <div id="artists">
   <% @artists.each do |artist| %>
     <%= render artist %>
-    <p>
-      <%= link_to "Show this artist", [:admin, artist], class: "link-normal" %>
+    <p class="action-button">
+      <%= link_to "Show this artist", [:admin, artist], class: "link-normal center-text" %>
     </p>
   <% end %>
 </div>

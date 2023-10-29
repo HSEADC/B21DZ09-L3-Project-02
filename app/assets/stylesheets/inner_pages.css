@@ -1,0 +1,155 @@
+.admin {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100vw;
+}
+
+h1, h2, h3, p {
+    color: white;
+    margin: 0;
+}
+
+.link-normal {
+    color: #FFF500;
+    text-decoration: none;
+}
+
+.menubar-link {
+    font-size: 32px;
+    color: #404040;
+    text-decoration: none;
+}
+
+.user-action {
+    color: #989898;
+}
+
+.menubar-link:hover {
+    opacity: 0.7;
+}
+
+.menubar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 2%;
+}
+
+.image-inner {
+    width: 300px;
+    border-radius: 8px;
+}
+  
+nav {
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+
+.image-outer {
+    width: 500px;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.small {
+    width: 100px;
+}
+
+.outer-card {
+    background-color: #C3C3C3;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px; 
+}
+
+.action-button {
+    background-color: #3C3C3C;
+    margin: 15px 15px 40px 15px;
+    padding: 12px;
+    border-radius: 100px;
+}
+
+.wrapped-action-button {
+    background-color: #3C3C3C;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 100px;
+}
+
+.action-button:hover {
+    opacity: 0.8;
+}
+
+.center-text {
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.narrow {
+    width: 200px;
+}
+
+.heading {
+    margin-top: 20px;
+}
+
+.destroy-button {
+    font-family: Inter;
+    color: white;
+    background-color: #FF5C5C;
+    padding: 12px 24px;
+    margin-top: 12px;
+    border-radius: 100px;
+    border: none;
+}
+
+.inner-body {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100vw;
+  }
+
+.outer-content-card {
+    background-color: #C3C3C3;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.article {
+    margin-top: 10px;
+    font-size: 24px;
+}
+  
+.create-button {
+    font-family: Inter;
+    color: white;
+    background-color: #3C3C3C;
+    padding: 12px 24px;
+    margin: 12px 0;
+    border-radius: 100px;
+    border: none;
+    width: 100%;
+}
+
+.comment-input {
+    font-family: Inter;
+    font-size: 20px;
+    padding: 12px;
+    width: 400px;
+    min-height: 100px;
+    background: #D9D9D9;
+    border-radius: 12px;
+    border: none;
+}

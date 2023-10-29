@@ -1,4 +1,7 @@
-<div id="<%= dom_id issue %>">
+<div id="<%= dom_id issue %>", class="outer-content-card">
+
+  <%= image_tag issue.post_image.url, class: "image-outer small"  %>
+
   <p>
     <strong>Name:</strong>
     <%= issue.name %>
@@ -15,7 +18,7 @@
   </p>
 
   <p>
-      <%= link_to "Show this release", admin_artist_issue_path(@artist, issue), class: "link-normal" %>
+      <%= link_to "Show this release", admin_artist_issue_path(@artist, issue), class: "link-normal wrapped-action-button center-text narrow" %>
   </p>
 
 </div>

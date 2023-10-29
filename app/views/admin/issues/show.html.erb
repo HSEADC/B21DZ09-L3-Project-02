@@ -1,27 +1,31 @@
 <p style="color: green"><%= notice %></p>
-
-<%= image_tag @issue.post_image.url, class: "image-inner" %>
-
+<%= link_to "Back to artist", admin_artist_path(@artist), class: "link-normal action-button center-text", style: "width: 200px; margin: 0; margin-top: 20px;" %>
 <%= render partial: "issue_inner", locals: { issue: @issue } %>
 
 
 
-<div>
-  <h2>Write anything about the release</h2>
+<div class="inner-body">
+
+  <% if can? :manage, @issue %>
+    <%= link_to "Edit this release", edit_admin_artist_issue_path(@artist, @issue), class: "link-normal action-button center-text", style: "width: 200px; margin: 0;" %> 
+  <% end %>
+
+
+  <% if can? :manage, @issue %>
+    <%= button_to "Destroy this release", [:admin, @artist, @issue], method: :delete, class: "destroy-button" %>
+  <% end %>
+
+
   <% if can? :create, Post %>
+    <h2 class="heading">Write anything about the release</h2>
     <%= link_to "New post", new_admin_artist_issue_post_path(@artist, @issue), class: "link-normal" %>
   <% end %>
 
-  <h2> Publications about the release </h2>
+
+
+  <h2 class="heading"> Publications about the release </h2>
   <%= render @issue.posts %>
 
-  <% if can? :manage, @issue %>
-    <%= link_to "Edit this release", edit_admin_artist_issue_path(@artist, @issue), class: "link-normal" %> 
-  <% end %>
-  <%= link_to "Back to artist", admin_artist_path(@artist), class: "link-normal" %>
-
-  <% if can? :manage, @issue %>
-    <%= button_to "Destroy this release", [:admin, @artist, @issue], method: :delete %>
-  <% end %>
+  
 
 </div>

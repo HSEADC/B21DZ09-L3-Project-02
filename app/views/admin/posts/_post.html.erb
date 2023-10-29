@@ -1,4 +1,7 @@
-<div id="<%= dom_id post %>">
+<div id="<%= dom_id post %>", class="outer-content-card">
+
+  <%= image_tag post.post_image.url, class: "image-outer small"  %>
+
   <p>
     <strong>Name:</strong>
     <%= post.name %>
@@ -15,12 +18,7 @@
   </p>
 
   <p>
-    <strong>Body:</strong>
-    <%= post.body %>
-  </p>
-
-  <p>
-      <%= link_to "Show this post", admin_artist_issue_post_path(@artist, @issue, post), class: "link-normal" %>
+      <%= link_to "Show this post", admin_artist_issue_post_path(@artist, @issue, post), class: "link-normal wrapped-action-button center-text narrow" %>
   </p>
 
 </div>

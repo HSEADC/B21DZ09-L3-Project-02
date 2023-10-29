@@ -1,10 +1,9 @@
 <%= form_for([:admin, @artist, @issue, @post, @post.comments.build]) do |f| %>
 	<div class="field">
-		<%= f.label :body %><br />
-		<%= f.text_area :body %>
+		<%= f.text_area :body, class: "comment-input", placeholder: "Leave a comment" %>
 	</div>
 
-	<div class="actions">
-		<%= f.submit %>
+	<div>
+		<%= f.submit class: "create-button" %>
 	</div>
 <% end %>

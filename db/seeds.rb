@@ -189,7 +189,7 @@ def create_issues(quantity)
     artists.each do |artist|
         quantity.times do
           user = User.all.sample
-          issue = Issue.create(artist_id: artist.id, name: @words.sample, description: (create_sentence + create_sentence), post_image: upload_random_issue_image, user_id: user.id)
+          issue = Issue.create(artist_id: artist.id, name: @words.sample, description: create_sentence, post_image: upload_random_issue_image, user_id: user.id)
           puts "Issue with id #{issue.id} for artist with id #{issue.artist.id} just created"
         end
       end

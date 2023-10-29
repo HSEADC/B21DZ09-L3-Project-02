@@ -11,7 +11,7 @@
   </head>
 
 <% if not controller_name == "welcome" %>
-  <body>
+  <body class="admin">
     <%= render 'menubar' if not controller_name == "welcome"%>
     <%= yield %>
     <%= render 'footer' if not controller_name == "welcome"%>

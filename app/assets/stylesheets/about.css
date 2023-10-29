@@ -1,0 +1,528 @@
+.h1-about {
+    font-family: "PangramSemiBold";
+    font-size: 90px;
+    color: #E7E6FF;
+    line-height: 131.3%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.h2-about {
+    font-family: "PangramSemiBold";
+    font-size: 80px;
+    color: #E7E6FF;
+    line-height: 104.3%;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.h3-about {
+    font-family: "PangramSemiBold";
+    font-size: 44px;
+    color: #E7E6FF;
+    line-height: 104.3%;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.h4-about {
+    font-family: "PangramSemiBold";
+    font-size: 38px;
+    color: #E7E6FF;
+    line-height: 125.3%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.h5-about {
+    font-family: "PangramBold";
+    font-size: 28px;
+    color: #E7E6FF;
+    line-height: 125.3%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.h5-about-2 {
+    font-family: "PangramSemiBold";
+    font-size: 28px;
+    color: #E7E6FF;
+    line-height: 125.3%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.h6-about {
+    font-family: "PangramSemiBold";
+    font-size: 24px;
+    color: #E7E6FF;
+    line-height: 125.3%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.p-big-about {
+    font-family: "PangramMedium";
+    font-size: 55px;
+    color: #E7E6FF;
+    line-height: 104.3%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.p-medium-about {
+    font-family: "PangramMedium";
+    font-size: 48px;
+    color: #E7E6FF;
+    line-height: 104.3%;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.p-super-small-about {
+    font-family: "PangramMedium";
+    font-size: 14px;
+    color: #E7E6FF;
+    line-height: 150%;
+    opacity: 50%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.p-small-about {
+    font-family: "PangramMedium";
+    font-size: 24px;
+    color: #E7E6FF;
+    line-height: 123.5%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.a-about {
+    text-decoration: none;
+    font-family: "PangramBold";
+    font-size: 40px;
+    color: #131313;
+    line-height: 104.3%;
+    text-align: center;
+    background-color: #E7E6FF;
+    padding: 22px 44px;
+    border-radius: 22px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+/* Меню */
+.menu-text {
+    font-family: "PangramSemibold";
+    font-size: 28.63px;
+    text-decoration: none;
+    color: #E7E6FF;
+}
+.menu-text:hover {
+    font-family: "PangramBold";
+    -webkit-text-stroke: 1px;
+}
+.menu-box{
+    top: 0;
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    padding: 2vw 0;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5vw;
+    z-index: 100;
+}
+/* Первый экран */
+.about-first-screen {
+    width: 100vw;
+    height: auto;
+    background-image: url("/assets/background-color.svg");
+    background-color: #4844FE;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.decorations-top-of-the-screen {
+    width: 100vw;
+    height: 10vw;
+    object-fit: cover;
+    position: relative;
+    z-index: -5;
+}
+.hello {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 2vw;
+    margin-left: 4.17vw;
+    position: realtive;
+}
+.hand {
+    padding-left: 20px;
+    padding-right: 5px;
+}
+.musial-logo-big {
+    padding-top: 16px;
+    width: 890px;
+    height: auto;
+}
+.lady-gaga-and-decorations {
+    width: 100vw;
+    height: 56.25vw;
+    position: relative;
+    z-index: 0;
+    margin-top: -38vw;
+}
+/* Компьютер */
+.about-laptop {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    background-color: #4844FE;
+}
+.laptop {
+    width: 85.63vw;
+    height: 50.36vw;
+    position: relative;
+    margin-left: 7.185vw;
+    margin-top: 5vw;
+}
+/* Текст под компьютером */
+.visual-is-crucial {
+    background-color: #4844FE;
+} 
+.visual-is-crucial-text {
+    display: flex;
+    flex-direction: column;
+    width: 62.14vw;
+    gap: 24px;
+    margin: 0 auto;
+    margin-top: 4.79vw;
+    position: relative;
+}
+/* Обложки */
+.about-covers {
+    height: 75vw;
+    width: 100vw;
+}
+.die-big {
+    display: flex;
+    flex-direction: column;
+    background-color: #131313;
+    padding: 1.15vw;
+    width: 25.83vw;
+    position: relative;
+    border-radius: 2.29vw;
+    gap: 0.8vw;
+    box-shadow: 0 0 2.60vw #131313;
+}
+.transform-minus-21 {
+    transform: rotate(-21deg);
+    margin-left: 10vw;
+}
+.transform-plus-21 {
+    transform: rotate(21deg);
+    margin-top: -27vw;
+    left: 58vw;
+}
+.die-image {
+    width: 25.83vw;
+    height: 16.56vw;
+    border-radius: 1.56vw;
+    position: relative;
+}
+.avatar-image {
+    width: 2.66vw;
+    height: 2.66vw;
+    border-radius: 1.56vw;
+    position: relative;
+}
+.avatar-and-names {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.94vw;
+    width: calc(25.83vw - 2.66vw - 0.94vw);
+    padding-top: 0.9vw;
+}
+.names {
+    display: flex;
+    flex-direction: column;
+}
+.date {
+    text-align: right;
+    width: 25.31vw;
+}
+.description {
+    width: 25.31vw;
+}
+.cover {
+    width: 59.64vw;
+    height: 47.76vw;
+    transform: rotate(-7.64deg);
+    position: relative;
+    z-index: -4;
+    margin-top: -43vw;
+    margin-left: 18.07vw;
+}
+.covers-and-dies {
+    width: 100vw;
+    position: relative;
+    padding-top: 2vw;
+}
+.covers-and-die-with-background {
+    background-image: url("/assets/decorations-in-covers.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 56.30vw;
+    position: relative;
+    z-index: -5;
+    margin-top: 17vw;
+}
+.decorations-under-covers {
+    position: relative;
+    z-index: 5;
+    width: 100vw;
+    height: 34vw;
+    object-fit: cover;
+    top: -32vw;
+}
+.h3-covers {
+    margin-top: 8.13vw;
+}
+/* Клипы */
+.about-videos {
+    background-color: #131313;
+    width: 100vw;
+    height: auto;
+    margin-top: -28w;
+    position: relative;
+    z-index: 4;
+}
+.h3-videos {
+    padding-top: 4vw;
+}
+.videos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 3.5vw;
+}
+.video-1, .video-3 {
+    width: 17.81vw;
+    height: 28.33vw;
+    position: relative;
+}
+.video-1 {
+    background-image: url("/assets/video-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0 1.67vw 1.67vw 0;
+}
+.video-3 {
+    background-image: url("/assets/video-3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1.67vw 0 0 1.67vw;
+}
+.video-2 {
+    width: 60.57vw;
+    height: 34.06vw;
+    position: relative;
+    background-image: url("/assets/video-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2.08vw;
+    box-shadow: 0 0 1.30vw #E7E6FF;
+}
+.die-small {
+    display: flex;
+    flex-direction: row;
+    background-color: #131313;
+    padding: 1.15vw;
+    width: 28.02vw;
+    position: absolute;
+    border-radius: 1.6vw;
+    gap: 1.15vw;
+    box-shadow: 0 0 2.60vw #131313;
+    z-index: 400;
+}
+.die-image-small {
+    width: 4.84vw;
+    height: 4.84vw;
+    border-radius: 0.89vw;
+    position: relative;
+}
+.names-and-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.31vw;
+}
+.transform-to-top-in-video {
+    margin-top: -26vw;
+    margin-left: 26vw;
+}
+.video-2-text {
+    position: relative;
+    top: 28vw;
+    left: 2vw;
+}
+.video-3-text {
+    position: relative;
+    top: 23.49vw;
+    left: 1.35vw;
+}
+/* Фотосессии */
+.about-photos-artists {
+    background-color: #131313;
+    height: auto;
+}
+.h3-photos {
+    margin-left: 8.49vw;
+    padding-top: 12.60vw;
+    width: 24.22vw;
+}
+.relative {
+    position: relative;
+    top: 0;
+}
+.dies-small-for-photos {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 5vw;
+}
+.photos-artists-background {
+    background-image: url("/assets/photos-artists.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 99.90vw;
+    height: 78.39vw;
+    margin-top: -4vw;
+}
+.die-small-1 {
+    margin-top: 41.93vw;
+    margin-left: 10.83vw;
+    align-self: flex-start;
+}
+.die-small-2 {
+    margin-top: 28.49vw;
+    align-self: flex-start;
+}
+.die-small-3 {
+    margin-top: 16.7vw;
+    margin-left: 13.5vw;
+    align-self: flex-start;
+}
+.die-width-2 {
+    width: 20.13vw;
+}
+/* Читай статьи */
+.h2-read {
+    width: 87.50vw;
+}
+.read-text-and-button {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    align-items: center;
+    padding-top: 14.32vw;
+}
+.arrow {
+    padding-left: 22px;
+    /* width: 40px; */
+}
+.musial-logo-small {
+    width: 274px;
+    height: auto;
+    padding-left: 20px;
+}
+.read-with-background {
+    background-image: url("/assets/decorations-bottom-of-the-screen.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height: 58.23vw;
+    margin-top: -20vw;
+}
+/* Футер */
+.footer-section{
+    background-color: #131313;
+    margin-top: -6%;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 3vw;
+}
+.logo-footer{
+    width: 500px;
+}
+.adc-logo-box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.33vw;
+}
+.adc-logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.89vw;
+}
+.adc-logo{
+    width: 28px;
+}
+.adc-text{
+    font-family: "PangramMedium";
+    font-size: 24px;
+    color: #E7E6FF;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.adc-year{
+    font-family: "PangramMedium";
+    font-size: 24px;
+    color: #E7E6FF;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.credits{
+    display: flex;
+    align-items: flex-start;
+    gap: 3.33vw;
+    padding-right: 3vw;
+}
+.authors{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.63vw;
+}
+.authors-head{
+    font-family: "PangramMedium";
+    font-size: 12px;
+    color: #E7E6FF;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.authors-text{
+    font-family: "PangramMedium";
+    font-size: 24px;
+    color: #E7E6FF;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.blue-bg{
+    position: relative;
+    background-color: #4844FE;
+    width: 100vw;
+    z-index: 0;
+}

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "PangramBold";
+    src: url("/assets/PPPangramSans-Bold.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "PangramLight";
+    src: url("/assets/PPPangramSans-Light.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "PangramMedium";
+    src: url("/assets/PPPangramSans-Medium.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "PangramSemibold";
+    src: url("assets/PPPangramSans-Semibold.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "PangramThin";
+    src: url("/assets/PPPangramSans-Thin.otf") format("opentype");
+  }

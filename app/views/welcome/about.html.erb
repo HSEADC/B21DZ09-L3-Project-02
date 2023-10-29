@@ -1,3 +1,126 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>About</h1>
+<section class="blue-bg">
+<section class="about-first-screen">
+<%= image_tag "about/decorations-top-of-the-screen.svg", :class => "decorations-top-of-the-screen" %>
+<div class="hello">
+    <h1 class="h1-about">Привет<span><%= image_tag "about/hand.svg", :class => "hand" %></span> это</h1>
+    <%= image_tag "about/musial-logo.svg", :class => "musial-logo-big" %>
+    <p class="p-big-about">медиасервис о визуале в музыке</p>
+</div>
+<%= image_tag "about/lady-gaga-and-decorations.svg", :class => "lady-gaga-and-decorations" %>
+</section>
+<section class="about-laptop">
+<%= image_tag "about/laptop.svg", :class => "laptop" %>
+</section>
+<section class="visual-is-crucial">
+<div class="visual-is-crucial-text">
+    <h2 class="h2-about h2-visual-is-crucial">Визуал имеет значение</h2>
+    <p class="p-medium-about">На&nbsp;нашем сайте ты узнаешь всё о&nbsp;том, какая эстетика стоит за&nbsp;релизами артистов</p>
+</div>
+</section>
+<section class="about-covers">
+<h3 class="h3-about h3-covers">Обзоры обложек</br>альбомов</h3>
+<div class="covers-and-die-with-background">
+    <div class="covers-and-dies">
+        <div class="die-big transform-minus-21">
+            <%= image_tag "about/wasteland-detail-1.jpg", :class => "die-image" %>
+            <div class="avatar-and-names">
+                <%= image_tag "about/dima-astashov.jpg", :class => "avatar-image" %>
+                <div class="names">
+                    <h5 class="h5-about">Дима Асташов</h5>
+                    <p class="p-super-small-about">о Wasteland, Baby!, 2019</p>
+                </div>
+            </div>
+            <p class="p-small-about description">Здесь изображено публичное несогласие</p>
+            <p class="p-super-small-about date">сегодня, 13:00</p>
+        </div>
+        <%= image_tag "about/cover.png", :class => "cover" %>
+        <div class="die-big transform-plus-21">
+            <%= image_tag "about/wasteland-detail-2.jpg", :class => "die-image" %>
+            <div class="avatar-and-names">
+                <%= image_tag "about/ksusha-strukova.jpg", :class => "avatar-image" %>
+                <div class="names">
+                    <h5 class="h5-about">Ксюша Струкова</h5>
+                    <p class="p-super-small-about">о Wasteland, Baby!, 2019</p>
+                </div>
+            </div>
+            <p class="p-small-about description">На самом деле на&nbsp;груди Хозиера лодка с&nbsp;беженцами!</p>
+            <p class="p-super-small-about date">сегодня, 13:00</p>
+        </div>
+    </div>
+</div>
+<%= image_tag "about/decorations-under-covers.svg", :class => "decorations-under-covers" %>
+</section>
+<section class="about-videos">
+<h3 class="h3-about h3-videos">Визуал музыкальных</br>клипов</h3>
+<div class="videos">
+    <div class="video-1"></div>
+    <div class="video-and-die">
+        <div class="video-2">
+            <div class="video-2-text">
+                <h4 class="h4-about">Lil Nas X</h4>
+                <h5 class="h5-about-2">Montero, 2021</h5>
+            </div>
+        </div>
+        <div class="die-small transform-to-top-in-video">
+            <%= image_tag "about/snake.jpg", :class => "die-image-small" %>
+            <div class="names-and-description">
+                <div class="names">
+                    <h5 class="h5-about">Лиза Ярошенко</h5>
+                    <p class="p-super-small-about">о Montero, 2021</p>
+                </div>
+                <p class="p-small-about description">Библейский змей-искуситель</p>
+            </div>
+        </div>
+    </div>
+    <div class="video-3">
+        <div class="video-3-text">
+            <h5 class="h5-about">Harry Styles</h5>
+            <h6 class="h6-about">Adore you, 2020</h6>
+        </div>
+    </div>
+</div>
+</section>
+<section class="about-photos-artists">
+<h3 class="h3-about h3-photos">Эстетика фотосессий</br>артистов</h3>
+<div class="photos-artists-background">
+    <div class="dies-small-for-photos">
+        <div class="die-small relative die-small-1">
+            <%= image_tag "about/harry-styles-wear.jpg", :class => "die-image-small" %>
+            <div class="names-and-description">
+                <div class="names">
+                    <h5 class="h5-about">Алиса Пирожникова</h5>
+                    <p class="p-super-small-about">о Harry Styles</p>
+                </div>
+                <p class="p-small-about description">Пайетки от Артуро Оберего</p>
+            </div>
+        </div>
+        <div class="die-small relative die-small-2">
+            <div class="names-and-description die-width-2">
+                <div class="names">
+                    <h5 class="h5-about">Артём Рождественский</h5>
+                    <p class="p-super-small-about">о Halsey</p>
+                </div>
+                <p class="p-small-about description">Перья от Тони-Блейза</p>
+            </div>
+            <%= image_tag "about/halsey-wear.jpg", :class => "die-image-small" %>
+        </div>
+        <div class="die-small relative die-small-3">
+            <%= image_tag "about/doja-cat-make-up.jpg", :class => "die-image-small" %>
+            <div class="names-and-description">
+                <div class="names">
+                    <h5 class="h5-about">Лиза Мкртчян</h5>
+                    <p class="p-super-small-about">о Doja Cat</p>
+                </div>
+                <p class="p-small-about description">А где розовый?</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="read-with-background">
+    <div class="read-text-and-button">
+        <h2 class="h2-about h2-read">Читай статьи о&nbsp;визуале релизов или&nbsp;создавай их самостоятельно</h2>
+        <h2 class="h2-about">на <span><%= image_tag "about/musial-logo.svg", :class => "musial-logo-small" %></span></h2>
+        <%= link_to "Предупредить о старте →", welcome_index_url, class: "a-about" %>
+</div>
+</section>
+</section>

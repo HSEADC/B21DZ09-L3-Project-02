@@ -1,7 +1,5 @@
-<nav>
-  <div class="menubar">
-    <%= link_to "Промо", welcome_index_url, class: "menubar-link" %>
-    <%= link_to "О проекте", welcome_about_url, class: "menubar-link"  %>
-    <%= link_to "Артисты", admin_artists_url, class: "menubar-link" if current_user %>
-  </div>
-</nav>
+<div class="menu-box">
+<%= link_to "Промо", welcome_index_url, class: "menu-text promot" %>
+<%= link_to "О проекте", welcome_about_url, class: "menu-text aboutt" %>
+<%= link_to "Телеграм-канал", "https://t.me/mmusial", class: "menu-text tgt" %>
+</div>

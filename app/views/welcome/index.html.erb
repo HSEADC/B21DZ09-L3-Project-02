@@ -1,80 +1,80 @@
 <section class="first-section"> 
-<div class="wave-one-box">
-<%= image_tag "promo/wave-one.png", :class => "wave-one" %>
-</div>
-<div class="wave-two-box">
-<%= image_tag "promo/wave-two.png", :class => "wave-two" %>
-</div>
-<div class="logo-box">
-<%= image_tag "promo/Musial.svg", :class => "logo" %>
-<p class="logo-description">медиасервис о визуале в музыке</p>
-</div>
+    <div class="wave-one-box">
+        <%= image_tag "promo/wave-one.png", :class => "wave-one" %>
+    </div>
+    <div class="wave-two-box">
+        <%= image_tag "promo/wave-two.png", :class => "wave-two" %>
+    </div>
+    <div class="logo-box">
+        <%= image_tag "promo/Musial.svg", :class => "logo" %>
+        <p class="logo-description">медиасервис о визуале в музыке</p>
+    </div>
 </section> 
 <section class="second-section"> 
-<div class="wave-three-box">
-<%= image_tag "promo/wave-three.png", :class => "wave-three" %>
-</div>
-<div class="text-box-one">
-<h2 class="text-head">Мы про визуал</h2>
-<p class="text">Эстетичные обложки, красочные клипы и&nbsp;необычные метафоры в&nbsp;промо-кампаниях поп-звёзд по&nbsp;нашей части</p>
-</div>
-<div class="poppy-box">
-<%= image_tag "promo/poppy.png", :class => "poppy" %>
-</div>
+        <div class="wave-three-box">
+        <%= image_tag "promo/wave-three.png", :class => "wave-three" %>
+    </div>
+    <div class="text-box-one">
+        <h2 class="text-head">Мы про визуал</h2>
+        <p class="text">Эстетичные обложки, красочные клипы и&nbsp;необычные метафоры в&nbsp;промо-кампаниях поп-звёзд по&nbsp;нашей части</p>
+    </div>
+    <div class="poppy-box">
+        <%= image_tag "promo/poppy.png", :class => "poppy" %>
+    </div>
 </section> 
 <section class="third-section"> 
-<div class="text-box-two">
-<p class="text">Читай про новые релизы, пиши о&nbsp;любимых артистах, будь в&nbsp;курсе того, что осталось за&nbsp;кадром</p>
-</div>
-<div class="artist-line">
-<%= image_tag "promo/artist-line-mob.png", :class => "artist-line-mob" %>
-<%= image_tag "promo/charli.png", :class => "charli" %>
-<%= image_tag "promo/dorian.png", :class => "dorian" %>
-<%= image_tag "promo/halsey.png", :class => "halsey" %>
-</div>
-<div class="die-small-promo">
-                    <%= image_tag "promo/dorian-eye.png", :class => "die-image-small" %>
-                    <div class="names-and-description">
-                        <div class="names">
-                            <h5 class="h5-about">Дима Асташов</h5>
-                            <p class="p-super-small-about">о Fanfare, 2023</p>
-                        </div>
-                        <p class="p-small-about description">Макияж by Jayde Coxon</p>
-                    </div>
-                </div>
-<div class="die-big-promo">
-                    <%= image_tag "promo/dorian-hand.png", :class => "die-image" %>
-                    <div class="avatar-and-names">
-                        <%= image_tag "promo/danil.jpg", :class => "avatar-image" %>
-                        <div class="names">
-                            <h5 class="h5-about">Данил Матлахов</h4>
-                            <p class="p-super-small-about">о Fanfare, 2023</p>
+    <div class="text-box-two">
+        <p class="text">Читай про новые релизы, пиши о&nbsp;любимых артистах, будь в&nbsp;курсе того, что осталось за&nbsp;кадром</p>
+    </div>
+    <div class="artist-line">
+        <%= image_tag "promo/artist-line-mob.png", :class => "artist-line-mob" %>
+        <%= image_tag "promo/charli.png", :class => "charli" %>
+        <%= image_tag "promo/dorian.png", :class => "dorian" %>
+        <%= image_tag "promo/halsey.png", :class => "halsey" %>
+    </div>
+    <div class="die-small-promo">
+                        <%= image_tag "promo/dorian-eye.png", :class => "die-image-small" %>
+                        <div class="names-and-description">
+                            <div class="names">
+                                <h5 class="h5-about">Дима Асташов</h5>
+                                <p class="p-super-small-about">о Fanfare, 2023</p>
+                            </div>
+                            <p class="p-small-about description">Макияж by Jayde Coxon</p>
                         </div>
                     </div>
-                    <p class="p-small-about description">Невообразимой красоты образ от&nbsp;Luca&nbsp;Wowczyna</p>
-                    <p class="p-super-small-about date">сегодня, 13:00</p>
-                </div>
-<div class="main-head-box">
-<h1 class="main-head">Musial&nbsp;&mdash; говорим визуально<br>об&nbsp;аудиальном</h1>
-</div>
-<div class="wave-four-box">
-                <%= image_tag "promo/wave-four.png", :class => "wave-four" %>
-                </div>
-<div class="nessa-box">
-<%= image_tag "promo/nessa.png", :class => "nessa" %>
-</div>
-<div class="jazmin-box">
-<%= image_tag "promo/jazmin.png", :class => "jazmin" %>
-</div>
-<div class="mail-main">
-<%= image_tag "promo/wave-five.png", :class => "wave-five" %>
-<div class="text-box-three">
-<h2 class="text-head">Узнай первым о запуске!</h2>
-<p class="text">Подпишись на&nbsp;рассылку и&nbsp;стань одним из&nbsp;первых пользователей</p>
-<%= turbo_frame_tag dom_id(@subscription) do %>
-    <%= render "subscriptions/form", subscription: @subscription %>
-<% end %>
-</div>
-</div>
+    <div class="die-big-promo">
+                        <%= image_tag "promo/dorian-hand.png", :class => "die-image" %>
+                        <div class="avatar-and-names">
+                            <%= image_tag "promo/danil.jpg", :class => "avatar-image" %>
+                            <div class="names">
+                                <h5 class="h5-about">Данил Матлахов</h4>
+                                <p class="p-super-small-about">о Fanfare, 2023</p>
+                            </div>
+                        </div>
+                        <p class="p-small-about description">Невообразимой красоты образ от&nbsp;Luca&nbsp;Wowczyna</p>
+                        <p class="p-super-small-about date">сегодня, 13:00</p>
+                    </div>
+    <div class="main-head-box">
+        <h1 class="main-head">Musial&nbsp;&mdash; говорим визуально<br>об&nbsp;аудиальном</h1>
+    </div>
+    <div class="wave-four-box">
+                    <%= image_tag "promo/wave-four.png", :class => "wave-four" %>
+                    </div>
+    <div class="nessa-box">
+        <%= image_tag "promo/nessa.png", :class => "nessa" %>
+    </div>
+    <div class="jazmin-box">
+        <%= image_tag "promo/jazmin.png", :class => "jazmin" %>
+    </div>
+    <div class="mail-main">
+        <%= image_tag "promo/wave-five.png", :class => "wave-five" %>
+        <div class="text-box-three">
+            <h2 class="text-head">Узнай первым о запуске!</h2>
+            <p class="text">Подпишись на&nbsp;рассылку и&nbsp;стань одним из&nbsp;первых пользователей</p>
+            <%= turbo_frame_tag dom_id(@subscription) do %>
+                <%= render "subscriptions/form", subscription: @subscription %>
+            <% end %>
+        </div>
+    </div>
 </section>
 

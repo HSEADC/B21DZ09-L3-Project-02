@@ -1,18 +1,17 @@
 <div class="outer-card">
 
 	<p>
-		<b>Commenter:</b>
+		<b>Автор:</b>
 		<%= comment.user.email %>
 	</p>
 
 	<p>
-		<b>Comment:</b>
 		<%= comment.body %>
 	</p>
 
 	<% if can? :manage, comment %>
 		<p>
-			<%= button_to 'Destroy Comment', [:admin, comment.post.issue.artist, comment.post.issue, comment.post, comment], :method => :delete, class: "destroy-button" %>
+			<%= button_to 'Удалить комментарий', [:admin, comment.post.issue.artist, comment.post.issue, comment.post, comment], :method => :delete, class: "destroy-button" %>
 		</p>
 	<% end %>
 

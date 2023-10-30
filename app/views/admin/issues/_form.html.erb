@@ -12,21 +12,21 @@
   <% end %>
 
   <div>
-    <%= form.label :post_image, style: "display: block" %>
+    <%= form.label :post_image, style: "display: block", value: "Обложка"%>
     <%= form.file_field :post_image %>
   </div>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name, style: "display: block", value: "Название" %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label :description, style: "display: block", value: "Описание" %>
     <%= form.text_field :description %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit value: "ОК" %>
   </div>
 <% end %>

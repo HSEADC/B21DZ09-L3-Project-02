@@ -3,22 +3,22 @@
   <%= image_tag post.post_image.url, class: "image-outer small"  %>
 
   <p>
-    <strong>Name:</strong>
+    <strong></strong>
     <%= post.name %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong>Описание:</strong>
     <%= post.description %>
   </p>
 
   <p>
-  <strong>Written by</strong>
+  <strong>Автор:</strong>
   <%= post.user.email %>
   </p>
 
   <p>
-      <%= link_to "Show this post", admin_artist_issue_post_path(@artist, @issue, post), class: "link-normal wrapped-action-button center-text narrow" %>
+      <%= link_to "На страницу поста", admin_artist_issue_post_path(@artist, @issue, post), class: "link-normal wrapped-action-button center-text narrow" %>
   </p>
 
 </div>

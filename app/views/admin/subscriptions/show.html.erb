@@ -3,8 +3,8 @@
 <%= render @subscription %>
 
 <div>
-  <%= link_to "Edit this subscription", edit_admin_subscription_path(@subscription), class: "link-normal" %> |
-  <%= link_to "Back to subscriptions", admin_subscriptions_path, class: "link-normal" %>
+  <%= link_to "Редактировать подписку", edit_admin_subscription_path(@subscription), class: "link-normal" %> |
+  <%= link_to "Назад к подпискам", admin_subscriptions_path, class: "link-normal" %>
 
-  <%= button_to "Destroy this subscription", [:admin, @subscription], method: :delete, class: "destroy-button"  %>
+  <%= button_to "Удалить подписку", [:admin, @subscription], method: :delete, class: "destroy-button"  %>
 </div>

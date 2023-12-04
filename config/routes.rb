@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 namespace :api do
   namespace :v1 do
     resources :artists, defaults: { format: :json }
+    resources :issues, defaults: { format: :json }
+    resources :posts, defaults: { format: :json }
+    resources :comments, defaults: { format: :json }
   end
 end
 

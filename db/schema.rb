@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_05_051617) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_05_074308) do
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -51,6 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_05_051617) do
     t.datetime "updated_at", null: false
     t.string "post_image"
     t.integer "user_id"
+    t.string "type"
     t.index ["issue_id"], name: "index_posts_on_issue_id"
   end
 

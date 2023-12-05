@@ -1,0 +1,2 @@
+class PromoPost < Post
+end

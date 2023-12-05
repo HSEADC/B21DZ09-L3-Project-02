@@ -28,6 +28,7 @@ end
 
   get 'welcome/index'
   get 'welcome/about'
+  get 'welcome/feed'
   root 'welcome#index'
   
 end

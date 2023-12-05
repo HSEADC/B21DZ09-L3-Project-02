@@ -30,7 +30,7 @@ class Admin::PostsController < ApplicationController
   def create
     @artist = Artist.find(params[:artist_id])
     @issue = Issue.find(params[:issue_id])
-    @post = Post.new(name:params[:post][:name], description: params[:post][:description], body: params[:post][:body], post_image: params[:post][:post_image], issue_id: @issue.id, user_id: current_user.id)
+    @post = Post.new(name:params[:post][:name], type: params[:post][:type], description: params[:post][:description], body: params[:post][:body], post_image: params[:post][:post_image], issue_id: @issue.id, user_id: current_user.id)
 
     respond_to do |format|
       if @post.save

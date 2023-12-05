@@ -1,0 +1,2 @@
+class CoverPost < Post
+end

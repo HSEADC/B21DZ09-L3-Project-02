@@ -88,6 +88,7 @@ def seed
     create_issues(15)
     create_posts(5)
     create_comments(2..4)
+    create_comment_replies(1000)
 end
 
 def reset_db
@@ -217,6 +218,16 @@ def create_comments(quantity)
       puts "Comment with id #{comment.id} for pin with id #{comment.post.id} just created"
     end
   end
+end
+
+def create_comment_replies(quantity)
+
+    Comment.all.each do |comment|
+      user = User.all.sample
+      reply = comment.replies.create(post_id: comment.post.id, commenter: create_sentence, body: (create_sentence + create_sentence), user_id: user.id)
+      puts "Reply with id #{reply.id} for comment with id #{comment.post.id} just created"
+    end
+
 end
 
 seed

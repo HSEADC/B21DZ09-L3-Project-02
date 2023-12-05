@@ -156,3 +156,8 @@ width: 100%;
     border-radius: 12px;
     border: none;
 }
+
+.comment-replies {
+    width: 480px;
+    overflow: hidden;
+}

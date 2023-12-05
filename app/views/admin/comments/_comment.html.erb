@@ -15,4 +15,11 @@
 		</p>
 	<% end %>
 
+	<div class="comment-replies">
+
+		<% comment.replies.each do |reply| %>
+			<%= render reply, partial: "admin/comments/comment", comment: reply, post: comment.post %>
+		<% end %>
+	</div> 
+
 </div>

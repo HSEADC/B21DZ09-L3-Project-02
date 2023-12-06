@@ -1,0 +1,25 @@
+<div id="<%= dom_id post %>", class="outer-content-card">
+
+  <%= post.post_image.url %>
+
+
+  <p>
+    <strong></strong>
+    <%= post.name  %>
+  </p>
+
+  <p>
+    <strong>Type</strong>
+    <%= post.type  %>
+  </p>
+
+  <p>
+    <strong>Описание:</strong>
+    <%= post.description %>
+  </p>
+
+  <p>
+  <strong>Автор:</strong>
+  <%= post.user.email %>
+  </p>
+</div>

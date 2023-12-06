@@ -28,7 +28,7 @@ end
 
   get 'welcome/index'
   get 'welcome/about'
-  get 'welcome/feed'
+  get 'admin/posts/feed'
   root 'welcome#index'
   
 end

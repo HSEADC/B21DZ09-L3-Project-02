@@ -82,4 +82,8 @@ class Admin::PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:name, :description, :body, :issue_id, :post_image).merge(user_id: current_user.id)
     end
+
+    def feed
+      @posts = Post.all
+    end
 end

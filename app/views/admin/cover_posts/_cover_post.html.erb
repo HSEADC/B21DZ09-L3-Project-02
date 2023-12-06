@@ -1,0 +1,21 @@
+<div id="<%= dom_id cover_post %>", class="outer-card">
+
+  <p>
+    <%= cover_post.name %>
+  </p>
+
+  <p>
+    <strong>Автор</strong>
+    <%= cover_post.user.email %>
+  </p>
+
+  <p>
+    <strong>Описание</strong>
+    <%= cover_post.description %>
+  </p>
+
+  <p class="article">
+    <%= cover_post.body%>
+  </p>
+
+</div>

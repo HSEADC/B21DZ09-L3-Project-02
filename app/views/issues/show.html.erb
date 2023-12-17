@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+<%= link_to "На страницу артиста", admin_artist_path(@artist), class: "link-normal action-button center-text", style: "width: 200px; margin: 0; margin-top: 20px;" %>
+<%= render partial: "issue_inner", locals: { issue: @issue } %>
+
+
+
+<div class="inner-body">
+
+  <% if can? :manage, @issue %>
+    <%= link_to "Редактировать релиз", edit_admin_artist_issue_path(@artist, @issue), class: "link-normal action-button center-text", style: "width: 200px; margin: 0;" %> 
+  <% end %>
+
+
+  <% if can? :manage, @issue %>
+    <%= button_to "Удалить релиз", [:admin, @artist, @issue], method: :delete, class: "destroy-button" %>
+  <% end %>
+
+
+  <% if can? :create, Post %>
+    <h2 class="heading">Поделитесь с миром мыслями</h2>
+    <%= link_to "Новая публикация", new_admin_artist_issue_post_path(@artist, @issue), class: "link-normal" %>
+  <% end %>
+
+
+
+  <h2 class="heading"> Публикации о релизе </h2>
+  <%= render @issue.posts %>
+
+  
+
+</div>

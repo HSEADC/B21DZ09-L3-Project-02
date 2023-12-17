@@ -1,0 +1,17 @@
+<div id="<%= dom_id artist %>", class="outer-card">
+  <%= image_tag artist.post_image.url, class: "image-outer"  %>
+  <p>
+    <%= artist.name %>
+  </p>
+
+  <p>
+    <strong>Описание:</strong>
+    <%= artist.description %>
+  </p>
+
+  <p>
+  <strong>Автор:</strong>
+  <%= artist.user.email %>
+  </p>
+
+</div>

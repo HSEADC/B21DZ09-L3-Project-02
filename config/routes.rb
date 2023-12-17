@@ -21,7 +21,13 @@ namespace :admin do
 end
 
 
-  resources :posts
+resources :artists do
+  resources :issues do
+    resources :posts do
+      resources :comments
+    end
+  end
+end
 
   resources :subscriptions, only: [:create, :show]
 

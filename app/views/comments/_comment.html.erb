@@ -1,0 +1,25 @@
+<div class="outer-card">
+
+	<p>
+		<b>Автор:</b>
+		<%= comment.user.email %>
+	</p>
+
+	<p>
+		<%= comment.body %>
+	</p>
+
+	<% if can? :manage, comment %>
+		<p>
+			<%= button_to 'Удалить комментарий', [:admin, comment.post.issue.artist, comment.post.issue, comment.post, comment], :method => :delete, class: "destroy-button" %>
+		</p>
+	<% end %>
+
+	<div class="comment-replies">
+
+		<% comment.replies.each do |reply| %>
+			<%= render reply, partial: "admin/comments/comment", comment: reply, post: comment.post %>
+		<% end %>
+	</div> 
+
+</div>

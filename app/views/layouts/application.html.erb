@@ -11,7 +11,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-<% if action_name == "index" || action_name == "about"%>
+<% if controller_name == "welcome" && action_name != "feed"%>
   <body class="welcome">
     <%= render 'promo_menubar' if controller_name == "welcome"%>
     <%= yield %>

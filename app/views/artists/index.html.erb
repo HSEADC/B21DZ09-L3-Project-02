@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Артисты</h1>
+
+
+<div id="artists">
+  <% @artists.each do |artist| %>
+    <%= render artist %>
+    <p class="action-button">
+      <%= link_to "На страницу артиста", [artist], class: "link-normal center-text" %>
+    </p>
+  <% end %>
+</div>

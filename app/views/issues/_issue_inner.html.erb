@@ -1,0 +1,19 @@
+<div id="<%= dom_id issue %>", class="outer-card">
+
+<%= image_tag issue.post_image.url, class: "image-outer"  %>
+
+  <p>
+    <%= issue.name %>
+  </p>
+
+  <p>
+    <strong>Описание:</strong>
+    <%= issue.description %>
+  </p>
+
+  <p>
+  <strong>Автор:</strong>
+  <%= issue.user.email %>
+  </p>
+
+</div>

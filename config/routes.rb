@@ -8,8 +8,6 @@ namespace :api do
   end
 end
 
-
-
 namespace :admin do
   resources :artists do
     resources :issues do
@@ -22,13 +20,16 @@ namespace :admin do
   resources :subscriptions
 end
 
+
+  resources :posts
+
   resources :subscriptions, only: [:create, :show]
 
   devise_for :users
 
   get 'welcome/index'
   get 'welcome/about'
-  get 'admin/posts/feed'
+  get 'welcome/feed'
   root 'welcome#index'
   
 end

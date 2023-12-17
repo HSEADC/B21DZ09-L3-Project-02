@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<%= link_to "На страницу релиза", admin_artist_issue_path(@artist, @issue), class: "link-normal action-button center-text", style: "width: 200px; margin: 0; margin-top: 20px;" %>
+
+<%= render partial: "post_inner", locals: { post: @post } %>
+
+<% if can? :manage, @post %>
+    <%= link_to "Редактировать пост", edit_admin_artist_issue_post_path(@post), class: "link-normal action-button center-text", style: "width: 200px; margin: 0;" %>
+<% end %>
+  
+<% if can? :manage, @post %>
+  <%= button_to "Удалить пост", [:admin, @artist, @post.issue, @post], method: :delete, class: "destroy-button" %>
+<% end %>
+
+<h2 class="heading">Комментарии</h2>
+<%= render @post.comments %>
+
+<h2>Оставить комментарий</h2>
+<% if can? :create, Comment %>
+  <%= render "admin/comments/form" %>
+<% end %>
+
+<% if not can? :create, Comment %>
+  <p> Для того, чтобы оставлять комментарии надо авторизоваться :( </p>
+<% end %>

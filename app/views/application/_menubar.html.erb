@@ -2,11 +2,13 @@
   <div class="menubar">
     <%= link_to "Промо", root_url, class: "menubar-link" %>
     <%= link_to "О проекте", welcome_about_url, class: "menubar-link"  %>
+
     <% if user_signed_in? %>
       <%= link_to "Артисты", admin_artists_url, class: "menubar-link"  %>
       <%= link_to "Подписки", admin_subscriptions_url, class: "menubar-link"  %>
       <%= link_to "Post Feed", admin_posts_feed_url, class: "menubar-link"  %>
     <% end %>
+  
     <% if user_signed_in? %>
       <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: "menubar-link user-action"  %>
     <% end %>

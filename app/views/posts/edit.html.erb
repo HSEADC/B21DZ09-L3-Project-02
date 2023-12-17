@@ -1,0 +1,9 @@
+<h1>Редактирование поста</h1>
+
+<%= render "form", artist: @artist, issue: @issue, post: @post %>
+
+<br>
+
+<div>
+  <%= link_to "На страницу публикации", admin_artist_issue_post_path(@artist, @issue), class: "link-normal"   %>
+</div>

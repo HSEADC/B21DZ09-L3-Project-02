@@ -1,3 +1,3 @@
-@posts.each do |@post|
-    <%= render "admin/posts/post", post: @post %>
-end
+<% @posts.each do |post| %>
+    <%= render "posts/feed_post", post: post %>
+<% end %>

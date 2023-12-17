@@ -1,6 +1,8 @@
 <div id="<%= dom_id post %>", class="outer-content-card">
 
-  <%= image_tag post.post_image.url, class: "image-outer"  %>
+  <% if post.post_image.url %>
+    <%= image_tag post.post_image.url, class: "image-outer"  %>
+  <% end %>
 
 
   <p>

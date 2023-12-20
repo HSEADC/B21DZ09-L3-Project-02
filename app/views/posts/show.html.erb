@@ -5,11 +5,11 @@
 <%= render partial: "post_inner", locals: { post: @post } %>
 
 <% if can? :manage, @post %>
-    <%= link_to "Редактировать пост", edit_admin_artist_issue_post_path(@post), class: "link-normal action-button center-text", style: "width: 200px; margin: 0;" %>
+    <%= link_to "Редактировать пост", edit_artist_issue_post_path(@post), class: "link-normal action-button center-text", style: "width: 200px; margin: 0;" %>
 <% end %>
   
 <% if can? :manage, @post %>
-  <%= button_to "Удалить пост", [:admin, @artist, @post.issue, @post], method: :delete, class: "destroy-button" %>
+  <%# button_to "Удалить пост", [@artist, @post.issue, artist_issue_post_path(@post).to_sym], method: :delete, class: "destroy-button" %>
 <% end %>
 
 <h2 class="heading">Комментарии</h2>

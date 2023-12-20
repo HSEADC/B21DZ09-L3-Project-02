@@ -11,7 +11,7 @@
 
 	<% if can? :manage, comment %>
 		<p>
-			<%= button_to 'Удалить комментарий', [:admin, comment.post.issue.artist, comment.post.issue, comment.post, comment], :method => :delete, class: "destroy-button" %>
+			<%= button_to 'Удалить комментарий', [comment.post.issue.artist, comment.post.issue, comment.post, comment], :method => :delete, class: "destroy-button" %>
 		</p>
 	<% end %>
 

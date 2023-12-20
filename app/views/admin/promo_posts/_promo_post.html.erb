@@ -1,0 +1,20 @@
+<div id="<%= dom_id promo_post %>", class="outer-card">
+
+  <%# image_tag promo_post.post_image.url, class: "image-outer"  %>
+
+  <p>
+    <strong>Про промо</strong>
+    <%= promo_post.name %>
+  </p>
+
+  <p>
+    <strong>Автор</strong>
+    <%= promo_post.user.email %>
+  </p>
+
+  <p>
+    <strong>Описание</strong>
+    <%= promo_post.description %>
+  </p>
+
+</div>

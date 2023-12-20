@@ -1,6 +1,10 @@
 <% @posts.each do |post| %>
     <% if post.type == "CoverPost" %>
         <%= render "cover_posts/cover_post", cover_post: post %>
+    <% elsif post.type == "VideoPost" %>
+        <%= render "video_posts/video_post", video_post: post %>
+    <% elsif post.type == "PromoPost" %>
+        <%= render "promo_posts/promo_post", promo_post: post %>
     <% else %>
         <%= render "posts/feed_post", post: post %>
     <% end %>

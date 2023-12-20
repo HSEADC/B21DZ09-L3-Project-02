@@ -11,7 +11,6 @@
     <% else %>
       <%= link_to "Артисты", artists_url, class: "menubar-link"  %>
       <%= link_to "Все посты", welcome_feed_url, class: "menubar-link"  %>
-      <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: "menubar-link user-action"  %>
     <% end %>
   
     <% if user_signed_in? %>

@@ -1,6 +1,6 @@
 <div id="<%= dom_id cover_post %>", class="outer-card">
 
-  <%# image_tag cover_post.post_image.url, class: "image-outer"  %>
+  <%= image_tag cover_post.post_image.url, class: "image-outer"  %>
 
   <p>
     <strong>Про обложку</strong>
@@ -15,6 +15,10 @@
   <p>
     <strong>Описание</strong>
     <%= cover_post.description %>
+  </p>
+
+  <p>
+      <%= link_to "На страницу поста", artist_issue_post_path(cover_post.issue.artist, cover_post.issue, cover_post), class: "link-normal wrapped-action-button center-text narrow" %>
   </p>
 
 </div>

@@ -1,0 +1,23 @@
+<div id="<%= dom_id video_post %>", class="outer-card">
+
+  <%= image_tag video_post.video_post_image.url, class: "image-outer"  %>
+
+  <p>
+    <%= video_post.name %>
+  </p>
+
+  <p>
+    <strong>Автор</strong>
+    <%= video_post.user.email %>
+  </p>
+
+  <p>
+    <strong>Описание</strong>
+    <%= video_post.description %>
+  </p>
+
+  <p class="article">
+    <%= video_post.body%>
+  </p>
+
+</div>

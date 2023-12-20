@@ -1,0 +1,24 @@
+<div id="<%= dom_id video_post %>", class="outer-card">
+
+  <%# image_tag video_post.post_image.url, class: "image-outer"  %>
+
+  <p>
+    <strong>Про видео</strong>
+    <%= video_post.name %>
+  </p>
+
+  <p>
+    <strong>Автор</strong>
+    <%= video_post.user.email %>
+  </p>
+
+  <p>
+    <strong>Описание</strong>
+    <%= video_post.description %>
+  </p>
+
+  <p>
+      <%= link_to "На страницу поста", admin_artist_issue_post_path(@artist, @issue, video_post), class: "link-normal wrapped-action-button center-text narrow" %>
+  </p>
+
+</div>

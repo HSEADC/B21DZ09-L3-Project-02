@@ -19,7 +19,7 @@
   <div>
     <%= form.label :type, style: "display: block", value: "Тип поста" %>
     <%# form.text_field :type %>
-    <%= form.select :type %>
+    <%= form.select :type, ["VideoPost", "PromoPost", "CoverPost"] %>
   </div>
 
   <div>

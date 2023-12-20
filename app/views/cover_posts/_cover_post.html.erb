@@ -1,6 +1,9 @@
 <div id="<%= dom_id cover_post %>", class="outer-card">
 
+  <%# image_tag cover_post.post_image.url, class: "image-outer"  %>
+
   <p>
+    <strong>Про обложку</strong>
     <%= cover_post.name %>
   </p>
 
@@ -12,10 +15,6 @@
   <p>
     <strong>Описание</strong>
     <%= cover_post.description %>
-  </p>
-
-  <p class="article">
-    <%= cover_post.body%>
   </p>
 
 </div>

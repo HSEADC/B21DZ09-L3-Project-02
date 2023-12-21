@@ -6,7 +6,15 @@ class WelcomeController < ApplicationController
   def about
   end
 
-  def feed
+  def covers
+    @posts = Post.all
+  end
+
+  def videos
+    @posts = Post.all
+  end
+
+  def promos
     @posts = Post.all
   end
 end

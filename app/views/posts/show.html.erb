@@ -9,15 +9,15 @@
 <% end %>
   
 <% if can? :manage, @post %>
-  <%# button_to "Удалить пост", [@artist, @post.issue, artist_issue_post_path(@post).to_sym], method: :delete, class: "destroy-button" %>
+  <%= button_to "Удалить пост",post_path(@post), method: :delete, class: "destroy-button" %>
 <% end %>
 
 <h2 class="heading">Комментарии</h2>
-<%= render @post.comments %>
+<%# render @post.comments %>
 
 <h2>Оставить комментарий</h2>
-<% if can? :create, Comment %>
-  <%= render "admin/comments/form" %>
+<% if can? :create, Comment %>a
+  <%# render "admin/comments/form" %>
 <% end %>
 
 <% if not can? :create, Comment %>

@@ -82,19 +82,24 @@ raw_text = "Oh-oh-oh-oh-oh, oh-oh-oh-oh, oh-oh-oh
 def seed
     puts "Seeding started"
     reset_db
+    clean_content_folders
     create_admin
     create_users
     create_artists
-    create_issues(15)
+    create_issues(5)
     create_posts(5)
     create_comments(2..4)
-    create_comment_replies(1000)
+    create_comment_replies(10)
 end
 
 def reset_db
     Rake::Task['db:drop'].invoke
     Rake::Task['db:create'].invoke
     Rake::Task['db:migrate'].invoke
+end
+
+def clean_content_folders
+  FileUtils.rm_rf('public/uploads')
 end
 
 def create_sentence
@@ -198,11 +203,12 @@ end
 
 def create_posts(quantity)
     issues = Issue.all
+    types = ["CoverPost", "VideoPost", "PromoPost"]
 
     issues.each do |issue|
         quantity.times do
             user = User.all.sample
-            post = Post.create(name: create_sentence, description: create_sentence, body: create_paragraph, issue_id: issue.id, post_image: upload_random_post_image, user_id: user.id)
+            post = Post.create(name: create_sentence, type: types.sample, description: create_sentence, body: create_paragraph, issue_id: issue.id, post_image: upload_random_post_image, user_id: user.id)
             puts "Post with id #{post.id} for release with id #{post.issue.id} just created"
         end
     end

@@ -20,6 +20,15 @@ namespace :admin do
   resources :subscriptions
 end
 
+resources :posts, only: [:new, :create, :destroy] do
+  # collection do 
+  #   get "new_for_artist", to: "posts#new_for_artist"
+  # end
+end 
+
+# get "posts/new_for_artist", to: "posts#new_for_artist", as: "new_post_for_artist"
+
+
 
 resources :artists do
   resources :issues do
@@ -33,9 +42,12 @@ end
 
   devise_for :users
 
+  get 'welcome/covers'
+  get 'welcome/promos'
+  get 'welcome/videos'
+
   get 'welcome/index'
   get 'welcome/about'
-  get 'welcome/feed'
   root 'welcome#index'
   
 end

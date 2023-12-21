@@ -11,7 +11,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-<% if controller_name == "welcome" && action_name != "feed"%>
+<% if controller_name == "welcome" && !['covers', 'videos', 'promos'].include?(action_name)%>
   <body class="welcome">
     <%= render 'promo_menubar' if controller_name == "welcome"%>
     <%= yield %>

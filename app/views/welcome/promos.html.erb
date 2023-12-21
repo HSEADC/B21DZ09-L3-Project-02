@@ -1,0 +1,3 @@
+<% @posts.each do |post| %>
+    <%= render "promo_posts/promo_post", promo_post: post if post.type == "PromoPost" %>
+<% end %>

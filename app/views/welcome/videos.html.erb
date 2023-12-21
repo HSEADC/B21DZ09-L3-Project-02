@@ -1,0 +1,3 @@
+<% @posts.each do |post| %>
+    <%= render "video_posts/video_post", video_post: post if post.type == "VideoPost" %>
+<% end %>

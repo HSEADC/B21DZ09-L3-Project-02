@@ -15,8 +15,8 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @artist = Artist.find(params[:artist_id])
-    @issue = Issue.find(params[:issue_id])
+    # @artist = Artist.find(params[:artist_id])
+    # @issue = Issue.find(params[:issue_id])
     @post = Post.new
   end
 

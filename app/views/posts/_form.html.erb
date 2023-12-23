@@ -1,4 +1,7 @@
-<%= form_with(model: [:admin, artist, issue, post], url: url) do |form| %>
+<%= form_with(model: post) do |form| %>
+  <% issue_id_array = [] %>
+  <% artist_id_array = [] %>
+
   <% if post.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -17,8 +20,17 @@
   </div>
 
   <div>
+    <%= form.label :issue_id, style: "display: block", value: "ID Релиза" %>
+    
+    <% Post.all.each do |post| %>
+      <% issue_id_array.push(post.issue_id) %>
+    <% end %>
+    <%= form.select :issue_id, issue_id_array.uniq %>
+  </div>
+
+  <div>
     <%= form.label :type, style: "display: block", value: "Тип поста" %>
-    <%= form.text_field :type %>
+    <%= form.select :type, ["VideoPost", "PromoPost", "CoverPost"] %>
   </div>
 
   <div>

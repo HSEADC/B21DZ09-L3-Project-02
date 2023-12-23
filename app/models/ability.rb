@@ -8,10 +8,10 @@ class Ability
       can :manage, :all
     end
 
-    # can :read, Artist
-    # can :read, Issue
-    # can :read, Post
-    # can :read, Comment
+    can :read, Artist
+    can :read, Issue
+    can :read, Post
+    can :read, Comment
 
     # return unless user.present?
     # can :create, Artist
@@ -19,9 +19,9 @@ class Ability
     # can :create, Issue
     # can :manage, Issue, user_id: user.id
     # can :create, Post
-    # can :manage, Post, user_id: user.id
-    # can :create, Comment
-    # can :manage, Comment, user_id: user.id
+    can :manage, Post, user_id: user.id
+    can :create, Comment
+    can :manage, Comment, user_id: user.id
     
     # Define abilities for the user here. For example:
     #

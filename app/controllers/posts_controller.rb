@@ -28,6 +28,13 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
+    # p = nil
+    # if params[:post]
+    #   p = post_params
+    # elsif params[:cover_post]
+    #   p = cover_post_params
+    # end
+
     @artist = Artist.find(params[:artist_id])
     @issue = Issue.find(params[:issue_id])
     @post = Post.new(name:params[:post][:name], type: params[:post][:type], description: params[:post][:description], body: params[:post][:body], post_image: params[:post][:post_image], issue_id: @issue.id, user_id: current_user.id)
@@ -49,7 +56,7 @@ class PostsController < ApplicationController
     @issue = Issue.find(params[:issue_id])
 
     respond_to do |format|
-      if @post.update(post_params)
+      if @post.update(sti_post_params)
         format.html { redirect_to artist_issue_post_path(@artist, @issue, @post), notice: "Post was successfully updated." }
         format.json { render :show, status: :ok, location: @post }
       else
@@ -79,11 +86,38 @@ class PostsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def post_params
-      params.require(:post).permit(:name, :description, :body, :issue_id, :post_image).merge(user_id: current_user.id)
-    end
+    # def post_params
+    #   params.require(:post).permit(:type, :name, :description, :body, :issue_id, :post_image).merge(user_id: current_user.id)
+    # end
 
-    def feed
-      @posts = Post.all
+    # def cover_post_params
+    #   params.require(:cover_post).permit(:type, :name, :description, :body, :issue_id, :post_image).merge(user_id: current_user.id)
+    # end
+
+    # def video_post_params
+    #   params.require(:video_post).permit(:type, :name, :description, :body, :issue_id, :post_image).merge(user_id: current_user.id)
+    # end
+
+    # def promo_post_params
+    #   params.require(:promo_post).permit(:type, :name, :description, :body, :issue_id, :post_image).merge(user_id: current_user.id)
+    # end
+
+    # def feed
+    #   @posts = Post.all
+    # end
+
+    def sti_post_params
+      p = nil
+      if params[:post]
+        p = params.require(:post)
+      elsif params[:cover_post]
+        p = params.require(:cover_post)
+      elsif params[:video_post]
+        p = params.require(:video_post)
+      elsif params[:promo_post]
+        p = params.require(:promo_post)
+      end
+
+      p.permit(:type, :name, :description, :body, :issue_id, :post_image).merge(user_id: current_user.id)
     end
 end

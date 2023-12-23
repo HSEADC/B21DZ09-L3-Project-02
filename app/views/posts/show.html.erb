@@ -5,7 +5,7 @@
 <%= render partial: "post_inner", locals: { post: @post } %>
 
 <% if can? :manage, @post %>
-    <%= link_to "Редактировать пост", edit_artist_issue_post_path(@post), class: "link-normal action-button center-text", style: "width: 200px; margin: 0;" %>
+    <%= link_to "Редактировать пост", edit_artist_issue_post_path(@artist, @issue, @post), class: "link-normal action-button center-text", style: "width: 200px; margin: 0;" %>
 <% end %>
   
 <% if can? :manage, @post %>
@@ -16,8 +16,8 @@
 <%# render @post.comments %>
 
 <h2>Оставить комментарий</h2>
-<% if can? :create, Comment %>a
-  <%# render "admin/comments/form" %>
+<% if can? :create, Comment %>
+  <%# render "comments/form" %>
 <% end %>
 
 <% if not can? :create, Comment %>

@@ -1,4 +1,4 @@
-<%= form_with(model: post) do |form| %>
+<%= form_with(model: post, url: url) do |form| %>
   <% issue_id_array = [] %>
   <% artist_id_array = [] %>
 
@@ -17,6 +17,15 @@
   <div>
     <%= form.label :post_image, style: "display: block", value: "Обложка" %>
     <%= form.file_field :post_image %>
+  </div>
+
+  <div>
+    <%= form.label :issue_id, style: "display: block", value: "ID Исполнителя" %>
+    
+    <% Post.all.each do |post| %>
+      <% issue_id_array.push(post.issue_id) %>
+    <% end %>
+    <%= form.select :issue_id, issue_id_array.uniq %>
   </div>
 
   <div>

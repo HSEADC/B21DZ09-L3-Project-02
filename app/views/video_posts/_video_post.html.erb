@@ -17,4 +17,8 @@
     <%= video_post.description %>
   </p>
 
+  <p>
+    <%= link_to "На страницу поста", artist_issue_post_path(Issue.find(video_post.issue_id).artist_id, video_post.issue_id, video_post), class: "link-normal wrapped-action-button center-text narrow" %>
+  </p>
+
 </div>

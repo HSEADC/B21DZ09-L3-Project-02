@@ -37,7 +37,7 @@
 
   <div>
     <%= form.label :tag_list, style: "display: block", value: "Теги" %>
-    <%= form.text_field :tag_list %>
+    <%= form.text_field :tag_list, value: post.tag_list.join(", ") %>
   </div>
 
   <div>

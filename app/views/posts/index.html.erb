@@ -1,12 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>Поиск по постам</h1>
+
+<div>
+    <% Post.tag_counts_on(:tags).each do |tag| %>
+        <div class="tag">
+            <%= link_to tagged_posts_path(tag.name) do%>
+                <%= tag.name %> (<%= tag.taggings_count %>)
+            <% end %>
+        </div>
+    <% end %>
+</div>
 
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
     <p>
-      <%= link_to "Show this post", post %>
+      <%= link_to "Show this post", post_path(post) %>
     </p>
   <% end %>
 </div>

@@ -7,6 +7,11 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def by_tag
+    @posts = Post.tagged_with(params[:tag])
+    render :index
+  end
+
   # GET /posts/1 or /posts/1.json
   def show
     @artist = Artist.find(params[:artist_id])

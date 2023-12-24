@@ -2,6 +2,7 @@ class Admin::PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
   load_and_authorize_resource
 
+
   # GET /posts or /posts.json
   def index
     @posts = Post.all

@@ -1,3 +1,13 @@
+<div>
+    <% Post.tag_counts_on(:tags).each do |tag| %>
+        <div class="tag">
+            <%= link_to tagged_posts_path(tag.name) do%>
+                <%= tag.name %> (<%= tag.taggings_count %>)
+            <% end %>
+        </div>
+    <% end %>
+</div>
+
 <% @posts.each do |post| %>
     <%= render "cover_posts/cover_post", cover_post: post if post.type == "CoverPost" %>
 <% end %>

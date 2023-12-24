@@ -21,6 +21,11 @@ namespace :admin do
 end
 
 resources :posts, only: [:new, :create, :destroy, :edit, :show] do
+  
+
+  collection do
+    get "by_tag/:tag", to: "posts#by_tag", as: "tagged"
+  end
   # collection do 
   #   get "new_for_artist", to: "posts#new_for_artist"
   # end

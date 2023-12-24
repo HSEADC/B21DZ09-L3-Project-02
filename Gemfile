@@ -48,8 +48,11 @@ gem "bootsnap", require: false
 gem "carrierwave"
 gem "devise"
 gem "cancancan"
-
 gem 'acts-as-taggable-on', '~> 9.0'
+gem "sass-rails"
+
+
+
 
 gem "rack-cors"
 

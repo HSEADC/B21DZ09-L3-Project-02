@@ -4,22 +4,20 @@
 
 <%= render partial: "post_inner", locals: { post: @post } %>
 
-<% if can? :manage, @post %>
-    <%= link_to "Редактировать пост", edit_artist_issue_post_path(@artist, @issue, @post), class: "link-normal action-button center-text", style: "width: 200px; margin: 0;" %>
+<% if user_signed_in? %>
+    <%= link_to "Редактировать пост", edit_artist_issue_post_path(@artist, @issue, @post), class: "link-normal action-button center-text", style: "width: 200px; margin: 0;" if can? :manage, @post %>
 <% end %>
   
-<% if can? :manage, @post %>
-  <%= button_to "Удалить пост",post_path(@post), method: :delete, class: "destroy-button" %>
+<% if user_signed_in? %>
+  <%= button_to "Удалить пост",post_path(@post), method: :delete, class: "destroy-button" if can? :manage, @post %>
 <% end %>
 
 <h2 class="heading">Комментарии</h2>
 <%# render @post.comments %>
 
 <h2>Оставить комментарий</h2>
-<% if can? :create, Comment %>
-  <%# render "comments/form" %>
-<% end %>
-
-<% if not can? :create, Comment %>
+<% if user_signed_in? %>
+  <%# render "comments/form" if can? :create, Comment %>
+<% else %>
   <p> Для того, чтобы оставлять комментарии надо авторизоваться :( </p>
 <% end %>

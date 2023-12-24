@@ -6,6 +6,15 @@
     <strong>Про обложку</strong>
     <%= cover_post.name %>
   </p>
+  
+  <p>
+    <strong>Теги</strong>
+    <% cover_post.tag_list.each do |tag| %>
+      <span>
+        <%= tag %>
+      </span>
+    <% end %>
+  </p>
 
   <p>
     <strong>Автор</strong>

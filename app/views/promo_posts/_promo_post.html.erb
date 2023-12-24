@@ -8,6 +8,15 @@
   </p>
 
   <p>
+    <strong>Теги</strong>
+    <% promo_post.tag_list.each do |tag| %>
+      <span>
+        <%= tag %>
+      </span>
+    <% end %>
+  </p>
+
+  <p>
     <strong>Автор</strong>
     <%= promo_post.user.email %>
   </p>

@@ -5,10 +5,13 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.all
+
+    @title = "Поиск"
   end
 
   def by_tag
     @posts = Post.tagged_with(params[:tag])
+    @title = "Поиск"
     render :index
   end
 
@@ -16,6 +19,9 @@ class PostsController < ApplicationController
   def show
     @artist = Artist.find(params[:artist_id])
     @issue = Issue.find(params[:issue_id])
+
+    @title = @post.name
+    @description = @post.description
   end
 
   # GET /posts/new

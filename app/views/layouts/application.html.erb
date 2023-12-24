@@ -1,27 +1,48 @@
 <!DOCTYPE html>
+<%
+  title = "Musial"
+  if @title
+    @title = [@title, title].join(" | ")
+  else
+    @title = title
+  end
+%>
+
 <html>
   <head>
-    <title>Musial</title>
+    <title><%= @title %></title>
     <%= favicon_link_tag asset_path('favicon.png') %>
+    <meta name="description" content="#{@description}">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%
+      set_meta_tags og: {
+        title: @title,
+        url: request.original_url,
+        image: "http://ia.media-imdb.com/rock.jpg"
+      }
+    %>
+    <meta property="og:title" content="<%= @title %>">
+    <meta property="og:image" content="<%= request.base_url + "/shared/share_og.png" %>">
+    <meta property="og:url" content="<%= request.base_url + request.path %>">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-<% if controller_name == "welcome" && !['covers', 'videos', 'promos'].include?(action_name)%>
-  <body class="welcome">
-    <%= render 'promo_menubar' if controller_name == "welcome"%>
-    <%= yield %>
-    <%= render 'promo_footer' if controller_name == "welcome"%>
-  </body>
-<% else %>
-  <body class="admin">
-    <%= render 'menubar'%>
-    <%= yield %>
-    <%= render 'footer'%>
-  </body>
-<% end %>
+  <% if controller_name == "welcome" && !['covers', 'videos', 'promos'].include?(action_name)%>
+    <body class="welcome">
+      <%= render 'promo_menubar' if controller_name == "welcome"%>
+      <%= yield %>
+      <%= render 'promo_footer' if controller_name == "welcome"%>
+    </body>
+  <% else %>
+    <body class="admin">
+      <%= render 'menubar'%>
+      <%= yield %>
+      <%= render 'footer'%>
+    </body>
+  <% end %>
 </html>

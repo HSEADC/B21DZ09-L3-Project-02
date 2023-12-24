@@ -49,6 +49,8 @@ gem "carrierwave"
 gem "devise"
 gem "cancancan"
 
+gem 'acts-as-taggable-on', '~> 9.0'
+
 gem "rack-cors"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]

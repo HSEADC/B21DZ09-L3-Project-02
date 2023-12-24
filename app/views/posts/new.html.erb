@@ -1,9 +1,9 @@
 <h1>Новая публикация</h1>
 
-<%= render "form", post: @post, url: welcome_covers_url %>
+<%= render "form", post: @post, url: posts_path(@post) %>
 
 <br>
 
 <div>
-  <%# link_to "На страницу релиза", admin_artist_issue_path(@artist, @issue), class: "link-normal" %>
+  <%# link_to "На страницу релиза", artist_issue_path(@artist, @issue), class: "link-normal" %>
 </div>

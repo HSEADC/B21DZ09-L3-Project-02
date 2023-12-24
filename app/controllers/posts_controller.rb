@@ -35,9 +35,9 @@ class PostsController < ApplicationController
     #   p = cover_post_params
     # end
 
-    @artist = Artist.find(params[:artist_id])
-    @issue = Issue.find(params[:issue_id])
-    @post = Post.new(name:params[:post][:name], type: params[:post][:type], description: params[:post][:description], body: params[:post][:body], post_image: params[:post][:post_image], issue_id: @issue.id, user_id: current_user.id)
+    @artist = Artist.find(params[:post][:artist_id])
+    @issue = Issue.find(params[:post][:issue_id])
+    @post = Post.new(name: params[:post][:name], type: params[:post][:type], description: params[:post][:description], body: params[:post][:body], post_image: params[:post][:post_image], tag_list: params[:post][:tag_list], issue_id: @issue.id, user_id: current_user.id)
 
     respond_to do |format|
       if @post.save
@@ -118,6 +118,6 @@ class PostsController < ApplicationController
         p = params.require(:promo_post)
       end
 
-      p.permit(:type, :name, :description, :body, :issue_id, :post_image).merge(user_id: current_user.id)
+      p.permit(:type, :name, :description, :body, :issue_id, :post_image, :tag_list).merge(user_id: current_user.id)
     end
 end

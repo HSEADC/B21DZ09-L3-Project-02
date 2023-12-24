@@ -20,7 +20,7 @@ namespace :admin do
   resources :subscriptions
 end
 
-resources :posts, only: [:new, :create, :destroy, :edit] do
+resources :posts, only: [:new, :create, :destroy, :edit, :show] do
   # collection do 
   #   get "new_for_artist", to: "posts#new_for_artist"
   # end

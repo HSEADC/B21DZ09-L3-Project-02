@@ -21,7 +21,14 @@
 
   <div>
     <%= form.label :issue_id, style: "display: block", value: "ID Исполнителя" %>
-    
+    <% Issue.all.each do |issue| %>
+      <% artist_id_array.push(issue.artist_id) %>
+    <% end %>
+    <%= form.select :artist_id, artist_id_array.uniq %>
+  </div>
+
+  <div>
+    <%= form.label :issue_id, style: "display: block", value: "ID Релиза" %>
     <% Post.all.each do |post| %>
       <% issue_id_array.push(post.issue_id) %>
     <% end %>
@@ -29,12 +36,8 @@
   </div>
 
   <div>
-    <%= form.label :issue_id, style: "display: block", value: "ID Релиза" %>
-    
-    <% Post.all.each do |post| %>
-      <% issue_id_array.push(post.issue_id) %>
-    <% end %>
-    <%= form.select :issue_id, issue_id_array.uniq %>
+    <%= form.label :tag_list, style: "display: block", value: "Теги" %>
+    <%= form.text_field :tag_list %>
   </div>
 
   <div>

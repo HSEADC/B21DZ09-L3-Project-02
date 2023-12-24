@@ -8,6 +8,15 @@
   </p>
 
   <p>
+    <strong>Теги</strong>
+    <% video_post.tag_list.each do |tag| %>
+      <span>
+        <%= tag %>
+      </span>
+    <% end %>
+  </p>
+
+  <p>
     <strong>Автор</strong>
     <%= video_post.user.email %>
   </p>
@@ -16,6 +25,8 @@
     <strong>Описание</strong>
     <%= video_post.description %>
   </p>
+
+  
 
   <p>
     <%= link_to "На страницу поста", artist_issue_post_path(Issue.find(video_post.issue_id).artist_id, video_post.issue_id, video_post), class: "link-normal wrapped-action-button center-text narrow" %>

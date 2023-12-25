@@ -1,35 +1,33 @@
-<div id="<%= dom_id video_post %>", class="outer-card">
+<%= link_to artist_issue_post_path(video_post.issue.artist, video_post.issue, video_post) do %>
+  <div id="<%= dom_id video_post %>", class="outer-card">
 
-  <%= image_tag video_post.post_image.url, class: "image-outer"  %>
+    <%= image_tag video_post.post_image.url, class: "image-outer"  %>
 
-  <p>
-    <strong>Про видео</strong>
-    <%= video_post.name %>
-  </p>
+    <p>
+      <strong>Про видео</strong>
+      <%= video_post.name %>
+    </p>
 
-  <p>
-    <strong>Теги</strong>
-    <% video_post.tag_list.each do |tag| %>
-      <span>
-        <%= tag %>
-      </span>
-    <% end %>
-  </p>
+    <p>
+      <strong>Теги</strong>
+      <% video_post.tag_list.each do |tag| %>
+        <span>
+          <%= tag %>
+        </span>
+      <% end %>
+    </p>
 
-  <p>
-    <strong>Автор</strong>
-    <%= video_post.user.email %>
-  </p>
+    <div style="display: inline-flex; align-items: center; gap: 20px;">
+      <%= image_tag video_post.user.avatar.url, style: "width: 50px; border-radius: 8px;" %>
+      <p>
+        <strong>Автор</strong>
+        <%= video_post.user.email %>
+      </p>
+    </div>
 
-  <p>
-    <strong>Описание</strong>
-    <%= video_post.description %>
-  </p>
-
-  
-
-  <p>
-    <%= link_to "На страницу поста", artist_issue_post_path(Issue.find(video_post.issue_id).artist_id, video_post.issue_id, video_post), class: "link-normal wrapped-action-button center-text narrow" %>
-  </p>
-
-</div>
+    <p>
+      <strong>Описание</strong>
+      <%= video_post.description %>
+    </p>
+  </div>
+<% end %>

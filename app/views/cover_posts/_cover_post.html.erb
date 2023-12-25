@@ -1,33 +1,41 @@
-<div id="<%= dom_id cover_post %>", class="outer-card">
-
-  <%= image_tag cover_post.post_image.url, class: "image-outer"  %>
-
-  <p>
-    <strong>Про обложку</strong>
-    <%= cover_post.name %>
-  </p>
+<%= link_to artist_issue_post_path(cover_post.issue.artist, cover_post.issue, cover_post) do %>
   
-  <p>
-    <strong>Теги</strong>
-    <% cover_post.tag_list.each do |tag| %>
-      <span>
-        <%= tag %>
-      </span>
-    <% end %>
-  </p>
+  <div id="<%= dom_id cover_post %>", class="outer-card">
+    
+    <%= image_tag cover_post.post_image.url, class: "image-outer"  %>
 
-  <p>
-    <strong>Автор</strong>
-    <%= cover_post.user.email %>
-  </p>
+    <p>
+      <strong>Про обложку</strong>
+      <%= cover_post.name %>
+    </p>
+    
+    <p>
+      <strong>Теги</strong>
+      <% cover_post.tag_list.each do |tag| %>
+        <span>
+          <%= tag %>
+        </span>
+      <% end %>
+    </p>
 
-  <p>
-    <strong>Описание</strong>
-    <%= cover_post.description %>
-  </p>
+    <div style="display: inline-flex; align-items: center; gap: 20px;">
+      <%= image_tag cover_post.user.avatar.url, style: "width: 50px; border-radius: 8px;" %>
+      <p>
+        <strong>Автор</strong>
+        <%= cover_post.user.email %>
+      </p>
+    </div>
 
-  <p>
-      <%= link_to "На страницу поста", artist_issue_post_path(cover_post.issue.artist, cover_post.issue, cover_post), class: "link-normal wrapped-action-button center-text narrow" %>
-  </p>
+    <p>
+      <strong>Описание</strong>
+      <%= cover_post.description %>
+    </p>
 
-</div>
+    <p>
+      <strong>Комментариев</strong>
+      <%= cover_post.comments.count %>
+    </p>
+
+  </div>
+
+<% end %>

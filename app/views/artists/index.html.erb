@@ -5,9 +5,8 @@
 
 <div id="artists">
   <% @artists.each do |artist| %>
-    <%= render artist %>
-    <p class="action-button">
-      <%= link_to "На страницу артиста", [artist], class: "link-normal center-text" %>
-    </p>
+    <%= link_to [artist] do %>
+      <%= render artist %>
+    <% end %>
   <% end %>
 </div>

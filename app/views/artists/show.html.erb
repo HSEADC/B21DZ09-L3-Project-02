@@ -1,25 +1,17 @@
 <p style="color: green"><%= notice %></p>
-<%= link_to "Back to artists", admin_artists_path, class: "link-normal action-button center-text", style: "width: 200px; margin: 0; margin-top: 20px;" %>
 <%= render @artist %>
 
 <div class="inner-body">
-  <% if can? :manage, @artist %>
-    <%= link_to "Редактировать артиста", edit_admin_artist_path(@artist), class: "link-normal action-button center-text", style: "width: 200px; margin: 0;" %>
-  <% end %>
-  <% if can? :manage, @artist %>
-    <%= button_to "Удалить артиста", [:admin, @artist], method: :delete, class: "destroy-button" %>
-  <% end %>
-  
-
-  
   <% if can? :create, Issue %>
     <h2 class="heading">Добавить релиз артиста</h2>
     <%= link_to "Новый релиз", new_admin_artist_issue_path(@artist), class: "link-normal" %>
   <% end %>
   
 
-  <h2 class="heading"> Релизы артиста </h2>
-  <%= render @artist.issues %>
+  <h2 class="heading"> Связанные публикации </h2>
+  <% @artist.issues.each do |issue| %>
+    <%= render issue.posts %>
+  <% end %>
   
 
   

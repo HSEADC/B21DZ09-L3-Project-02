@@ -8,14 +8,14 @@
       <%= link_to "Видеоклипы", welcome_videos_url, class: "menubar-link"  %>
       <%= link_to "Подписки", admin_subscriptions_url, class: "menubar-link" if current_user.admin == true %>
       <%= link_to "+", new_post_path, url: posts_path(@post), class: "menubar-link" %>
-      <%# link_to "Профиль", profile_path(current_user.profile), class: "menubar-link" %>
+      <%= link_to "Профиль", edit_user_registration_path, class: "menubar-link" %>
       <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: "menubar-link user-action"  %>
     <% else %>
       <%= link_to "Исполнители", artists_url, class: "menubar-link"  %>
       <%= link_to "Промо-кампании", welcome_promos_url, class: "menubar-link"  %>
       <%= link_to "Видеоклипы", welcome_videos_url, class: "menubar-link"  %>
       <%= link_to "Обложки", welcome_covers_url, class: "menubar-link"  %>
-      <%= link_to 'Sign in', new_user_session_path, class: "menubar-link" %>
+      <%= link_to 'Войти', new_user_session_path, class: "menubar-link" %>
     <% end %>
 
     <% if user_signed_in? %>

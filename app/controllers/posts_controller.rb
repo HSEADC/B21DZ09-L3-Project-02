@@ -52,7 +52,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to artist_issue_url(@artist, @issue), notice: "Post was successfully created." }
+        format.html { redirect_to artist_issue_post_url(@artist, @issue, @post), notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -79,13 +79,25 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1 or /posts/1.json
   def destroy
-    @artist = Artist.find(params[:artist_id])
-    @issue = Issue.find(params[:issue_id])
+    @artist = Artist.find(@post.issue.artist_id)
+    @issue = Issue.find(@post.issue_id)
     @post = @issue.posts.find(params[:id])
+
+    type = @post.type
+    url = nil
+
+    if type == "CoverPost"
+      url = welcome_covers_url
+    elsif type == "VideoPost"
+      url = welcome_videos_url
+    elsif type == "PromoPost"
+      url = welcome_promos_url
+    end
+
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to artist_issue_url(@artist, @issue), notice: "Post was successfully destroyed." }
+      format.html { redirect_to url, notice: "Post was successfully destroyed." }
       format.json { head :no_content }
     end
   end

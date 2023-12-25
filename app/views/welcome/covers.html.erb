@@ -1,4 +1,4 @@
-<div>
+<div style="display: inline-flex; align-items: flex-start; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <% Post.tag_counts_on(:tags).each do |tag| %>
         <div class="tag">
             <%= link_to tagged_posts_path(tag.name) do%>

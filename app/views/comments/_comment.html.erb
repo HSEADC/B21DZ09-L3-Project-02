@@ -1,6 +1,7 @@
 <div class="outer-card">
 
 	<p>
+		<%= image_tag comment.user.avatar.url, style: "width: 50px; border-radius: 8px;" %>
 		<b>Автор:</b>
 		<%= comment.user.email %>
 	</p>
@@ -11,14 +12,14 @@
 
 	<% if can? :manage, comment %>
 		<p>
-			<%= button_to 'Удалить комментарий', [comment.post.issue.artist, comment.post.issue, comment.post, comment], :method => :delete, class: "destroy-button" %>
+			<%# button_to 'Удалить комментарий', [comment.post.issue.artist, comment.post.issue, comment.post, comment], :method => :delete, class: "destroy-button" %>
 		</p>
 	<% end %>
 
 	<div class="comment-replies">
 
 		<% comment.replies.each do |reply| %>
-			<%= render reply, partial: "admin/comments/comment", comment: reply, post: comment.post %>
+			<%= render reply, partial: "comments/comment", comment: reply, post: comment.post %>
 		<% end %>
 	</div> 
 

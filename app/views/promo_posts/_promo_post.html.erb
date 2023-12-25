@@ -1,34 +1,36 @@
-<div id="<%= dom_id promo_post %>", class="outer-card">
+<%= link_to artist_issue_post_path(promo_post.issue.artist, promo_post.issue, promo_post) do %>
 
-  <%= image_tag promo_post.post_image.url, class: "image-outer"  %>
+  <div id="<%= dom_id promo_post %>", class="outer-card">
 
-  <p>
-    <strong>Про промо</strong>
-    <%= promo_post.name %>
-  </p>
+    <%= image_tag promo_post.post_image.url, class: "image-outer"  %>
 
-  <p>
-    <strong>Теги</strong>
-    <% promo_post.tag_list.each do |tag| %>
-      <span>
-        <%= tag %>
-      </span>
-    <% end %>
-  </p>
+    <p>
+      <strong>Про промо</strong>
+      <%= promo_post.name %>
+    </p>
 
-  <p>
-    <strong>Автор</strong>
-    <%= promo_post.user.email %>
-  </p>
+    <p>
+      <strong>Теги</strong>
+      <% promo_post.tag_list.each do |tag| %>
+        <span>
+          <%= tag %>
+        </span>
+      <% end %>
+    </p>
 
-  <p>
-    <strong>Описание</strong>
-    <%= promo_post.description %>
-  </p>
+    <div style="display: inline-flex; align-items: center; gap: 20px;">
+      <%= image_tag promo_post.user.avatar.url, style: "width: 50px; border-radius: 8px;" %>
+      <p>
+        <strong>Автор</strong>
+        <%= promo_post.user.email %>
+      </p>
+    </div>
 
-  <p>
-      <%= link_to "На страницу поста", artist_issue_post_path(Issue.find(promo_post.issue_id).artist_id, promo_post.issue_id, promo_post), class: "link-normal wrapped-action-button center-text narrow" %>
-  </p>
-  
+    <p>
+      <strong>Описание</strong>
+      <%= promo_post.description %>
+    </p>
+    
+  </div>
 
-</div>
+<% end %>

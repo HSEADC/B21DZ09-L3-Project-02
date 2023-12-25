@@ -14,5 +14,8 @@
  *= require_self
  *= require fonts
  *= require vars
- *= require_tree ./components
+ *= require_tree ./atoms
+ *= require_tree ./molecules
+ *= require_tree ./organisms
+ *= require_tree ./superorganisms
  */

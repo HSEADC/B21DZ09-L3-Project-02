@@ -1,23 +1,21 @@
-<div id="<%= dom_id issue %>", class="outer-content-card">
+<%= link_to artist_issue_path(@artist, issue)do %>
+  <div id="<%= dom_id issue %>", class="outer-content-card">
 
-  <%= image_tag issue.post_image.url, class: "image-outer small"  %>
+    <%= image_tag issue.post_image.url, class: "image-outer small"  %>
 
-  <p>
-    <%= issue.name %>
-  </p>
+    <p>
+      <%= issue.name %>
+    </p>
 
-  <p>
-    <strong>Описание:</strong>
-    <%= issue.description %>
-  </p>
+    <p>
+      <strong>Описание:</strong>
+      <%= issue.description %>
+    </p>
 
-  <p>
-  <strong>Автор:</strong>
-  <%= issue.user.email %>
-  </p>
+    <p>
+    <strong>Автор:</strong>
+    <%= issue.user.email %>
+    </p>
 
-  <p>
-      <%= link_to "На страницу релиза", admin_artist_issue_path(@artist, issue), class: "link-normal wrapped-action-button center-text narrow" %>
-  </p>
-
-</div>
+  </div>
+<% end %>

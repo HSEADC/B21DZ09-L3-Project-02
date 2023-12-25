@@ -88,7 +88,7 @@ def seed
     create_artists
     create_issues(5)
     create_posts(5)
-    create_comments(2..4)
+    create_comments(2..10)
     create_comment_replies(10)
 end
 
@@ -140,11 +140,18 @@ def upload_random_artist_image
   uploader
 end
 
+def upload_random_user_avatar
+  uploader = AvatarUploader.new(User.new, :avatar)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'public/autoupload/artists_covers', '*')).sample))
+  uploader
+end
+
 def create_admin
   user_data = {
     email: "admin@email.com",
     password: 'testtest',
-    admin: true
+    admin: true,
+    avatar: upload_random_user_avatar
   }
 
   user = User.create!(user_data)
@@ -158,7 +165,8 @@ def create_users
   10.times do
     user_data = {
       email: "user_#{i}@email.com",
-      password: 'testtest'
+      password: 'testtest',
+      avatar: upload_random_user_avatar
     }
 
     user = User.create!(user_data)
@@ -208,7 +216,7 @@ def create_posts(quantity)
     issues.each do |issue|
         quantity.times do
             user = User.all.sample
-            post = Post.create(name: create_sentence, type: types.sample, description: create_sentence, body: create_paragraph, issue_id: issue.id, post_image: upload_random_post_image, user_id: user.id)
+            post = Post.create(name: create_sentence, type: types.sample, description: create_sentence, body: create_paragraph, issue_id: issue.id, post_image: upload_random_post_image, user_id: user.id, tag_list: [@words.sample, @words.sample])
             puts "Post with id #{post.id} for release with id #{post.issue.id} just created"
         end
     end

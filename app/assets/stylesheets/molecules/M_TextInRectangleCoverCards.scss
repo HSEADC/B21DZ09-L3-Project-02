@@ -1,5 +1,7 @@
-.M_TextInRectangleCoverCards {
+.M_FlexInRectangleCoverCards {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 768px;
+    height: 254px;
 }

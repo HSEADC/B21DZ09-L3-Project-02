@@ -20,6 +20,7 @@ h1, h2, h3, p {
     font-size: 32px;
     color: #404040;
     text-decoration: none;
+    opacity: 50%
 }
 
 .user-action {
@@ -36,7 +37,9 @@ h1, h2, h3, p {
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px 30px 0 30px;
-    
+}
+.menubar-link:hover {
+    opacity: 100%;
 }
 
 .image-inner {

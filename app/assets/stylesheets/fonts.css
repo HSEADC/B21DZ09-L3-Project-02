@@ -1,4 +1,4 @@
-@font-face {
+  @font-face {
     font-family: "PangramBold";
     src: url("/assets/PPPangramSans-Bold.otf") format("opentype");
   }
@@ -17,4 +17,20 @@
   @font-face {
     font-family: "PangramThin";
     src: url("/assets/PPPangramSans-Thin.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "SuisseBold";
+    src: url("/assets/SuisseIntl-Bold.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "SuisseMedium";
+    src: url("/assets/SuisseIntl-Medium.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "SuisseBook";
+    src: url("/assets/SuisseIntl-Book.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "SuisseRegular";
+    src: url("assets/SuisseIntl-Regular.otf") format("opentype");
   }

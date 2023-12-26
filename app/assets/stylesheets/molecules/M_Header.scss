@@ -1,0 +1,19 @@
+.M_Header {
+    background-color: var(--dark-gray);
+    display: flex;
+    width: 1628px;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 660px;
+}
+.M_Header a {
+    font-family: "SuisseMedium";
+    font-size: 18px;
+    color: var(--white);
+    opacity: 50%;
+}
+.M_Header a:hover {
+    opacity: 100%;
+}

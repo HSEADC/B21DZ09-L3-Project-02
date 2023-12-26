@@ -1,15 +1,20 @@
 <nav>
-  <div class="menubar">
+  <div class="M_Header">
 
     <% if user_signed_in? %>
+    <div class="C_LinksInMenubar">
+      <%= link_to image_tag("A_Logo.svg", class: "A_Logo"), image_path(welcome_index_url), class: "menubar-link" %>
       <%= link_to "Исполнители", artists_url, class: "menubar-link"  %>
       <%= link_to "Обложки", welcome_covers_url, class: "menubar-link"  %>
       <%= link_to "Промо-кампании", welcome_promos_url, class: "menubar-link"  %>
       <%= link_to "Видеоклипы", welcome_videos_url, class: "menubar-link"  %>
+    </div>
       <%= link_to "Подписки", admin_subscriptions_url, class: "menubar-link" if current_user.admin == true %>
-      <%= link_to "+", new_post_path, url: posts_path(@post), class: "menubar-link" %>
-      <%= link_to "Профиль", edit_user_registration_path, class: "menubar-link" %>
+    <div class="C_LinksInMenubar">
+      <%= link_to image_tag("A_Plus.svg", class: "A_Plus"), image_path(new_post_path, url: posts_path(@post)), class: "menubar-link" %>
+      <%= link_to image_tag("A_Profile.svg", class: "A_Profile"), image_path(edit_user_registration_path), class: "menubar-link" %>
       <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: "menubar-link user-action"  %>
+    </div>
     <% else %>
       <%= link_to "Исполнители", artists_url, class: "menubar-link"  %>
       <%= link_to "Промо-кампании", welcome_promos_url, class: "menubar-link"  %>

@@ -6,14 +6,14 @@
     <div class="M_FlexInRectangleCoverCards">
     <div class="M_AvatarsAndTextInCards">
       <div class="C_AuthorAndArtist">
-        <div class="M_Person">
+        <div class="M_PersonBig">
           <%= image_tag cover_post.user.avatar.url, class: "A_Avatar" %>
           <p class="A_PSmallMedium">
             <%= cover_post.user.email %>
           </p>
         </div>
         <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
-        <div class="M_Person">
+        <div class="M_PersonBig">
           <%= image_tag cover_post.issue.artist.post_image.url, class: "A_Avatar" %>
           <p class="A_PSmallMedium">
             <%= cover_post.issue.artist.name %>

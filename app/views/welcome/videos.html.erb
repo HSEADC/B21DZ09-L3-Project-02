@@ -1,4 +1,4 @@
-<div style="display: inline-flex; align-items: flex-start; flex-wrap: wrap; gap: 10px; justify-content: center;">
+<div style="display: none; align-items: flex-start; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <% Post.tag_counts_on(:tags).each do |tag| %>
         <div class="tag">
             <%= link_to tagged_posts_path(tag.name) do%>
@@ -12,6 +12,24 @@
 <%= image_tag "BannerInClips.png", :class => "A_ContentBannerPic" %>
 </div>
 
+<<<<<<< HEAD
+=======
+<% i = 1 %>
+>>>>>>> 910bcfe3b207645b12f78a73ba8fe2247f17c072
 <% @posts.each do |post| %>
-    <%= render "video_posts/video_post", video_post: post if post.type == "VideoPost" %>
+    <% if post.type == "VideoPost" %>
+        <% i += 1 %>
+        <%= render "video_posts/video_post", video_post: post %>
+        <% if i == 2 %>
+            <div class="M_Reminder">
+                <div class="A_BannerPicInReminder">
+                    <%= image_tag "Reminder.png", :class => "A_ReminderMain" %>
+                </div>
+                <button class="A_ButtonAddArticleBlack">
+                    <%= image_tag "PlusIcon.svg", :class => "A_PlusIcon" %>
+                    <p>Написать<br>о новинке</p>
+                </button>
+            </div>
+        <% end %>
+    <% end %>
 <% end %>

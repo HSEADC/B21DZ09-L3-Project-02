@@ -1,4 +1,5 @@
 .A_ButtonAddArticleBlack {
+    position: relative;
     display: flex;
     width: 140px;
     height: 140px;
@@ -13,6 +14,7 @@
     border: none;
     outline: none;
     margin-top: -40px;
+    z-index: 100;
 }
 .A_ButtonAddArticleBlack p{
     font-family: "SuisseRegular";

@@ -1,0 +1,24 @@
+.M_PromoCard {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--dark-gray);
+    padding: 20px;
+    border-radius: 16px;
+    .C_AuthorAndArtist {
+        margin: 0 auto;
+    }
+    .A_Photo {
+        width: 490px;
+        height: 254px;
+        object-fit: cover;
+    }
+    .M_AvatarsAndTextInCards {
+        width: 491px;
+        height: 168px;
+    }
+    .M_TagsAndComments {
+        width: 491px;
+    }
+}

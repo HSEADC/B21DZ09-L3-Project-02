@@ -8,6 +8,10 @@
     <% end %>
 </div>
 
+<div class="M_HeadContentBanner">
+<%= image_tag "BannerInClips.png", :class => "A_ContentBannerPic" %>
+</div>
+
 <% @posts.each do |post| %>
     <%= render "video_posts/video_post", video_post: post if post.type == "VideoPost" %>
 <% end %>

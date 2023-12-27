@@ -8,6 +8,10 @@
     <% end %>
 </div>
 
+<div class="M_HeadContentBanner">
+<%= image_tag "BannerInPromos.png", :class => "A_ContentBannerPic" %>
+</div>
+
 <% @posts.each do |post| %>
     <%= render "promo_posts/promo_post", promo_post: post if post.type == "PromoPost" %>
 <% end %>

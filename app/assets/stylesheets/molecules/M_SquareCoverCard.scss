@@ -1,0 +1,17 @@
+.M_SquareCoverCard {
+    display: flex;
+    height: 222px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 37px;
+    margin-top: -257px;
+
+    .Q_Ellipse {
+        height: 85px;
+    }
+}
+
+.M_SquareCoverCard h6{
+    text-align: center;
+}

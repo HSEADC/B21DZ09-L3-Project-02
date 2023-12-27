@@ -1,6 +1,9 @@
+<% holes = ["Q_Cassette.svg", "Q_Ellipse.svg", "Q_Gear.svg"] %>
+
 <%= link_to artist_issue_post_path(promo_post.issue.artist, promo_post.issue, promo_post) do %>
 
   <div id="<%= dom_id promo_post %>", class="M_PromoCard">
+  <%= image_tag holes.sample, class: "CoverHole" %>
 
       <div class="M_AvatarsAndTextInCards">
         <div class="C_AuthorAndArtist">
@@ -46,7 +49,6 @@
         </p>
       </div>
     </div>
-    
   </div>
 
 <% end %>

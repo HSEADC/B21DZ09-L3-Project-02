@@ -1,0 +1,21 @@
+.M_BannerArticle {
+    width: 100%;
+    height: 661px;
+    margin-top: -180px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(27, 27, 27, 0.52) 0%, rgba(27, 27, 27, 0.00) 100%),  rgba(27, 27, 27, 0.2);
+    .A_H1 {
+        margin: 0 auto;
+        width: 1082px;
+        height: 255px;
+    }
+    .InformationInBannerInArticle {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        height: 457px;
+        padding: auto auto;
+        margin-top: -511px;
+    }
+}

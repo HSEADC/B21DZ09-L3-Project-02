@@ -5,4 +5,11 @@
     align-items: center;
     border-radius: 16px;
     background: linear-gradient(180deg, rgba(27, 27, 27, 0.52) 0%, rgba(27, 27, 27, 0.00) 100%),  rgba(27, 27, 27, 0.2);
+
+    .CoverHole {
+        position: absolute;
+        height: 85px;
+        margin-top: 140px;
+        margin-left: 0px;
+    }
 }

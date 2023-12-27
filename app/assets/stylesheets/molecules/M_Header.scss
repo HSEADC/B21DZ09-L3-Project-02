@@ -1,4 +1,6 @@
 .M_Header {
+    position: relative;
+    z-index: 100;
     background-color: var(--dark-gray);
     display: flex;
     width: 1628px;

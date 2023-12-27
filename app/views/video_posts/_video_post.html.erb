@@ -1,3 +1,5 @@
+<% holes = ["Cassettes.svg", "Ellipses.svg", "Gears.svg"] %>
+
 <%= link_to artist_issue_post_path(video_post.issue.artist, video_post.issue, video_post) do %>
   <div id="<%= dom_id video_post %>", class="M_VideoCardHuge">
   <div class="PhotoAndTextInVideoCardsHuge M_VideoCardAdditional">
@@ -41,6 +43,7 @@
       </p>
     </div>
     </div>
+    <%= image_tag holes.sample, class: "CoverHole" %>
     </div>
   </div>
 <% end %>

@@ -1,24 +1,5 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="M_BannerLong">
-  <div class="C_AuthorAndArtist">
-    <div class="M_PersonBig">
-      <%= image_tag post.user.avatar.url, class: "A_Avatar" %>
-      <p class="A_PSmallMedium">
-        <%= post.user.email %>
-      </p>
-    </div>
-    <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
-    <div class="M_PersonBig">
-      <%= image_tag post.issue.artist.post_image.url, class: "A_Avatar" %>
-      <p class="A_PSmallMedium">
-        <%= post.issue.artist.name %>
-      </p>
-    </div>
-    </div>
-  <h1 class="A_H1">Кровь и&nbsp;бесовщина: Doja Cat говорит о&nbsp;важном</h1>
-</div>
-
 <%= render partial: "post_inner", locals: { post: @post } %>
 
 <% if user_signed_in? %>

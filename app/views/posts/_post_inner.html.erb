@@ -1,37 +1,61 @@
-<div id="<%= dom_id post %>", class="outer-card">
+<div id="<%= dom_id post %>">
 
-  <%= image_tag post.post_image.url, class: "image-outer"  %>
-
-  <p>
-    <%= post.name %>
-  </p>
-
-  <div style="display: inline-flex; align-items: center; gap: 20px;">
-    <%= image_tag post.user.avatar.url, style: "width: 50px; border-radius: 8px;" %>
-    <p>
-      <strong>Автор</strong>
-      <%= post.user.email %>
-    </p>
+  <div class="M_BannerArticle">
+    <%= image_tag post.post_image.url, class: "A_BannerInArticlePic"  %>
+    <div class="InformationInBannerInArticle">
+      <div class="C_AuthorAndArtist">
+        <div class="M_PersonBig">
+          <%= image_tag post.user.avatar.url, class: "A_Avatar" %>
+          <p class="A_PSmallMedium">
+            <%= post.user.email %>
+          </p>
+        </div>
+        <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
+        <div class="M_PersonBig">
+          <%= image_tag post.issue.artist.post_image.url, class: "A_Avatar" %>
+          <p class="A_PSmallMedium">
+            <%= post.issue.artist.name %>
+          </p>
+        </div>
+      </div>
+      <h1 class="A_H1"><%= post.name %></h1>
+      <div class="C_Tags">
+        <% post.tag_list.each do |tag| %>
+          <%= link_to "#{request.base_url}/posts/by_tag/#{tag}", class: "A_Tag" do%>
+            <%= tag %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="M_Parameter">
+        <%= image_tag "A_IconComment.svg", :class => "A_Icon" %>
+        <p class="A_PSmallMedium">
+          <%= post.comments.count %>
+        </p>
+      </div>
+    </div>
   </div>
 
-  <p>
-    <strong>Теги</strong>
-    <% post.tag_list.each do |tag| %>
-      <span style="text-decoration: none;">
-        <%= link_to "#{request.base_url}/posts/by_tag/#{tag}", style: "text-decoration: none;" do%>
-          <%= tag %>
-        <% end %>
-      </span>
-    <% end %>
-  </p>
-
-  <p>
-    <strong>Описание</strong>
+  <p class="M_Conduction A_PBig">
     <%= post.description %>
   </p>
 
-  <p class="article">
-    <%= post.body%>
-  </p>
+  <div class="M_TitleAndTextInArticle">
+    <h4 class="A_H4"><%= post.name %></h4>
+    <p class="A_PMediumRegular">
+      <%= post.body%>
+    </p>
+  </div>
+
+  <div class="M_Cite">
+  <%= image_tag post.issue.artist.post_image.url, class: "A_AvatarBig" %>
+    <div class="CiteBlock">
+      <h5 class="A_H5Bold">
+        <%= post.issue.artist.name %>
+      </h5>
+      <p class="A_PBig">
+        <%= post.description %>
+      </p>
+    </div>
+  </div>
 
 </div>

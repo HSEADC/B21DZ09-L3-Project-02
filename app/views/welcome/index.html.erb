@@ -1,3 +1,6 @@
+<% holes = ["Cassettes.svg", "Ellipses.svg", "Gears.svg"] %>
+<% holesbottom = ["Q_Cassette.svg", "Q_Ellipse.svg", "Q_Gear.svg"] %>
+
 <div class="M_BannerInHeader">
     <div class="A_BannerPicInHeader">
         <%= image_tag "FirstBannerMain.png", :class => "A_FirstBannerMain" %>
@@ -37,6 +40,7 @@
             </p>
             </div>
         </div>
+        <%= image_tag holes.sample, class: "CoverHole" %>
         </div>
     </div>
     <div class="M_VideoCardAdditional">
@@ -58,6 +62,7 @@
             </p>
             </div>
         </div>
+        <%= image_tag holes.sample, class: "CoverHole" %>
         </div>
     </div>
 </div>
@@ -83,7 +88,7 @@
         <%= image_tag "EartheaterVid.png", :class => "A_VideoCardPic" %>
             <div class="M_SquareCoverCard">
             <h6 class="A_H6">Отражение религии в&nbsp;обложках</h6>
-            <%= image_tag "Q_Ellipse.svg", :class => "Q_Ellipse" %>
+            <%= image_tag holesbottom.sample, :class => "Q_Ellipse" %>
                 <div class="M_PersonSmall">
                 <%= image_tag "EartheaterVid.png", :class => "A_AvatarSmall" %>
                 <p class="A_PSmallMedium">
@@ -97,7 +102,7 @@
         <%= image_tag "StereoCover.png", :class => "A_VideoCardPic" %>
             <div class="M_SquareCoverCard">
             <h6 class="A_H6">Отражение религии в&nbsp;обложках</h6>
-            <%= image_tag "Q_Gear.svg", :class => "Q_Ellipse" %>
+            <%= image_tag holesbottom.sample, :class => "Q_Ellipse" %>
                 <div class="M_PersonSmall">
                 <%= image_tag "EartheaterVid.png", :class => "A_AvatarSmall" %>
                 <p class="A_PSmallMedium">
@@ -110,21 +115,7 @@
         <%= image_tag "EartheaterVid.png", :class => "A_VideoCardPic" %>
             <div class="M_SquareCoverCard">
             <h6 class="A_H6">Отражение религии в&nbsp;обложках</h6>
-            <%= image_tag "Q_Gear.svg", :class => "Q_Ellipse" %>
-                <div class="M_PersonSmall">
-                <%= image_tag "EartheaterVid.png", :class => "A_AvatarSmall" %>
-                <p class="A_PSmallMedium">
-                hautilusthewriter
-                </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="M_SquareCoverCardAdditional">
-        <%= image_tag "EartheaterVid.png", :class => "A_VideoCardPic" %>
-            <div class="M_SquareCoverCard">
-            <h6 class="A_H6">Отражение религии в&nbsp;обложках</h6>
-            <%= image_tag "Q_Ellipse.svg", :class => "Q_Ellipse" %>
+            <%= image_tag holesbottom.sample, :class => "Q_Ellipse" %>
                 <div class="M_PersonSmall">
                 <%= image_tag "EartheaterVid.png", :class => "A_AvatarSmall" %>
                 <p class="A_PSmallMedium">
@@ -138,7 +129,21 @@
         <%= image_tag "EartheaterVid.png", :class => "A_VideoCardPic" %>
             <div class="M_SquareCoverCard">
             <h6 class="A_H6">Отражение религии в&nbsp;обложках</h6>
-            <%= image_tag "Q_Cassette.svg", :class => "Q_Ellipse" %>
+            <%= image_tag holesbottom.sample, :class => "Q_Ellipse" %>
+                <div class="M_PersonSmall">
+                <%= image_tag "EartheaterVid.png", :class => "A_AvatarSmall" %>
+                <p class="A_PSmallMedium">
+                hautilusthewriter
+                </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="M_SquareCoverCardAdditional">
+        <%= image_tag "EartheaterVid.png", :class => "A_VideoCardPic" %>
+            <div class="M_SquareCoverCard">
+            <h6 class="A_H6">Отражение религии в&nbsp;обложках</h6>
+            <%= image_tag holesbottom.sample, :class => "Q_Ellipse" %>
                 <div class="M_PersonSmall">
                 <%= image_tag "EartheaterVid.png", :class => "A_AvatarSmall" %>
                 <p class="A_PSmallMedium">

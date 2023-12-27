@@ -1,11 +1,12 @@
-<div id="<%= dom_id artist %>", class="outer-card">
-  <%= image_tag artist.post_image.url, class: "image-outer"  %>
-  <p>
+<div id="<%= dom_id artist %>", class="M_Artist">
+<div class="ArtistPicName">
+  <%= image_tag artist.post_image.url, class: "A_Avatar" %>
+  <h5 class="A_H5Medium">
     <%= artist.name %>
-  </p>
+  </h5>
+  </div>
 
-  <p>
-    <strong>Описание:</strong>
+  <p class="A_PSmallBook">
     <%= artist.description %>
   </p>
 

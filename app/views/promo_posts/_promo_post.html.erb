@@ -1,35 +1,51 @@
 <%= link_to artist_issue_post_path(promo_post.issue.artist, promo_post.issue, promo_post) do %>
 
-  <div id="<%= dom_id promo_post %>", class="outer-card">
+  <div id="<%= dom_id promo_post %>", class="M_PromoCard">
 
-    <%= image_tag promo_post.post_image.url, class: "image-outer"  %>
+      <div class="M_AvatarsAndTextInCards">
+        <div class="C_AuthorAndArtist">
+          <div class="M_PersonBig">
+            <%= image_tag promo_post.user.avatar.url, class: "A_Avatar" %>
+            <p class="A_PSmallMedium">
+              <%= promo_post.user.email %>
+            </p>
+          </div>
+          <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
+          <div class="M_PersonBig">
+            <%= image_tag promo_post.issue.artist.post_image.url, class: "A_Avatar" %>
+            <p class="A_PSmallMedium">
+              <%= promo_post.issue.artist.name %>
+            </p>
+          </div>
+        </div>
+        <div class="M_TextInCards">
+          <h4 class="A_H4">
+            <%= promo_post.name %>
+          </h4>
+          <p class="A_PParagraph">
+            <%= promo_post.description %>
+          </p>
+        </div>
+      </div>
+    
 
-    <p>
-      <strong>Про промо</strong>
-      <%= promo_post.name %>
-    </p>
+    <%= image_tag promo_post.post_image.url, class: "A_Photo"  %>
 
-    <p>
-      <strong>Теги</strong>
-      <% promo_post.tag_list.each do |tag| %>
-        <span>
-          <%= tag %>
-        </span>
-      <% end %>
-    </p>
-
-    <div style="display: inline-flex; align-items: center; gap: 20px;">
-      <%= image_tag promo_post.user.avatar.url, style: "width: 50px; border-radius: 8px;" %>
-      <p>
-        <strong>Автор</strong>
-        <%= promo_post.user.email %>
-      </p>
+    <div class="M_TagsAndComments">
+    <div class="C_Tags">
+        <% promo_post.tag_list.each do |tag| %>
+          <button class="A_Tag">
+            <%= tag %>
+          </button>
+        <% end %>
+      </div>
+      <div class="M_Parameter">
+        <%= image_tag "A_IconComment.svg", :class => "A_Icon" %>
+        <p class="A_PSmallMedium">
+          <%= promo_post.comments.count %>
+        </p>
+      </div>
     </div>
-
-    <p>
-      <strong>Описание</strong>
-      <%= promo_post.description %>
-    </p>
     
   </div>
 

@@ -1,0 +1,32 @@
+.M_VideoCardHuge {
+    display: flex;
+    flex-direction: column;
+    .A_VideoCardPic {
+        width: 1082px;
+        height: 554px;
+        object-fit: cover;
+        border-top-right-radius: 16px;
+        border-top-left-radius: 16px;
+    }
+    .AdditionalInfromationInVideoCard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1042px;
+        padding: 20px;
+        background-color: var(--dark-gray);
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+    }
+    .PhotoAndTextInVideoCardsHuge{
+        width: 1082px;
+        height: 554px;
+        border-top-right-radius: 16px;
+        border-top-left-radius: 16px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .M_TextInCards {
+        margin-top: -510px;
+    }
+}

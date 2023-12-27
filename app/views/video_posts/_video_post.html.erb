@@ -1,33 +1,46 @@
 <%= link_to artist_issue_post_path(video_post.issue.artist, video_post.issue, video_post) do %>
-  <div id="<%= dom_id video_post %>", class="outer-card">
-
-    <%= image_tag video_post.post_image.url, class: "image-outer"  %>
-
-    <p>
-      <strong>Про видео</strong>
-      <%= video_post.name %>
-    </p>
-
-    <p>
-      <strong>Теги</strong>
-      <% video_post.tag_list.each do |tag| %>
-        <span>
-          <%= tag %>
-        </span>
-      <% end %>
-    </p>
-
-    <div style="display: inline-flex; align-items: center; gap: 20px;">
-      <%= image_tag video_post.user.avatar.url, style: "width: 50px; border-radius: 8px;" %>
-      <p>
-        <strong>Автор</strong>
-        <%= video_post.user.email %>
+  <div id="<%= dom_id video_post %>", class="M_VideoCardHuge">
+  <div class="PhotoAndTextInVideoCardsHuge M_VideoCardAdditional">
+    <%= image_tag video_post.post_image.url, class: "A_VideoCardPic"  %>
+    <div class="M_TextInCards">
+      <h4 class="A_H4">
+        <%= video_post.name %>
+      </h4>
+      <p class="A_PParagraph">
+        <%= video_post.description %>
       </p>
     </div>
-
-    <p>
-      <strong>Описание</strong>
-      <%= video_post.description %>
-    </p>
+  </div>
+    <div class="AdditionalInfromationInVideoCard">
+    <div class="C_Tags">
+      <% video_post.tag_list.each do |tag| %>
+        <button class="A_Tag">
+          <%= tag %>
+        </button>
+      <% end %>
+    </div>
+    <div class="C_AuthorAndArtist">
+        <div class="M_PersonBig">
+          <%= image_tag video_post.user.avatar.url, class: "A_Avatar" %>
+          <p class="A_PSmallMedium">
+            <%= video_post.user.email %>
+          </p>
+        </div>
+        <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
+        <div class="M_PersonBig">
+          <%= image_tag video_post.issue.artist.post_image.url, class: "A_Avatar" %>
+          <p class="A_PSmallMedium">
+            <%= video_post.issue.artist.name %>
+          </p>
+        </div>
+    </div>
+    <div class="M_Parameter">
+      <%= image_tag "A_IconComment.svg", :class => "A_Icon" %>
+      <p class="A_PSmallMedium">
+        <%= video_post.comments.count %>
+      </p>
+    </div>
+    </div>
+    </div>
   </div>
 <% end %>

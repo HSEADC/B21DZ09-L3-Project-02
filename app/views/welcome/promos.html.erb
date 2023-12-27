@@ -1,4 +1,4 @@
-<div style="display: inline-flex; align-items: flex-start; flex-wrap: wrap; gap: 10px; justify-content: center;">
+<div style="display: none; align-items: flex-start; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <% Post.tag_counts_on(:tags).each do |tag| %>
         <div class="tag">
             <%= link_to tagged_posts_path(tag.name) do%>
@@ -6,6 +6,10 @@
             <% end %>
         </div>
     <% end %>
+</div>
+
+<div class="M_HeadContentBanner">
+    <%= image_tag "BannerInPromos.png", :class => "A_ContentBannerPic" %>
 </div>
 
 <% @posts.each do |post| %>

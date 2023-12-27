@@ -1,6 +1,6 @@
 body {
     font-family: Inter;
-    background-color: #CFCFCF;
+    background-color: var(--black);
     margin: 0;
   }
 

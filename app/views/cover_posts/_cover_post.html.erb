@@ -2,39 +2,46 @@
   
   <div id="<%= dom_id cover_post %>", class="M_RectangleCoverCard">
     
-    <%= image_tag cover_post.post_image.url, class: "image-outer"  %>
-    <div class="M_TextInRectangleCoverCards"
-    <p>
-      <strong>Про обложку</strong>
-      <%= cover_post.name %>
-    </p>
-    
-    <p>
-      <strong>Теги</strong>
-      <% cover_post.tag_list.each do |tag| %>
-        <span>
-          <%= tag %>
-        </span>
-      <% end %>
-    </p>
+    <%= image_tag cover_post.post_image.url, class: "A_Photo"  %>
+    <div class="M_FlexInRectangleCoverCards">
+    <div class="M_AvatarsAndTextInCards">
+      <div class="C_AuthorAndArtist">
+        <div class="M_Person">
+          <%= image_tag cover_post.user.avatar.url, class: "A_Avatar" %>
+          <p class="A_PSmallMedium">
+            <%= cover_post.user.email %>
+          </p>
+        </div>
+        <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
+        <div class="M_Person">
+          <%= image_tag cover_post.issue.artist.post_image.url, class: "A_Avatar" %>
+          <p class="A_PSmallMedium">
+            <%= cover_post.issue.artist.name %>
+          </p>
+        </div>
+      </div>
 
-    <div style="display: inline-flex; align-items: center; gap: 20px;">
-      <%= image_tag cover_post.user.avatar.url, style: "width: 50px; border-radius: 8px;" %>
-      <p>
-        <strong>Автор</strong>
-        <%= cover_post.user.email %>
-      </p>
+    <div class="M_TextInCards">
+      <h4 class="A_H4"><%= cover_post.name %></h4>
+      <p class="A_PParagraph"><%= cover_post.description %></p>
+    </div>
     </div>
 
-    <p>
-      <strong>Описание</strong>
-      <%= cover_post.description %>
-    </p>
-
-    <p>
-      <strong>Комментариев</strong>
-      <%= cover_post.comments.count %>
-    </p>
+    <div class="M_TagsAndComments">
+    <div class="C_Tags">
+      <% cover_post.tag_list.each do |tag| %>
+        <button class="A_Tag">
+          <%= tag %>
+        </button>
+      <% end %>
+    </div>
+    <div class="M_Parameter">
+      <%= image_tag "A_IconComment.svg", :class => "A_Icon" %>
+      <p class="A_PSmallMedium">
+        <%= cover_post.comments.count %>
+      </p>
+    </div>
+    </div>
 
   </div>
   </div>

@@ -1,4 +1,10 @@
 .C_AuthorAndArtist {
     display: flex;
     gap: 15px;
+    align-items: center;
+}
+@media (max-width: 390px) {
+    .C_AuthorAndArtist {
+        gap: 8px;
+    }
 }

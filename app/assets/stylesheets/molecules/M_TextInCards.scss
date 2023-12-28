@@ -4,3 +4,8 @@
     gap: 10px;
     text-align: center;
 }
+@media (max-width: 390px) {
+    .M_TextInCards {
+        gap: 3px;
+    }
+}

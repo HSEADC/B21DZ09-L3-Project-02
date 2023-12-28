@@ -2,3 +2,14 @@
     margin-left: -40px;
     opacity: 30%;
 }
+
+@media (max-width: 400px) {
+
+    .A_Magnifier {
+        width: 28px;
+        height: auto;
+        margin-left: 0px;
+        opacity: 100%;
+    }
+
+}

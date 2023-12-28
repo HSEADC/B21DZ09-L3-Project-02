@@ -16,20 +16,80 @@
         <%= image_tag "A_Magnifier.svg", :class => "A_Magnifier" %>
       </div>
           <%= link_to image_tag("A_Plus.svg", class: "A_Plus"), image_path(new_post_path, url: posts_path(@post)) %>
-          <%= link_to image_tag("A_Profile.svg", class: "A_Profile"), image_path(edit_user_registration_path) %>
-          <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: "menubar-link user-action"  %>
+          <%= link_to image_tag("A_Profile.svg", class: "A_Profile"), destroy_user_session_path, method: :delete %>
+          <%# link_to image_tag("A_Profile.svg", class: "A_Profile"), image_path(edit_user_registration_path) %>
+          <%# link_to "Выйти", destroy_user_session_path, method: :delete, class: "menubar-link user-action" %>
       </div>
     <% else %>
+    <div class="C_LinksInMenubar">
+      <%= link_to image_tag("A_Logo.svg", class: "A_Logo"), image_path(welcome_index_url) %>
       <%= link_to "Исполнители", artists_url, class: "menubar-link"  %>
       <%= link_to "Промо-кампании", welcome_promos_url, class: "menubar-link"  %>
       <%= link_to "Видеоклипы", welcome_videos_url, class: "menubar-link"  %>
       <%= link_to "Обложки", welcome_covers_url, class: "menubar-link"  %>
-      <%= link_to 'Войти', new_user_session_path, class: "menubar-link" %>
+    </div>
+
+    <div class="C_LinksInMenubar">
+    <div class="M_InputAndButton">
+    <input class="A_Input" type="text" placeholder="Обложка Slut Pop…"></input>
+    <%= image_tag "A_Magnifier.svg", :class => "A_Magnifier" %>
+  </div>
+      <%= link_to image_tag("A_Profile.svg", class: "A_Profile"), new_user_session_path %>
+      </div>
     <% end %>
 
     <% if user_signed_in? %>
     <% end %>
 
   </div>
+
+
+  <div class="M_HeaderMobile">
+
+  <% if user_signed_in? %>
+
+  <div class="MobileMenubarTop">
+  <div class="C_LinksInMenubar">
+    <%= link_to image_tag("A_Logo.svg", class: "A_Logo"), image_path(welcome_index_url) %>
+  </div>
+    <%= link_to "Подписки", admin_subscriptions_url, class: "menubar-link" if current_user.admin == true %>
+  <div class="C_LinksInMenubar">
+        <%= image_tag "A_MagnifierMob.svg", :class => "A_Magnifier" %>
+        <%= link_to image_tag("A_Plus.svg", class: "A_Plus"), image_path(new_post_path, url: posts_path(@post)) %>
+        <%= link_to image_tag("A_Profile.svg", class: "A_Profile"), destroy_user_session_path, method: :delete %>
+    </div>
+  </div>
+
+  <div class="C_LinksInMenubar">
+  <%= link_to "Исполнители", artists_url, class: "menubar-link"  %>
+  <%= link_to "Обложки", welcome_covers_url, class: "menubar-link"  %>
+  <%= link_to "Промо-кампании", welcome_promos_url, class: "menubar-link"  %>
+  <%= link_to "Видеоклипы", welcome_videos_url, class: "menubar-link"  %>
+</div>
+
+  <% else %>
+  <div class="MobileMenubarTop">
+  <div class="C_LinksInMenubar">
+    <%= link_to image_tag("A_Logo.svg", class: "A_Logo"), image_path(welcome_index_url) %>
+  </div>
+  <div class="C_LinksInMenubar">
+        <%= image_tag "A_MagnifierMob.svg", :class => "A_Magnifier" %>
+        <%= link_to image_tag("A_Profile.svg", class: "A_Profile"), new_user_session_path %>
+    </div>
+  </div>
+
+  <div class="C_LinksInMenubar">
+  <%= link_to "Исполнители", artists_url, class: "menubar-link"  %>
+  <%= link_to "Обложки", welcome_covers_url, class: "menubar-link"  %>
+  <%= link_to "Промо-кампании", welcome_promos_url, class: "menubar-link"  %>
+  <%= link_to "Видеоклипы", welcome_videos_url, class: "menubar-link"  %>
+</div>
+  <% end %>
+
+  <% if user_signed_in? %>
+  <% end %>
+
+</div>
+
 
 </nav>

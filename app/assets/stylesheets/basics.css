@@ -8,4 +8,12 @@ body {
 a {
   text-decoration: none;
 }
+input {
+  border: solid;
+  border-color: transparent;
+}
+select {
+  border-color: transparent;
+  outline: none;
+}
 

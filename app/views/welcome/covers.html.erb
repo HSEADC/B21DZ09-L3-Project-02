@@ -9,9 +9,30 @@
 </div>
 
 <div class="M_HeadContentBanner">
-<%= image_tag "BannerInCovers.png", :class => "A_ContentBannerPic" %>
+    <%= image_tag "BannerInCovers.png", :class => "A_ContentBannerPic displayvisible" %>
+    <%= image_tag "BannerInCovers390.png", :class => "A_ContentBannerPic displaynone" %>
 </div>
 
+<% i = 1 %>
 <% @posts.each do |post| %>
-    <%= render "cover_posts/cover_post", cover_post: post if post.type == "CoverPost" %>
+    <% if post.type == "CoverPost" %>
+        <% i += 1 %>
+        <%= render "cover_posts/cover_post", cover_post: post %>
+        <% if i == 4 %>
+            <div class="M_Reminder">
+                <div class="TitleAndText">
+                    <h2 class="A_H2">
+                        Релиз Powders
+                    </h2>
+                    <p class="A_PMediumBook">
+                        Над обложкой Eartheater трудилась целая команда. Может, вы знаете что-то ещё?
+                    </p>
+                </div>
+                <button class="A_ButtonAddArticleBlack">
+                    <%= image_tag "PlusIcon.svg", :class => "A_PlusIcon" %>
+                    <p>Написать<br>о новинке</p>
+                </button>
+            </div>
+        <% end %>
+    <% end %>
 <% end %>

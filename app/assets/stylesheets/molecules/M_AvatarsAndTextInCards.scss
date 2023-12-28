@@ -3,3 +3,8 @@
     flex-direction: column;
     gap: 20px;
 }
+@media (max-width: 390px) {
+    .M_AvatarsAndTextInCards {
+        gap: 10px;
+    }
+}

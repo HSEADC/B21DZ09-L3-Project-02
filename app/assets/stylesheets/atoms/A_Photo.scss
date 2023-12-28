@@ -3,3 +3,9 @@
     height: 254px;
     border-radius: 7px;
 }
+@media (max-width: 390px) {
+    .A_Photo {
+        width: 112px;
+        height: 112px;
+    }
+}

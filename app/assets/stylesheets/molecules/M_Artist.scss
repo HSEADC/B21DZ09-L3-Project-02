@@ -23,3 +23,32 @@
     }
 
 }
+
+@media (max-width: 390px) {
+    .M_Artist {
+        width: 320px;
+        padding: 15px;
+        margin-bottom: 10px;
+    
+        .A_Avatar {
+            width: 40px;
+            height: 40px;
+        }
+    
+        .ArtistPicName {
+            display: flex;
+            width: auto;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+        }
+
+        .A_PSmallBook {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 114px;
+            text-overflow: ellipsis;
+        }
+    
+    }
+}

@@ -19,3 +19,13 @@
         margin-top: -511px;
     }
 }
+@media (max-width: 390px) {
+    .M_BannerArticle {
+        height: 462px;
+        margin-top: -170px;
+    }
+    .M_BannerArticle .A_H1 {
+        width: 350px;
+        height: 116px;
+    }
+}

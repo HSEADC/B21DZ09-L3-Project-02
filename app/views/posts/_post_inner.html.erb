@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 <div id="<%= dom_id post %>">
 
+=======
+<% holes = ["Q_Cassette.svg", "Q_Ellipse.svg", "Q_Gear.svg"] %>
+
+<div id="<%= dom_id post %>">
+
+>>>>>>> fcefd1199edeeba9babadc3c5ef1e59341b52ccb
   <div class="M_BannerArticle">
     <%= image_tag post.post_image.url, class: "A_BannerInArticlePic"  %>
     <div class="InformationInBannerInArticle">
@@ -21,7 +28,7 @@
       <h1 class="A_H1"><%= post.name %></h1>
       <div class="C_Tags">
         <% post.tag_list.each do |tag| %>
-          <%= link_to "#{request.base_url}/posts/by_tag/#{tag}", class: "A_Tag" do%>
+          <%= link_to "#{request.base_url}/posts/by_tag/#{tag}", class: "A_TagBig" do%>
             <%= tag %>
           <% end %>
         <% end %>
@@ -45,6 +52,21 @@
       <%= post.body%>
     </p>
   </div>
+<<<<<<< HEAD
+
+  <div class="M_Cite">
+  <%= image_tag post.issue.artist.post_image.url, class: "A_AvatarBig" %>
+    <div class="CiteBlock">
+      <h5 class="A_H5Bold">
+        <%= post.issue.artist.name %>
+      </h5>
+      <p class="A_PBig">
+        <%= post.description %>
+      </p>
+    </div>
+  </div>
+=======
+>>>>>>> fcefd1199edeeba9babadc3c5ef1e59341b52ccb
 
   <div class="M_Cite">
   <%= image_tag post.issue.artist.post_image.url, class: "A_AvatarBig" %>
@@ -58,4 +80,95 @@
     </div>
   </div>
 
+  <div class="C_Photos">
+    <div class="M_PhotoAndText">
+      <%= image_tag post.post_image.url, class: "A_PhotoSquareBig"  %>
+      <p class="A_PSmallBook">
+        <%= post.description %>
+      </p>
+    </div>
+    <div class="M_PhotoAndText">
+      <%= image_tag post.post_image.url, class: "A_PhotoSquareBig"  %>
+      <p class="A_PSmallBook">
+        <%= post.description %>
+      </p>
+    </div>
+  </div>
+
+  <div class="M_PhotoAndText">
+      <%= image_tag post.post_image.url, class: "A_PhotoRectangleBig"  %>
+      <p class="A_PSmallBook">
+        <%= post.description %>
+      </p>
+    </div>
+
+    <div class="M_TitleAndTextInArticle">
+    <h4 class="A_H4"><%= post.name %></h4>
+    <p class="A_PMediumRegular">
+      <%= post.body%>
+    </p>
+  </div>
+
+  <div class="M_ParameterBig">
+    <%= image_tag "A_IconComment.svg", :class => "A_IconHuge" %>
+    <p class="A_PMediumBook">
+      <%= post.comments.count %>
+    </p>
+  </div>
+
+  <div class="O_RecommendationsAndTitle">
+    <h5 class="A_H5Medium">
+          Мы думаем, вам может понравиться
+    </h5>
+    <div class="C_Recommendations">
+      <div class="M_Recommendation">
+        <%= image_tag holes.sample, class: "CoverHole" %>
+        <%= image_tag post.post_image.url, class: "A_PhotoRectangleMedium"  %>
+        <div class="M_AvatarsAndTextInCards">
+          <div class="C_AuthorAndArtist">
+            <div class="M_PersonBig">
+              <%= image_tag post.user.avatar.url, class: "A_Avatar" %>
+              <p class="A_PSmallMedium">
+                <%= post.user.email %>
+              </p>
+            </div>
+            <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
+            <div class="M_PersonBig">
+              <%= image_tag post.issue.artist.post_image.url, class: "A_Avatar" %>
+              <p class="A_PSmallMedium">
+                <%= post.issue.artist.name %>
+              </p>
+            </div>
+          </div>
+          <h4 class="A_H4">
+            <%= post.name %>
+          </h4>
+        </div>
+      </div>
+      <div class="M_Recommendation">
+        <%= image_tag holes.sample, class: "CoverHole" %>
+        <%= image_tag post.post_image.url, class: "A_PhotoRectangleMedium"  %>
+        <div class="M_AvatarsAndTextInCards">
+          <div class="C_AuthorAndArtist">
+            <div class="M_PersonBig">
+              <%= image_tag post.user.avatar.url, class: "A_Avatar" %>
+              <p class="A_PSmallMedium">
+                <%= post.user.email %>
+              </p>
+            </div>
+            <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
+            <div class="M_PersonBig">
+              <%= image_tag post.issue.artist.post_image.url, class: "A_Avatar" %>
+              <p class="A_PSmallMedium">
+                <%= post.issue.artist.name %>
+              </p>
+            </div>
+          </div>
+          <h4 class="A_H4">
+            <%= post.name %>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,9 +1,6 @@
 <%= form_for([@artist, @issue, @post, @post.comments.build], url: url) do |f| %>
-	<div class="field">
-		<%= f.text_area :body, class: "comment-input", placeholder: "Комментарий" %>
-	</div>
-
-	<div>
-		<%= f.submit class: "create-button", value: "Отправить"%>
+	<div class="InputAndButton">
+		<%= f.text_area :body, class: "A_CommentInput", placeholder: "Написать комментарий" %>
+		<%= f.submit class: "A_Button", value: "Отправить"%>
 	</div>
 <% end %>

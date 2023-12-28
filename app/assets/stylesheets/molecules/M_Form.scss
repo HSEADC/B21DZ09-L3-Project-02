@@ -1,0 +1,25 @@
+.M_Form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 136px;
+    padding-bottom: 54px;
+    margin-top: 100px;
+    background-color: var(--white);
+    border-radius: 16px;
+    .A_H4 {
+        color: var(--black);
+    }
+    .A_Button{
+        top: -80px;
+    }
+}
+.InputAndButton {
+position: relative;
+    input[type="submit"] {
+        position: absolute;
+        right: 20px;
+        top: 94px;
+        z-index: 100;
+    }
+}

@@ -12,6 +12,8 @@
     <%= image_tag "BannerInPromos.png", :class => "A_ContentBannerPic" %>
 </div>
 
-<% @posts.each do |post| %>
-    <%= render "promo_posts/promo_post", promo_post: post if post.type == "PromoPost" %>
-<% end %>
+<div class="C_PromoCards">
+    <% @posts.each do |post| %>
+        <%= render "promo_posts/promo_post", promo_post: post if post.type == "PromoPost" %>
+    <% end %>
+</div>

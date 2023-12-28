@@ -1,0 +1,30 @@
+.M_Reminder {
+    .TitleAndText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        height: 139px;
+        padding: 40px 471px 134px 471px;
+        width: 100vw;
+        align-items: center;
+        background-image: linear-gradient(180deg, rgba(27, 27, 27, 0.52) 0%, rgba(27, 27, 27, 0.00) 100%),
+        url(Eartheater.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .A_H2 {
+        width: 1082px;
+        text-align: center;
+    }
+    .A_PMediumBook {
+        width: 684px;
+        text-align: center;
+    }
+    .A_ButtonAddArticleBlack {
+        position: absolute;
+        margin: 0 auto;
+        z-index: 500;
+    }
+}

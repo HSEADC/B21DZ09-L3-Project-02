@@ -9,3 +9,21 @@
     color: var(--white);
     font-weight: 500;
 }
+
+@media (max-width: 400px) {
+
+    .C_LinksInMenubar {
+        display: flex;
+        height: 16.8px;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .C_LinksInMenubar a {
+        font-family: "SuisseMedium";
+        font-size: 10px;
+        color: var(--white);
+        font-weight: 500;
+    }
+
+}

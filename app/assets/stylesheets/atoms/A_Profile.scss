@@ -1,4 +1,13 @@
-.A_Plus {
+.A_Profile {
     width: 40px;
     height: auto;
+}
+
+@media (max-width: 400px) {
+
+    .A_Profile {
+        width: 28px;
+        height: auto;
+    }
+
 }

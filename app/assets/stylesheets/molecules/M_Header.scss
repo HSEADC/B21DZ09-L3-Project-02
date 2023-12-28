@@ -10,3 +10,45 @@
     margin: 30px auto;
     border-radius: 660px;
 }
+
+.M_HeaderMobile {
+    display: none;
+}
+
+@media (max-width: 400px) {
+
+    .M_Header {
+        display: none;
+    }
+
+    .M_HeaderMobile {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 54px;
+    }
+
+    .MobileMenubarTop {
+        display: flex;
+        width: 350px;
+        padding: 11.115px;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 74.102px;
+        background: var(--dark-gray);
+
+
+    .C_LinksInMenubar {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        height: auto;
+    }
+
+
+}
+    
+}
+
+

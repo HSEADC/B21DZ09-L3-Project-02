@@ -1,0 +1,22 @@
+.A_ButtonForImage {
+    display: flex;
+    padding: 10px 20px 13px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    background: var(--dark-gray);
+
+    .ImgIcon {
+        width: 31px;
+    }
+}
+
+.A_ButtonForImage p {
+    font-family: "SuisseBook";
+    font-size: 22px;
+    color: var(--white);
+    font-weight: 450;
+    padding: 0;
+    margin: 0;
+}

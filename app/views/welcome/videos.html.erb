@@ -19,8 +19,13 @@
         <%= render "video_posts/video_post", video_post: post %>
         <% if i == 2 %>
             <div class="M_Reminder">
-                <div class="A_BannerPicInReminder">
-                    <%= image_tag "Reminder.png", :class => "A_ReminderMain" %>
+                <div class="TitleAndText">
+                    <h2 class="A_H2">
+                        Релиз Powders
+                    </h2>
+                    <p class="A_PMediumBook">
+                        Над обложкой Eartheater трудилась целая команда. Может, вы знаете что-то ещё?
+                    </p>
                 </div>
                 <button class="A_ButtonAddArticleBlack">
                     <%= image_tag "PlusIcon.svg", :class => "A_PlusIcon" %>

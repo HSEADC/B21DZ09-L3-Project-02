@@ -1,26 +1,27 @@
-<div class="outer-card">
-
-	<p>
-		<%= image_tag comment.user.avatar.url, style: "width: 50px; border-radius: 8px;" %>
-		<b>Автор:</b>
-		<%= comment.user.email %>
-	</p>
-
-	<p>
-		<%= comment.body %>
-	</p>
-
-	<% if can? :manage, comment %>
-		<p>
-			<%# button_to 'Удалить комментарий', [comment.post.issue.artist, comment.post.issue, comment.post, comment], :method => :delete, class: "destroy-button" %>
-		</p>
-	<% end %>
-
-	<div class="comment-replies">
-
-		<% comment.replies.each do |reply| %>
-			<%= render reply, partial: "comments/comment", comment: reply, post: comment.post %>
+<div class="M_Comment">
+	<div class="CommentBody">
+		<div class="PersonAndComment">
+			<div class="M_PersonBig">
+				<%= image_tag comment.user.avatar.url, class: "A_AvatarMedium" %>
+					<p class="A_PMediumBook">
+				<%= comment.user.email %>
+			</div>
+			<p class="A_PBig">
+				<%= comment.body %>
+			</p>
+			<%= image_tag "Q_ReplySign.svg", :class => "Q_ReplySign" %>
+		</div>
+		<% if can? :manage, comment %>
+			<p>
+				<%# button_to 'Удалить комментарий', [comment.post.issue.artist, comment.post.issue, comment.post, comment], :method => :delete, class: "destroy-button" %>
+			</p>
 		<% end %>
-	</div> 
 
+		<div class="M_PersonAndComment Reply">
+
+			<% comment.replies.each do |reply| %>
+				<%= render reply, partial: "comments/comment", comment: reply, post: comment.post %>
+			<% end %>
+		</div> 
+	</div>
 </div>

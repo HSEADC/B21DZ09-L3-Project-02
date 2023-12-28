@@ -1,9 +1,14 @@
-<h1>Новая публикация</h1>
+<div class="S_PostForm">
+  <div class="M_FormHead">
+  <h3 class="A_H3">О чем хотите рассказать сегодня?</h3>
+  <p class="A_PParagraphBig">Заполните информацию о публикации, вы ещё сможете поменять её позже в редакторе.</p>
+  </div>
 
-<%= render "form", post: @post, url: posts_path(@post) %>
+  <%= render "form", post: @post, url: posts_path(@post) %>
 
-<br>
+  </div>
+  <br>
 
-<div>
-  <%# link_to "На страницу релиза", artist_issue_path(@artist, @issue), class: "link-normal" %>
-</div>
+  <div>
+    <%# link_to "На страницу релиза", artist_issue_path(@artist, @issue), class: "link-normal" %>
+  </div>

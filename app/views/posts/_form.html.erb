@@ -14,53 +14,76 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :post_image, style: "display: block", value: "Обложка" %>
+  <div class="M_FormSection">
+  <h4 class="A_H4"><%= form.label :post_image, style: "display: block", value: "Обложка" %></h4>
+  <label class="A_ButtonForImage">
+    <p>Выбрать файл</p>
+    <%= image_tag "ImgIcon.svg", :class => "ImgIcon" %>
+    <span style="display:none;">
     <%= form.file_field :post_image %>
+    </span>
+  </label>
   </div>
 
-  <div>
-    <%= form.label :issue_id, style: "display: block", value: "ID Исполнителя" %>
+
+
+  <div class="C_FormSection">
+
+  <div class="M_FormSection">
+  <h4 class="A_H4"><%= form.label :issue_id, style: "display: block", value: "ID Исполнителя" %></h4>
     <% Issue.all.each do |issue| %>
       <% artist_id_array.push(issue.artist_id) %>
     <% end %>
     <%= form.select :artist_id, artist_id_array.uniq %>
   </div>
 
-  <div>
-    <%= form.label :issue_id, style: "display: block", value: "ID Релиза" %>
+  <div class="M_FormSection">
+  <h4 class="A_H4"><%= form.label :issue_id, style: "display: block", value: "ID Релиза" %></h4>
     <% Post.all.each do |post| %>
       <% issue_id_array.push(post.issue_id) %>
     <% end %>
     <%= form.select :issue_id, issue_id_array.uniq %>
   </div>
 
-  <div>
-    <%= form.label :tag_list, style: "display: block", value: "Теги" %>
-    <%= form.text_field :tag_list, value: post.tag_list.join(", ") %>
   </div>
 
-  <div>
-    <%= form.label :type, style: "display: block", value: "Тип поста" %>
+
+  <div class="M_FormSection">
+  <h4 class="A_H4"><%= form.label :tag_list, style: "display: block", value: "Теги" %></h4>
+  <div class="A_TextField">
+    <%= form.text_field :tag_list, placeholder: "Введите теги", value: post.tag_list.join(", ") %>
+  </div>
+  </div>
+
+  <div class="M_FormSection">
+  <h4 class="A_H4"><%= form.label :type, style: "display: block", value: "Тип поста" %></h4>
     <%= form.select :type, ["VideoPost", "PromoPost", "CoverPost"] %>
   </div>
 
-  <div>
-    <%= form.label :name, style: "display: block", value: "Название" %>
-    <%= form.text_field :name %>
+  <div class="M_FormSection">
+  <h4 class="A_H4"><%= form.label :name, style: "display: block", value: "Название" %></h4>
+  <div class="A_TextField">
+  <%= form.text_field :name, placeholder: "Введите название" %>
+</div>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block", value: "Описание" %>
-    <%= form.text_field :description %>
+  <div class="M_FormSection">
+  <h4 class="A_H4"><%= form.label :description, style: "display: block", value: "Описание" %></h4>
+  <div class="A_TextFieldMedium">
+  <%= form.text_field :description, placeholder: "Короткое описание поста" %>
+</div>
   </div>
 
-  <div>
-    <%= form.label :body, style: "display: block", value: "Контент" %>
-    <%= form.text_field :body %>
+  <div class="M_FormSection">
+  <h4 class="A_H4"><%= form.label :body, style: "display: block", value: "Контент" %></h4>
+  <div class="A_TextFieldWide">
+  <%= form.text_field :body, placeholder: "Текст публикации" %>
+</div>
   </div>
 
-  <div>
-    <%= form.submit value: "ОК" %>
+  <div class="PublicAction">
+  <button class="A_Button">
+    <%= form.submit value: "Опубликовать" %>
+  </button>
   </div>
 <% end %>

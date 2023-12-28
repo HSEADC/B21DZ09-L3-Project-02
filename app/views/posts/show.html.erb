@@ -1,5 +1,3 @@
-<p style="color: green"><%= notice %></p>
-
 <%= render partial: "post_inner", locals: { post: @post } %>
 
 <% if user_signed_in? %>
@@ -10,12 +8,18 @@
   <%= button_to "Удалить пост", post_path(@post), method: :delete, class: "destroy-button" if can? :manage, @post %>
 <% end %>
 
-<h2 class="heading">Комментарии</h2>
-<%= render @post.comments %>
+<div class="O_CommentsAndTitle">
+  <h4 class="A_H4">Комментарии</h4>
+  <%= render @post.comments %>
+</div>
 
-<h2>Оставить комментарий</h2>
-<% if user_signed_in? %>
-  <%= render "comments/form", url: artist_issue_post_path(@artist, @issue, @post) if can? :create, Comment %>
-<% else %>
-  <p> Для того, чтобы оставлять комментарии надо авторизоваться :( </p>
-<% end %>
+<div class="M_Form">
+  <h4 class="A_H4">Оставить комментарий</h4>
+  <div class="InputAndButton">
+    <% if user_signed_in? %>
+      <%= render "comments/form", url: artist_issue_post_path(@artist, @issue, @post) if can? :create, Comment %>
+    <% else %>
+      <p> Для того, чтобы оставлять комментарии надо авторизоваться :( </p>
+    <% end %>
+  </div>
+</div>

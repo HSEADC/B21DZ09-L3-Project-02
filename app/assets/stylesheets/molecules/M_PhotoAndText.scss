@@ -1,0 +1,12 @@
+.M_PhotoAndText {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: fit-content;
+    margin: 0 auto;
+    .A_PSmallBook {
+        width: 531px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}

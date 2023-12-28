@@ -1,0 +1,25 @@
+.A_Button {
+    display: flex;
+    padding: 10px 20px 13px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--dark-gray);
+    border: none;
+    outline: none;
+    font-family: "SuisseBook";
+    font-size: 18px;
+    font-weight: 450;
+    color: var(--white);
+}
+
+.A_Button input{
+    appearance: none;
+    background: var(--dark-gray);
+    font-family: "SuisseBook";
+    font-size: 18px;
+    font-weight: 450;
+    color: var(--white);
+    border: none;
+    outline: none;
+}

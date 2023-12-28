@@ -1,0 +1,19 @@
+.M_Cite {
+    display: flex;
+    gap: 20px;
+    align-items:self-end;
+    width: 1082px;
+    margin: 0 auto;
+    .CiteBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 20px;
+        background-color: var(--white);
+        border-radius: 16px;
+        .A_PBig {
+            width: 942px;
+            color: var(--black);
+        }
+    }
+}

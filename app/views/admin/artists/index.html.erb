@@ -1,15 +1,15 @@
-<div class="M_HeadContentBanner">
-    <%= image_tag "BannerInArtists.png", :class => "A_ContentBannerPic displayvisible" %>
-    <%= image_tag "BannerInArtists390.png", :class => "A_ContentBannerPic displaynone" %>
-</div>
+<p style="color: green"><%= notice %></p>
 
-<h2 class="A_H2 ArtistPageHead">Все артисты</h2>
+<h1>Артисты</h1>
+
+  <%= link_to "Добавить", new_admin_artist_path, class: "link-normal action-button center-text", style: "margin: 0; width: 100px;" %>
 
 
 <div id="artists">
   <% @artists.each do |artist| %>
-    <%= link_to [artist] do %>
-      <%= render artist %>
-    <% end %>
+    <%= render artist %>
+    <p class="action-button">
+      <%= link_to "На страницу артиста", [:admin, artist], class: "link-normal center-text" %>
+    </p>
   <% end %>
 </div>

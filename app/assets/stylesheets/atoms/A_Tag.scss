@@ -11,3 +11,10 @@
     color: var(--white);
     font-size: 12px;
 }
+@media (max-width: 390px) {
+    .A_Tag {
+        font-size: 8px;
+        padding: 4px 10px;
+        border-width: 1px;
+    }
+}

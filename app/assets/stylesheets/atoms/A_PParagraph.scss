@@ -3,3 +3,8 @@
     font-size: 18px;
     color: var(--white);
 }
+@media (max-width: 390px) {
+    .A_PParagraph {
+        font-size: 10px;
+    }
+}

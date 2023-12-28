@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<div id="<%= dom_id post %>">
-
-=======
 <% holes = ["Q_Cassette.svg", "Q_Ellipse.svg", "Q_Gear.svg"] %>
 
 <div id="<%= dom_id post %>">
 
->>>>>>> fcefd1199edeeba9babadc3c5ef1e59341b52ccb
   <div class="M_BannerArticle">
     <%= image_tag post.post_image.url, class: "A_BannerInArticlePic"  %>
     <div class="InformationInBannerInArticle">
@@ -52,21 +47,6 @@
       <%= post.body%>
     </p>
   </div>
-<<<<<<< HEAD
-
-  <div class="M_Cite">
-  <%= image_tag post.issue.artist.post_image.url, class: "A_AvatarBig" %>
-    <div class="CiteBlock">
-      <h5 class="A_H5Bold">
-        <%= post.issue.artist.name %>
-      </h5>
-      <p class="A_PBig">
-        <%= post.description %>
-      </p>
-    </div>
-  </div>
-=======
->>>>>>> fcefd1199edeeba9babadc3c5ef1e59341b52ccb
 
   <div class="M_Cite">
   <%= image_tag post.issue.artist.post_image.url, class: "A_AvatarBig" %>

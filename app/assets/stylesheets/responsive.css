@@ -199,6 +199,7 @@
         width: 65vw;
         padding: 11px 22px;
         border-radius: 19px;
+        outline: 0 !important;
     }
     .footer-section{
         margin-top: -6%;

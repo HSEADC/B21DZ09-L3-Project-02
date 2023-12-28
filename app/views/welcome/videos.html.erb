@@ -9,7 +9,8 @@
 </div>
 
 <div class="M_HeadContentBanner">
-<%= image_tag "BannerInClips.png", :class => "A_ContentBannerPic" %>
+    <%= image_tag "BannerInClips.png", :class => "A_ContentBannerPic displayvisible" %>
+    <%= image_tag "BannerInClips390.png", :class => "A_ContentBannerPic displaynone" %>
 </div>
 
 <% i = 1 %>
@@ -17,7 +18,7 @@
     <% if post.type == "VideoPost" %>
         <% i += 1 %>
         <%= render "video_posts/video_post", video_post: post %>
-        <% if i == 2 %>
+        <% if i == 3 %>
             <div class="M_Reminder">
                 <div class="TitleAndText">
                     <h2 class="A_H2">

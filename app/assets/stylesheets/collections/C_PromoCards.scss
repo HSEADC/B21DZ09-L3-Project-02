@@ -4,3 +4,11 @@
     width: 1082px;
     flex-wrap: wrap;
 }
+@media (max-width: 390px) {
+    .C_PromoCards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 350px;
+    }
+}

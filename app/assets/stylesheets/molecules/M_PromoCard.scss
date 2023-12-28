@@ -29,3 +29,26 @@
         margin-left: 10px;
     }
 }
+@media (max-width: 390px) {
+    .M_PromoCard {
+        gap: 10px;
+        padding: 10px;
+        border-radius: 12px;
+    }
+    .M_PromoCard .A_Photo {
+        width: 330px;
+        height: 160px;
+    }
+    .M_PromoCard .M_AvatarsAndTextInCards {
+        width: 330px;
+        height: 91px;
+    }
+    .M_PromoCard .M_TagsAndComments {
+        width: 330px;
+    }
+    .M_PromoCard .CoverHole {
+        height: 38px;
+        margin-top: 160px;
+        margin-left: 10px;
+    }
+}

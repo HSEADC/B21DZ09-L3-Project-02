@@ -18,3 +18,19 @@
     font-weight: 500;
     color: var(--white);
 }
+@media (max-width: 390px) {
+    .M_Footer {
+        padding: 15px 15px;
+        margin-top: 50px;
+        border-radius: 12px 12px 0px 0px;
+        width: 320px;
+        justify-content: flex-start;
+        gap: 53px;
+    }
+    .M_Footer .A_Logo {
+        width: 114px;
+    }
+    .M_Footer a {
+        font-size: 10px;
+    }
+}

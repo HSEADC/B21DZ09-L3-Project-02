@@ -1,6 +1,11 @@
-.C_LinkPairInFooter{
+.C_LinkPairInFooter {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 11px;
+}
+@media (max-width: 390px) {
+    .C_LinkPairInFooter {
+        gap: 5px;
+    }
 }

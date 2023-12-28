@@ -6,3 +6,15 @@
     padding: 0;
     margin: 0;
 }
+.ArtistPageHead {
+    margin-bottom: 30px;
+}
+@media (max-width: 390px) {
+    .A_H5Medium {
+        font-size: 14px;
+    }
+
+    .ArtistPageHead {
+        margin-bottom: 10px;
+    }
+}

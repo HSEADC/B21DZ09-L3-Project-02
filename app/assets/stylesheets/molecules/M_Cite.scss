@@ -11,9 +11,30 @@
         padding: 20px 20px;
         background-color: var(--white);
         border-radius: 16px;
-        .A_PBig {
-            width: 942px;
-            color: var(--black);
-        }
+    }
+}
+.CiteBlock p {
+    width: 942px;
+    color: var(--black);
+}
+@media (max-width: 390px) {
+    .M_Cite {
+        width: 350px;
+        gap: 10px;
+    }
+    .M_Cite .A_AvatarBig {
+        width: 40px;
+        height: 40px;
+    }
+    .M_Cite .CiteBlock {
+        padding: 10px 10px;
+        border-radius: 12px;
+        width: 282px;
+    }
+    .CiteBlock p {
+        width: 282px;
+    }
+    .Short {
+        width: 282px;
     }
 }

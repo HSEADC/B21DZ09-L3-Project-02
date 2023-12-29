@@ -6,3 +6,14 @@
     gap: 40px;
     margin: 100px auto;
 }
+.O_RecommendationsAndTitle h5 {
+    margin-left: 45px;
+}
+@media (max-width: 390px) {
+    .O_RecommendationsAndTitle {
+        gap: 20px;
+        width: 350px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}

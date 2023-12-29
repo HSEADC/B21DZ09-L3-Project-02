@@ -4,3 +4,11 @@
     object-fit: cover;
     border-radius: 7px;
 }
+@media (max-width: 390px) {
+    .A_PhotoRectangleMedium {
+        width: 241px;
+        height: 112px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}

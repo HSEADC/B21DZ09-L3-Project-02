@@ -10,3 +10,15 @@
         margin: 0 auto;
     }
 }
+@media (max-width: 390px) {
+    .M_PhotoAndText {
+        gap: 8px;
+        width: fit-content;
+    }
+    .M_PhotoAndText .A_PSmallBook {
+        width: 169px;
+    }
+    .M_Wide .A_PSmallBook {
+        width: 350px;
+    }
+}

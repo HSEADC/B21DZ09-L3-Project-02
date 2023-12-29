@@ -18,3 +18,18 @@
         height: 72px;
     }
 }
+@media (max-width: 390px) {
+    .M_Recommendation {
+        border-radius: 12px;
+        padding: 10px;
+        .A_H4 {
+            width: 241px;
+            height: 38px;
+        }
+    }
+    .M_Recommendation .CoverHole {
+        height: 38px;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+}

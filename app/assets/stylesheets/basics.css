@@ -1,21 +1,21 @@
 body {
-    font-family: Inter;
-    background-color: var(--black);
-    margin: 0;
-    overflow-x: hidden;
-    width: 100vw;
-  }
+  font-family: Inter;
+  background-color: var(--black);
+  margin: 0;
+  overflow-x: hidden;
+  width: 100vw;
+}
 
 a {
-  text-decoration: none;
+text-decoration: none;
 }
 input {
-  border: solid;
-  border-color: transparent;
+border: solid;
+border-color: transparent;
 }
 select {
-  border-color: transparent;
-  outline: none;
+border-color: transparent;
+outline: none;
 }
 
 html { overflow:auto; }

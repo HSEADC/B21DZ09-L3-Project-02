@@ -1,0 +1,41 @@
+.C_TagCloud {
+    display: inline-flex; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    gap: 15px; 
+    justify-content: center; 
+    margin-top: 20px; 
+    margin-bottom: 80px; 
+    width: 1628px;
+}
+
+@media (max-width: 400px) {
+
+    .C_TagCloud {
+        gap: 8px; 
+        margin-top: 10px; 
+        margin-bottom: 25px; 
+        width: 350px;
+
+        .A_TagBig{
+            border-style: solid;
+            border-color: var(--white);
+            outline: none;
+            background: none;
+            padding: 4px 10px;
+            border-width: 1px;
+            border-radius: 660px;
+            box-shadow: none;
+            font-family: "SuisseMedium";
+            color: var(--white);
+            font-size: 8px;
+        }
+
+        .A_TagBig a{
+            font-family: "SuisseMedium";
+            color: var(--white);
+            font-size: 8px;
+        }
+    }
+
+}

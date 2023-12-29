@@ -4,3 +4,10 @@
     object-fit: cover;
     border-radius: 16px;
 }
+@media (max-width: 390px) {
+    .A_PhotoSquareBig {
+        width: 170px;
+        height: 170px;
+        border-radius: 12px;
+    }
+}

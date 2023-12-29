@@ -6,3 +6,12 @@
     width: 1078px;
     margin-bottom: 40px;
 }
+
+@media (max-width: 400px) {
+
+    .M_FormHead {
+        gap: 15px;
+        width: 350px;
+        margin-bottom: 40px;
+    }
+}

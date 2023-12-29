@@ -9,8 +9,10 @@
 }
 @media (max-width: 390px) {
     .M_Conduction {
-        padding: 20px calc(50vw - 175px);
+        padding: 20px 20px;
         height: 88px;
         line-height: 88px;
+        width: 350px;
+        overflow: hidden;
     }
 }

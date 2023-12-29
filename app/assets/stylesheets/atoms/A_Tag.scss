@@ -11,6 +11,13 @@
     color: var(--white);
     font-size: 12px;
 }
+
+.A_Tag a{
+    font-family: "SuisseMedium";
+    color: var(--white);
+    font-size: 12px;
+}
+
 @media (max-width: 390px) {
     .A_Tag {
         font-size: 8px;

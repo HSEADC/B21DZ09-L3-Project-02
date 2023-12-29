@@ -4,3 +4,13 @@
     border-radius: 16px;
     overflow: hidden;
 }
+
+@media (max-width: 400px) {
+
+    .M_Banner {
+        width: 350px;
+        height: 294.5px;
+        border-radius: 12px;
+    }
+
+}

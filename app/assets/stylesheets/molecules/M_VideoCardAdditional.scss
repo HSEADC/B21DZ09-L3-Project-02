@@ -13,3 +13,18 @@
         margin-left: 0px;
     }
 }
+
+@media (max-width: 400px) {
+
+    .M_VideoCardAdditional {
+        height: 230px;
+        width: 350px;
+        border-radius: 12px;
+    
+        .CoverHole {
+            height: 45px;
+            margin-top: 88px;
+        }
+    }
+
+}

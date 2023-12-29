@@ -24,3 +24,35 @@
     width: 682px;
     text-align: center;
 }
+
+@media (max-width: 400px) {
+
+    .M_BannerLong {
+        display: flex;
+        width: 100%;
+        height: 392px;
+        padding: 20px 20px 20px 20px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-image:
+        linear-gradient(180deg, rgba(27, 27, 27, 0.52) 0%, rgba(27, 27, 27, 0.00) 100%),
+        url(ElectroforezMob.png);
+        background-size: auto 100%;
+        background-position: center;
+    
+        .LogosAndText{
+            display: flex;
+            width: 682px;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+    
+    .M_BannerLong p{
+        width: 350px;
+        text-align: center;
+    }
+
+}

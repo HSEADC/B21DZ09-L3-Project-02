@@ -10,3 +10,20 @@
         justify-content: space-around;
     }
 }
+
+@media (max-width: 400px) {
+
+    .S_PostForm {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    
+        .PublicAction {
+            width: 350px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+    }
+}

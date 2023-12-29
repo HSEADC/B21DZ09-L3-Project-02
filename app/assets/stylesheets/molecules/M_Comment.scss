@@ -32,3 +32,25 @@
         width: 1020px;
     }
 }
+@media (max-width: 390px) {
+    .M_Comment {
+        padding: 10px 10px;
+        width: 330px;
+    }
+    .M_Comment .A_PBig {
+        width: 330px;
+    }
+    .Reply .A_PBig,
+    .Reply .M_Comment {
+        width: 300px;
+    }
+    .M_Comment .Reply {
+        margin-left: 30px;
+    }
+    .CommentBody {
+        max-width: 330px;
+    }
+    .Reply .CommentBody {
+        width: 300px;
+    }
+}

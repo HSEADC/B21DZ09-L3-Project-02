@@ -3,3 +3,12 @@
     align-items: center;
     gap: 20px;
 }
+
+@media (max-width: 400px) {
+
+    .C_MainVideoCards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}

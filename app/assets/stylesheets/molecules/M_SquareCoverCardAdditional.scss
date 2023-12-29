@@ -6,3 +6,12 @@
     border-radius: 16px;
     background: linear-gradient(180deg, rgba(27, 27, 27, 0.90) 0%, rgba(27, 27, 27, 0.00) 51.04%, rgba(27, 27, 27, 0.90) 100%), rgba(27, 27, 27, 0.2);
 }
+
+@media (max-width: 400px) {
+
+    .M_SquareCoverCardAdditional {
+        height: 173px;
+        width: 170px;
+        border-radius: 12px;
+    }
+}

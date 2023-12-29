@@ -11,3 +11,26 @@
     color: var(--white);
     font-size: 18px;
 }
+
+.A_TagBig a{
+    font-family: "SuisseMedium";
+    color: var(--white);
+    font-size: 18px;
+}
+
+@media (max-width: 390px) {
+    .A_TagBig {
+        border-style: solid;
+        border-color: var(--white);
+        outline: none;
+        background: none;
+        padding: 4px 10px;
+        border-width: 1px;
+        border-radius: 660px;
+        box-shadow: none;
+        font-family: "SuisseMedium";
+        color: var(--white);
+        font-size: 8px;
+        
+    }
+}

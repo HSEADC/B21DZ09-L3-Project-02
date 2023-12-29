@@ -7,3 +7,16 @@
         font-size: 12px;
     }
 }
+
+@media (max-width: 400px) {
+
+    .M_PersonSmall {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    
+        .A_PSmallMedium {
+            font-size: 10px;
+        }
+    }
+}

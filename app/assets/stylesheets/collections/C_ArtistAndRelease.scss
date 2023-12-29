@@ -3,3 +3,13 @@
     gap: 200px;
     margin-top: -60px;
 }
+
+@media (max-width: 400px) {
+
+    .C_ArtistAndRelease {
+        display: flex;
+        gap: 140px;
+        margin-top: -65px;
+    }
+
+}

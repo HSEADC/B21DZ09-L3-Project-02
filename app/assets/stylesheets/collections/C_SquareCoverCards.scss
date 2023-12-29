@@ -3,3 +3,11 @@
     align-items: flex-start;
     gap: 20px;
 }
+
+@media (max-width: 400px) {
+
+    .C_SquareCoverCards {
+        gap: 10px;
+    }
+
+}

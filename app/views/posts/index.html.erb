@@ -1,10 +1,8 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Поиск по постам</h1>
 
-<div style="display: inline-flex; align-items: flex-start; flex-wrap: wrap; gap: 10px; justify-content: center;">
+<div class="C_TagCloud">
     <% Post.tag_counts_on(:tags).each do |tag| %>
-        <div class="tag">
+        <div class="A_TagBig">
             <%= link_to tagged_posts_path(tag.name) do%>
                 <%= tag.name %> (<%= tag.taggings_count %>)
             <% end %>
@@ -12,10 +10,10 @@
     <% end %>
 </div>
 
-<div id="posts">
+<div id="posts" class="C_TagsCardsBlock">
   <% @posts.each do |post| %>
     <%= render post %>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<%= link_to "New post", new_post_path, class: "A_Button ButtonTagPage" %>

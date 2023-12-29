@@ -20,3 +20,20 @@
     padding: 0;
     margin: 0;
 }
+
+@media (max-width: 400px) {
+
+    .A_ButtonForImage {
+        padding: 8px 20px 9px 20px;
+        gap: 10px;
+        border-radius: 100px;
+    
+        .ImgIcon {
+            width: 20px;
+        }
+    }
+    
+    .A_ButtonForImage p {
+        font-size: 12px;
+    }
+}

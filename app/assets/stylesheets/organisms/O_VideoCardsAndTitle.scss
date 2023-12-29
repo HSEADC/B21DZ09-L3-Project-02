@@ -5,3 +5,17 @@
     align-items: flex-start;
     gap: 40px;
 }
+
+@media (max-width: 400px) {
+
+    .O_VideoCardsAndTitle {
+        width: 350px;
+        align-items: left;
+        gap: 20px;
+    }
+    .O_VideoCardsAndTitle h5{
+        width: 350px;
+        text-align: center;
+    }
+
+}

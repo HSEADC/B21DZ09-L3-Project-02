@@ -7,3 +7,12 @@
     text-align: center;
     line-height: 132px;
 }
+@media (max-width: 390px) {
+    .M_Conduction {
+        padding: 20px 20px;
+        height: 88px;
+        line-height: 88px;
+        width: 350px;
+        overflow: hidden;
+    }
+}

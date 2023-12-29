@@ -21,3 +21,14 @@
     color: var(--white);
     text-align: center;
 }
+@media (max-width: 390px) {
+    .A_ButtonAddArticleBlack {
+        width: 89px;
+        height: 89px;
+        padding: 0px 12px;
+        gap: 5px;
+    }
+    .A_ButtonAddArticleBlack p {
+        font-size: 10px;
+    }
+}

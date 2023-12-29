@@ -7,46 +7,60 @@
     <%= image_tag cover_post.post_image.url, class: "A_Photo"  %>
     <%= image_tag holes.sample, class: "CoverHole" %>
     <div class="M_FlexInRectangleCoverCards">
-    <div class="M_AvatarsAndTextInCards">
-      <div class="C_AuthorAndArtist">
-        <div class="M_PersonBig">
-          <%= image_tag cover_post.user.avatar.url, class: "A_Avatar" %>
-          <p class="A_PSmallMedium">
-            <%= cover_post.user.email %>
-          </p>
+      <div class="M_AvatarsAndTextInCards">
+        <div class="C_AuthorAndArtist displayvisible">
+          <div class="M_PersonBig">
+            <%= image_tag cover_post.user.avatar.url, class: "A_Avatar" %>
+            <p class="A_PSmallMedium">
+              <%= cover_post.user.email %>
+            </p>
+          </div>
+          <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
+          <div class="M_PersonBig">
+            <%= image_tag cover_post.issue.artist.post_image.url, class: "A_Avatar" %>
+            <p class="A_PSmallMedium">
+              <%= cover_post.issue.artist.name %>
+            </p>
+          </div>
         </div>
-        <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
-        <div class="M_PersonBig">
-          <%= image_tag cover_post.issue.artist.post_image.url, class: "A_Avatar" %>
-          <p class="A_PSmallMedium">
-            <%= cover_post.issue.artist.name %>
-          </p>
+
+        <div class="M_TextInCards">
+          <h4 class="A_H4"><%= cover_post.name %></h4>
+          <p class="A_PParagraph"><%= cover_post.description %></p>
         </div>
       </div>
 
-    <div class="M_TextInCards">
-      <h4 class="A_H4"><%= cover_post.name %></h4>
-      <p class="A_PParagraph"><%= cover_post.description %></p>
+      <div class="M_TagsAndComments">
+        <div class="C_Tags">
+          <% cover_post.tag_list.each do |tag| %>
+            <button class="A_Tag">
+              <%= tag %>
+            </button>
+          <% end %>
+        </div>
+        <div class="C_AuthorAndArtist displaynone">
+          <div class="M_PersonBig">
+            <%= image_tag cover_post.user.avatar.url, class: "A_Avatar ZIndex" %>
+            <p class="A_PSmallMedium">
+              <%= cover_post.user.email %>
+            </p>
+          </div>
+          <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
+          <div class="M_PersonBig">
+            <%= image_tag cover_post.issue.artist.post_image.url, class: "A_Avatar SuperSmall" %>
+            <p class="A_PSmallMedium">
+              <%= cover_post.issue.artist.name %>
+            </p>
+          </div>
+        </div>
+        <div class="M_Parameter">
+          <%= image_tag "A_IconComment.svg", :class => "A_Icon" %>
+          <p class="A_PSmallMedium">
+            <%= cover_post.comments.count %>
+          </p>
+        </div>
+      </div>
     </div>
-    </div>
-
-    <div class="M_TagsAndComments">
-    <div class="C_Tags">
-      <% cover_post.tag_list.each do |tag| %>
-        <button class="A_Tag">
-          <%= tag %>
-        </button>
-      <% end %>
-    </div>
-    <div class="M_Parameter">
-      <%= image_tag "A_IconComment.svg", :class => "A_Icon" %>
-      <p class="A_PSmallMedium">
-        <%= cover_post.comments.count %>
-      </p>
-    </div>
-    </div>
-
-  </div>
   </div>
 
 <% end %>

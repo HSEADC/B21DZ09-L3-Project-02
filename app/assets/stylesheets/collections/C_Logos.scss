@@ -1,3 +1,10 @@
 .C_Logos {
     width: 205px;
 }
+
+@media (max-width: 400px) {
+
+    .C_Logos {
+        width: 140px;
+    }
+}

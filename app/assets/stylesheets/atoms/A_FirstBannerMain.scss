@@ -1,3 +1,24 @@
 .A_FirstBannerMain {
     width: 1350px;
+
+    .displaynone {
+        display: none;
+    }
+    .displayvisible {
+        display: block;
+    }
+}
+@media (max-width: 390px) {
+
+    .A_FirstBannerMain {
+        width: 350px;
+        border-radius: 12px;
+
+    .displaynone {
+        display: block;
+    }
+    .displayvisible {
+        display: none;
+    }
+}
 }

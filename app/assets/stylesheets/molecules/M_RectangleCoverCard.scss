@@ -10,10 +10,56 @@
         text-align: left;
     }
 
+    .displaynone {
+        display: none;
+    }
+    
+    .displayvisible {
+        display: inline-block;
+    }
+
     .CoverHole {
         position: absolute;
         height: 84px;
         margin-top: 85px;
         margin-left: 85px;
+    }
+}
+@media (max-width: 390px) {
+    .M_RectangleCoverCard .M_Parameter {
+        display: none;
+    }
+    .M_RectangleCoverCard {
+        gap: 10px;
+        padding: 10px;
+        border-radius: 12px;
+    }
+    .M_RectangleCoverCard .CoverHole {
+        position: absolute;
+        height: 38px;
+        margin-top: 35px;
+        margin-left: 35px;
+    }
+    .M_RectangleCoverCard .displaynone {
+        display: flex;
+    }
+    .M_RectangleCoverCard .displayvisible {
+        display: none;
+    }
+    .M_RectangleCoverCard .M_Parameter,
+    .M_RectangleCoverCard .Q_Unite,
+    .M_RectangleCoverCard .A_PSmallMedium {
+        display: none;
+    }
+    .M_RectangleCoverCard .ZIndex {
+        position: relative;
+        z-index: 1;
+    }
+    .M_RectangleCoverCard .SuperSmall {
+        position: relative;
+        width: 12px;
+        height: 12px;
+        margin-left: -12px;
+        z-index: 0;
     }
 }

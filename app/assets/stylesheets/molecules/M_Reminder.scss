@@ -32,3 +32,23 @@
         z-index: 500;
     }
 }
+@media (max-width: 390px) {
+    .M_Reminder {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .M_Reminder .TitleAndText {
+        gap: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .M_Reminder .A_H2 {
+        width: 350px;
+    }
+    .M_Reminder .A_PMediumBook {
+        width: 350px;
+    }
+    .M_Reminder .A_ButtonAddArticleBlack {
+        margin-top: -50px;
+    }
+}

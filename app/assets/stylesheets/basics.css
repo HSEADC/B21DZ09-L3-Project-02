@@ -3,6 +3,7 @@ body {
     background-color: var(--black);
     margin: 0;
     overflow-x: hidden;
+    width: 100vw;
   }
 
 a {
@@ -16,4 +17,6 @@ select {
   border-color: transparent;
   outline: none;
 }
+
+html { overflow:auto; }
 

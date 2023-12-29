@@ -23,3 +23,20 @@
     border: none;
     outline: 0 !important;
 }
+
+.ButtonTagPage{
+    margin-top: 20px;
+}
+
+@media (max-width: 390px) {
+    .A_Button {
+        padding: 7px 15px 8px 15px;
+        font-size: 12px;
+    }
+    .A_CommentInput {
+        font-size: 8px;
+    }
+    .A_Button input{
+        font-size: 12px;
+    }
+}

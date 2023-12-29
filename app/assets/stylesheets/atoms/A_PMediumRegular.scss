@@ -4,3 +4,8 @@
     line-height: 125%;
     color: var(--white);
 }
+@media (max-width: 390px) {
+    .A_PMediumRegular {
+        font-size: 14px;
+    }
+}

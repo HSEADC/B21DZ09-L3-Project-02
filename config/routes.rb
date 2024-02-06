@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'support/request_support'
 namespace :api do
   namespace :v1 do
     resources :artists, defaults: { format: :json }

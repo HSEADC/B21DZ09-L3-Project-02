@@ -16,7 +16,7 @@ class SupportController < ApplicationController
   private
 
   def support_params
-    params.require(:support).permit(:email, :comment)
+    params.require(:support).permit(:email, :comment, :post_image)
   end
 
 end

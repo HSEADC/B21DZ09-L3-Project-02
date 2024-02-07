@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  post 'support/request_support'
+
+  mount LetterOpenerWeb::Engine, at: "letter_opener" if Rails.env.development?
+
 namespace :api do
   namespace :v1 do
     resources :artists, defaults: { format: :json }
@@ -51,6 +56,7 @@ end
   get 'welcome/promos'
   get 'welcome/videos'
 
+  get 'welcome/support'
   get 'welcome/index'
   get 'welcome/about'
   root 'welcome#index'

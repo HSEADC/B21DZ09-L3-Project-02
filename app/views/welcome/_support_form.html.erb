@@ -1,0 +1,48 @@
+<%= form_with(model: support, url: support_request_support_path) do |form| %>
+    <% issue_id_array = [] %>
+    <% artist_id_array = [] %>
+  
+    <% if support.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(support.errors.count, "error") %> prohibited this support request from being saved:</h2>
+  
+        <ul>
+          <% support.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+  
+    <div class="M_FormSection">
+    <h4 class="A_H4"><%= form.label :email, style: "display: block", value: "Ваша почта" %></h4>
+    <div class="A_TextField">
+    <%= form.email_field :email, placeholder: "Почта" %>
+  </div>
+    </div>
+  
+    <div class="M_FormSection">
+    <h4 class="A_H4"><%= form.label :comment, style: "display: block", value: "Текст обращения" %></h4>
+    <div class="A_TextFieldWide">
+    <%= form.text_field :comment, placeholder: "Текст обращения" %>
+  </div>
+    </div>
+
+    <div class="M_FormSection">
+    <h4 class="A_H4"><%= form.label :post_image, style: "display: block", value: "Обложка" %></h4>
+    <label class="A_ButtonForImage">
+      <p>Выбрать файл</p>
+      <%= image_tag "ImgIcon.svg", :class => "ImgIcon" %>
+      <span style="display:none;">
+      <%= form.file_field :post_image %>
+      </span>
+    </label>
+    </div>
+  
+    <div class="PublicAction">
+    <button class="A_Button">
+      <%= form.submit value: "Отправить" %>
+    </button>
+    </div>
+  <% end %>

@@ -12,12 +12,8 @@ class Api::V1::PostsController < Api::V1::ApplicationController
     end
 
     def create
-      puts "======================="
-      puts "REQUEST FROM FRONTEND"
-      jti  = request.headers["Authorization"]
-      puts "======================="
 
-      @user = User.find_by_jti(jti)
+      @user = User.find_by_jti(decrypt_payload[0]['jti'])
       @post = @user.posts.new(post_params)
 
       if @post.save

@@ -8,8 +8,9 @@
       <%= link_to "Обложки", welcome_covers_url, class: "menubar-link"  %>
       <%= link_to "Промо-кампании", welcome_promos_url, class: "menubar-link"  %>
       <%= link_to "Видеоклипы", welcome_videos_url, class: "menubar-link"  %>
-    </div>
       <%= link_to "Подписки", admin_subscriptions_url, class: "menubar-link" if current_user.admin == true %>
+    </div>
+
     <div class="C_LinksInMenubar">
       <div class="M_InputAndButton">
         <input class="A_Input" type="text" placeholder="Обложка Slut Pop…"></input>
@@ -24,9 +25,9 @@
     <div class="C_LinksInMenubar">
       <%= link_to image_tag("A_Logo.svg", class: "A_Logo"), image_path(welcome_index_url) %>
       <%= link_to "Исполнители", artists_url, class: "menubar-link"  %>
+      <%= link_to "Обложки", welcome_covers_url, class: "menubar-link"  %>
       <%= link_to "Промо-кампании", welcome_promos_url, class: "menubar-link"  %>
       <%= link_to "Видеоклипы", welcome_videos_url, class: "menubar-link"  %>
-      <%= link_to "Обложки", welcome_covers_url, class: "menubar-link"  %>
     </div>
 
     <div class="C_LinksInMenubar">

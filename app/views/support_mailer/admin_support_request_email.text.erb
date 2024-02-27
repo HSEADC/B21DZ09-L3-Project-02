@@ -1,8 +1,10 @@
-<%= image_tag @support.post_image.url %>
-
 Вам пришло новое обращение в поддержку
 
-От пользователя <%= @email %>
+От пользователя: <%= @email %>
 
 Текст обращения:
 <%= @comment %>
+
+<% if @support&.post_image.present? %>
+<%= image_tag @support.post_image.url %>
+<% end %>

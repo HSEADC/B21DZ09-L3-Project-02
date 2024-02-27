@@ -13,6 +13,9 @@
     <%= image_tag "BannerInClips390.png", :class => "A_ContentBannerPic displaynone" %>
 </div>
 
+<div id="Anchor">
+</div>
+
 <% i = 1 %>
 <% @posts.each do |post| %>
     <% if post.type == "VideoPost" %>
@@ -37,4 +40,4 @@
     <% end %>
 <% end %>
 
-<%= will_paginate @posts %>
+<%= will_paginate @posts, :params => {:anchor => "Anchor"} %>

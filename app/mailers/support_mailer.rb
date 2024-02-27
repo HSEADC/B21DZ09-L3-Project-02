@@ -7,6 +7,7 @@ class SupportMailer < ApplicationMailer
         @support = params[:support]
         post_image = params[:support][:post_image]
         email = params[:support][:email]
+        @comment = params[:support][:comment]
         mail(from: "admin@test.com",to: email, subject: "Ваше обращение в поддержку принято")
     end
 

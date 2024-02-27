@@ -13,10 +13,13 @@
     <%= image_tag "BannerInPromos390.png", :class => "A_ContentBannerPic displaynone" %>
 </div>
 
+<div id="Anchor">
+</div>
+
 <div class="C_PromoCards">
     <% @posts.each do |post| %>
         <%= render "promo_posts/promo_post", promo_post: post if post.type == "PromoPost" %>
     <% end %>
 </div>
 
-<%= will_paginate @posts %>
+<%= will_paginate @posts, :params => {:anchor => "Anchor"} %>

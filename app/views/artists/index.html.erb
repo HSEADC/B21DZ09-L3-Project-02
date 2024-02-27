@@ -5,6 +5,8 @@
 
 <h2 class="A_H2 ArtistPageHead">Все артисты</h2>
 
+<div id="Anchor">
+</div>
 
 <div id="artists">
   <% @artists.each do |artist| %>
@@ -14,4 +16,4 @@
   <% end %>
 </div>
 
-<%= will_paginate @artists %>
+<%= will_paginate @artists, :params => {:anchor => "Anchor"} %>

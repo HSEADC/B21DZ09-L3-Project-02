@@ -1,3 +1,8 @@
-<h1>Спасибо за обращение в поддержку</h1>
+<h1>Спасибо за обращение в поддержку!</h1>
 
+<h3>Текст обращения:</h3>
+<p><%= @comment %></p>
+
+<% if @support&.post_image.present? %>
 <%= image_tag @support.post_image.url %>
+<% end %>

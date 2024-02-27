@@ -53,6 +53,8 @@ gem "sass-rails"
 gem "meta-tags"
 gem "mini_magick"
 
+gem 'will_paginate', '~> 4.0'
+
 
 
 

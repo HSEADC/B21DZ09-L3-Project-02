@@ -18,3 +18,5 @@
         <%= render "promo_posts/promo_post", promo_post: post if post.type == "PromoPost" %>
     <% end %>
 </div>
+
+<%= will_paginate @posts %>

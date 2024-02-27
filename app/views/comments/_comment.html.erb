@@ -11,10 +11,12 @@
 			</p>
 			<%= image_tag "Q_ReplySign.svg", :class => "Q_ReplySign" %>
 		</div>
+		<%if user_signed_in? %>
 		<% if can? :manage, comment %>
 			<p>
 				<%# button_to 'Удалить комментарий', [comment.post.issue.artist, comment.post.issue, comment.post, comment], :method => :delete, class: "destroy-button" %>
 			</p>
+		<% end %>
 		<% end %>
 
 		<div class="M_PersonAndComment Reply">

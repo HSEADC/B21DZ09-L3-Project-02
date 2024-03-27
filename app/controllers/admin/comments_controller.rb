@@ -13,13 +13,13 @@ class Admin::CommentsController < ApplicationController
 
     # GET /comments/new
     def new
-        @pin = Pin.find(params[:pin_id])
+        @post = Post.find(params[:post_id])
         @comment = Comment.new
     end
 
     # GET /comments/1/edit
     def edit
-        @pin = @comment.pin
+        @post = @comment.post
     end
 
     def create

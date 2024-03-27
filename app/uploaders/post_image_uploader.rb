@@ -39,6 +39,22 @@ class PostImageUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
 
+  def size_range
+    1.byte..20.megabytes
+  end
+
+  # def validate_size(file)
+  #   if file.size > 5.megabytes
+  #     puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  #     raise CarrierWave::ProcessingError.new("максимальный размер файла - 5 МБ")
+  #   end
+  # end
+
+  # def cache!(new_file = sanitized_file)
+  #   validate_size(new_file)
+  #   super
+  # end
+
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename

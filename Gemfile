@@ -55,6 +55,8 @@ gem "mini_magick"
 
 gem 'will_paginate', '~> 4.0'
 
+gem 'jquery-rails'
+
 
 
 

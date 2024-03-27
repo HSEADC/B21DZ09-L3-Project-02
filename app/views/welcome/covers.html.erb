@@ -16,6 +16,27 @@
 <div id="Anchor">
 </div>
 
+<% if params[:sort] == "likes_desc" %>
+  <%= link_to "Отмена сортировки по популярности", welcome_covers_url(anchor: "Anchor"), class: "btn btn-primary" %>
+  <%= link_to "Сортировать по популярности (возрастание)", welcome_covers_path(sort: :likes_asc, anchor: "Anchor"), class: "btn btn-primary" %>
+    <% elsif params[:sort] == "likes_asc" %>
+    <%= link_to "Отмена сортировки по популярности", welcome_covers_url(anchor: "Anchor"), class: "btn btn-primary" %>
+    <%= link_to "Сортировать по популярности (убывание)", welcome_covers_path(sort: :likes_desc, anchor: "Anchor"), class: "btn btn-primary" %>
+<% else %>
+  <%= link_to "Сортировать по популярности (убывание)", welcome_covers_path(sort: :likes_desc, anchor: "Anchor"), class: "btn btn-primary" %>
+<% end %>
+
+
+<% if params[:sort] == "created_at_desc" %>
+  <%= link_to "Отмена сортировки по актуальности", welcome_covers_url(anchor: "Anchor"), class: "btn btn-primary" %>
+  <%= link_to "Сортировать по актуальности (от старых к новым)", welcome_covers_path(sort: :created_at_asc, anchor: "Anchor"), class: "btn btn-primary" %>
+    <% elsif params[:sort] == "created_at_asc" %>
+    <%= link_to "Отмена сортировки по актуальности", welcome_covers_url(anchor: "Anchor"), class: "btn btn-primary" %>
+    <%= link_to "Сортировать по актуальности (от новых к старым)", welcome_covers_path(sort: :created_at_desc, anchor: "Anchor"), class: "btn btn-primary" %>
+<% else %>
+  <%= link_to "Сортировать по актуальности (от новых к старым)", welcome_covers_path(sort: :created_at_desc, anchor: "Anchor"), class: "btn btn-primary" %>
+<% end %>
+
 <% i = 1 %>
 <% @posts.each do |post| %>
     <% if post.type == "CoverPost" %>

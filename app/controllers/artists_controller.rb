@@ -6,6 +6,8 @@ class ArtistsController < ApplicationController
     # @artists = Artist.all
 
     @artists = Artist.paginate(page: params[:page])
+
+    @title = "Артисты"
   end
 
   # GET /artists/1 or /artists/1.json

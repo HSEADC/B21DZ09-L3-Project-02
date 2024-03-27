@@ -19,6 +19,8 @@ class Ability
     # can :create, Issue
     # can :manage, Issue, user_id: user.id
     # can :create, Post
+    can :toggle_favourite, Post
+    can :toggle_like, Post
     can :manage, Post, user_id: user.id
     can :create, Comment
     can :manage, Comment, user_id: user.id

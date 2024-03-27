@@ -12,18 +12,32 @@
 			<%= image_tag "Q_ReplySign.svg", :class => "Q_ReplySign" %>
 		</div>
 		<%if user_signed_in? %>
-		<% if can? :manage, comment %>
-			<p>
-				<%# button_to 'Удалить комментарий', [comment.post.issue.artist, comment.post.issue, comment.post, comment], :method => :delete, class: "destroy-button" %>
-			</p>
-		<% end %>
+			<% if can? :manage, comment %>
+				<%= button_to 'Удалить комментарий', artist_issue_post_comment_path(@artist, @issue, @post, comment), :method => :delete, class: "destroy-button" %>
+			<% end %>
 		<% end %>
 
 		<div class="M_PersonAndComment Reply">
 
 			<% comment.replies.each do |reply| %>
 				<%= render reply, partial: "comments/comment", comment: reply, post: comment.post %>
+
+				
+
 			<% end %>
+
+			<div class="M_Form">
+			<h4 class="A_H4">Оставить комментарий</h4>
+			<div class="InputAndButton">
+		  <% if user_signed_in? %>
+		 
+		   <%= render "comments/reply_form", url: artist_issue_post_path(@artist, @issue, @post, comment), comment: comment if can? :create, Comment %>
+		  <% else %>
+		  <p> Для того, чтобы оставлять комментарии надо авторизоваться :( </p>
+		  <% end %>
+		  </div>
+		  </div>
+
 		</div> 
 	</div>
 </div>

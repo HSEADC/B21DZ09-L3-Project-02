@@ -35,7 +35,7 @@
       <p>Выбрать файл</p>
       <%= image_tag "ImgIcon.svg", :class => "ImgIcon" %>
       <span style="display:none;">
-      <%= form.file_field :post_image %>
+      <%= form.file_field :post_image, data: { max_file_size: 20.megabytes } %>
       </span>
     </label>
     </div>

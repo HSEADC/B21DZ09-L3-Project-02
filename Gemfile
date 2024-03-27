@@ -57,6 +57,7 @@ gem 'will_paginate', '~> 4.0'
 
 gem 'jquery-rails'
 
+gem "devise-jwt"
 
 
 

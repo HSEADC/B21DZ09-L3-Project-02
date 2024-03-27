@@ -10,6 +10,11 @@ namespace :api do
     resources :issues, defaults: { format: :json }
     resources :posts, defaults: { format: :json }
     resources :comments, defaults: { format: :json }
+
+    devise_scope :user do
+      post "sign_in", to: "sessions#create"
+      post "sign_out", to: "sessions#destroy"
+    end
   end
 end
 

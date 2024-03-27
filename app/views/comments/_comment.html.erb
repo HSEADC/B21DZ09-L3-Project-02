@@ -17,7 +17,7 @@
 			<% end %>
 		<% end %>
 
-		<div class="M_PersonAndComment Reply">
+    <div class="M_PersonAndComment Reply">
 
 			<% comment.replies.each do |reply| %>
 				<%= render reply, partial: "comments/comment", comment: reply, post: comment.post %>

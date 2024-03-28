@@ -1,0 +1,8 @@
+<%= comment.to_json %>
+<%= form_with(model: [comment, comment.replies.build], url: artist_issue_post_comments_path(@artist, @issue, @post)) do |f| %>
+  <div class="InputAndButton">
+    <%= f.hidden_field :reply_to_comment_id, value: comment.id %>
+    <%= f.text_area :body, class: "A_CommentInput", placeholder: "Написать комментарий" %>
+    <%= f.submit class: "A_Button", value: "Отправить"%>
+  </div>
+<% end %>

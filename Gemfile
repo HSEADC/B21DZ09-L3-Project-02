@@ -52,8 +52,12 @@ gem 'acts-as-taggable-on', '~> 9.0'
 gem "sass-rails"
 gem "meta-tags"
 gem "mini_magick"
-gem "devise-jwt"
+
 gem 'will_paginate', '~> 4.0'
+
+gem 'jquery-rails'
+
+gem "devise-jwt"
 
 
 

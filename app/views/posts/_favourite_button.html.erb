@@ -1,0 +1,21 @@
+<%
+    post_user_ids = []
+
+    post.users_who_favourited.each do |user|
+        post_user_ids << user.id
+    end
+
+    if current_user
+        link_text = post_user_ids.include?(current_user.id) ? '★' : '☆'
+    else
+        link_text = '☆'
+    end
+
+%>
+
+
+<%= turbo_frame_tag dom_id(post) do %>
+    <br><br>
+    <%= link_to link_text, toggle_favourite_post_path(post) %>
+    <br><br>
+<% end %>

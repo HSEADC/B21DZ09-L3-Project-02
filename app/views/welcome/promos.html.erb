@@ -16,6 +16,27 @@
 <div id="Anchor">
 </div>
 
+<% if params[:sort] == "likes_desc" %>
+  <%= link_to "Отмена сортировки по популярности", welcome_promos_url(anchor: "Anchor"), class: "btn btn-primary" %>
+  <%= link_to "Сортировать по популярности (возрастание)", welcome_promos_path(sort: :likes_asc, anchor: "Anchor"), class: "btn btn-primary" %>
+    <% elsif params[:sort] == "likes_asc" %>
+    <%= link_to "Отмена сортировки по популярности", welcome_promos_url(anchor: "Anchor"), class: "btn btn-primary" %>
+    <%= link_to "Сортировать по популярности (убывание)", welcome_promos_path(sort: :likes_desc, anchor: "Anchor"), class: "btn btn-primary" %>
+<% else %>
+  <%= link_to "Сортировать по популярности (убывание)", welcome_promos_path(sort: :likes_desc, anchor: "Anchor"), class: "btn btn-primary" %>
+<% end %>
+
+
+<% if params[:sort] == "created_at_desc" %>
+  <%= link_to "Отмена сортировки по актуальности", welcome_promos_url(anchor: "Anchor"), class: "btn btn-primary" %>
+  <%= link_to "Сортировать по актуальности (от старых к новым)", welcome_promos_path(sort: :created_at_asc, anchor: "Anchor"), class: "btn btn-primary" %>
+    <% elsif params[:sort] == "created_at_asc" %>
+    <%= link_to "Отмена сортировки по актуальности", welcome_promos_url(anchor: "Anchor"), class: "btn btn-primary" %>
+    <%= link_to "Сортировать по актуальности (от новых к старым)", welcome_promos_path(sort: :created_at_desc, anchor: "Anchor"), class: "btn btn-primary" %>
+<% else %>
+  <%= link_to "Сортировать по актуальности (от новых к старым)", welcome_promos_path(sort: :created_at_desc, anchor: "Anchor"), class: "btn btn-primary" %>
+<% end %>
+
 <div class="C_PromoCards">
     <% @posts.each do |post| %>
         <%= render "promo_posts/promo_post", promo_post: post if post.type == "PromoPost" %>

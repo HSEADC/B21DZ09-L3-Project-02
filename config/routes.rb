@@ -10,11 +10,6 @@ namespace :api do
     resources :issues, defaults: { format: :json }
     resources :posts, defaults: { format: :json }
     resources :comments, defaults: { format: :json }
-
-    devise_scope :user do
-      post "sign_in", to: "sessions#create"
-      post "sign_out", to: "sessions#destroy"
-    end
   end
 end
 
@@ -30,11 +25,13 @@ namespace :admin do
   resources :subscriptions
 end
 
-resources :posts, only: [:new, :create, :destroy, :edit, :show] do
+
+resources :posts, only: [:new, :create, :destroy, :edit, :show, :toggle_favourite, :toggle_like] do
   
 
   collection do
     get "by_tag/:tag", to: "posts#by_tag", as: "tagged"
+    
   end
   # collection do 
   #   get "new_for_artist", to: "posts#new_for_artist"
@@ -42,6 +39,13 @@ resources :posts, only: [:new, :create, :destroy, :edit, :show] do
 end 
 
 # get "posts/new_for_artist", to: "posts#new_for_artist", as: "new_post_for_artist"
+
+resources :posts do
+  member do
+    get 'toggle_favourite', to: 'posts#toggle_favourite', as: 'toggle_favourite'
+    get 'toggle_like', to: 'posts#toggle_like', as: 'toggle_like'
+  end
+end
 
 
 

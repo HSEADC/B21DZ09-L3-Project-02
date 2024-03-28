@@ -1,7 +1,17 @@
 .A_AvatarMedium {
-    width: 50px;
-    height: 50px;
+    width: 38px;
+    height: 38px;
     border-radius: 660px;
+    &.number {
+        background-color: var(--dark-gray);
+        color: var(--white);
+        font-size: 12px;
+        font-family: "SuisseRegular";
+        font-weight: 400;
+        width: 23px;
+        height: 15px;
+        padding: 11.5px 7.5px 11.5px 7.5px;
+    }
 }
 @media (max-width: 390px) {
     .A_AvatarMedium {

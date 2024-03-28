@@ -1,0 +1,10 @@
+.M_ContentInBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    width: 667px;
+    .A_PBig {
+        width: 667px;
+    }
+}

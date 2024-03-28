@@ -1,156 +1,39 @@
 <% holes = ["Cassettes.svg", "Ellipses.svg", "Gears.svg"] %>
 <% holesbottom = ["Q_Cassette.svg", "Q_Ellipse.svg", "Q_Gear.svg"] %>
 
-<div class="M_BannerInHeader">
-    <div class="A_BannerPicInHeader">
-        <%= image_tag "FirstBannerMain.png", :class => "A_FirstBannerMain displayvisible" %>
-        <%= image_tag "FirstBannerMainMobile.png", :class => "A_FirstBannerMain displaynone" %>
-    </div>
-    <div class="C_ArtistAndRelease">
-        <div class="M_PersonBig">
-            <%= image_tag "Eartheater.jpeg", :class => "A_Avatar" %>
-            <p class="A_PSmallMedium">Eartheater</p>
-        </div>
-        <p class="A_PSmallMedium">«Powders», 2023</p>
-    </div>
-    <button class="A_ButtonAddArticleBlack">
-        <%= image_tag "PlusIcon.svg", :class => "A_PlusIcon" %>
-        <p>Написать<br>о новинке</p>
-    </button>
-</div>
-<div class="S_MainWholeBlock">
-<div class="O_VideoCardsAndTitle">
-<h5 class="A_H5Medium">Лучшие видеоклипы</h5>
-<div class="C_MainVideoCards">
-    <div class="M_VideoCardAdditional">
-    <%= image_tag "EartheaterVid.png", :class => "A_VideoCardPic" %>
-        <div class="M_VideoCard">
-        <h4 class="A_H4">Eartheater положила начало 4й волне феминизма</h4>
-        <div class="C_AuthorAndArtist">
-            <div class="M_PersonBig">
-            <%= image_tag "Sasha.png", :class => "A_Avatar" %>
-            <p class="A_PSmallMedium">
-            shashushashushashu
-            </p>
+<div class="S_Main">
+    <div class= "O_BannerInMain">
+        <div class="M_H1AndTextAndButtons">
+            <div class="M_ContentInBanner">
+                <h1 class="A_H1">Релиз Powders</h1>
+                <p class="A_PBig">Наполовину русская экспериментальная исполнительница выпустила новый альбом с&nbsp;прекрасной обложкой!
             </div>
-        <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
-            <div class="M_PersonBig">
-            <%= image_tag "Eartheater.jpeg", :class => "A_Avatar" %>
-            <p class="A_PSmallMedium">
-            Eartheater
-            </p>
+            <div class="C_Buttons">
+                <button class="A_Button orange">Читать материал<%= image_tag "BookIcon.svg", :class => "A_Icon" %></button>
+                <button class="A_Button white">Написать своё<%= image_tag "AddIcon", :class => "A_Icon" %></button>
             </div>
         </div>
-        <%= image_tag holes.sample, class: "CoverHole" %>
-        </div>
+        <%= image_tag "Disc.png", :class => "A_Disc" %>
     </div>
-    <div class="M_VideoCardAdditional">
-    <%= image_tag "DojaVideo.png", :class => "A_VideoCardPic" %>
-        <div class="M_VideoCard">
-        <h4 class="A_H4">Кровь и бесовщина: Как Doja Cat говорит о важном</h4>
-        <div class="C_AuthorAndArtist">
-            <div class="M_PersonBig">
-            <%= image_tag "DanyaM.png", :class => "A_Avatar" %>
-            <p class="A_PSmallMedium">
-            hautilusthewritter
-            </p>
+    <div class="S_BodyInMain">
+        <div class="O_CoverInMain">
+            <div class="M_CategoryAndAvatars">
+                <div class="W_H3AndAvatars">
+                    <div class="A_Category">
+                        <h3 class="A_H3">Искусство обложки</h3>
+                        <%= image_tag "BigArrowIcon.svg", :class => "A_IconBigArrow" %>
+                    </div>
+                    <div class="C_Avatars">
+                        <%= image_tag "Sasha.png", :class => "A_AvatarMedium" %>
+                        <%= image_tag "DanyaP.png", :class => "A_AvatarMedium" %>
+                        <div class="A_AvatarMedium number">+39</div>
+                    </div>
+                </div>
+                <%= image_tag "LineLong1728.svg", :class => "Q_Line long" %>
             </div>
-        <%= image_tag "Q_Unite.svg", :class => "Q_Unite" %>
-            <div class="M_PersonBig">
-            <%= image_tag "DojaAvatar.png", :class => "A_Avatar" %>
-            <p class="A_PSmallMedium">
-            Doja Cat
-            </p>
-            </div>
-        </div>
-        <%= image_tag holes.sample, class: "CoverHole" %>
-        </div>
-    </div>
-</div>
-</div>
+            <div class="M_CoverCardsInMain">
 
-<div class="M_Banner">
-<%= image_tag "CoversMainBanner.png", :class => "A_FirstBannerMain displayvisible" %>
-<%= image_tag "CoverMainBannerMobile.png", :class => "A_FirstBannerMain displaynone" %>
-</div>
-
-<div class="M_BannerLong">
-<h2 class="A_H2">Годный low-effort визуал</h2>
-<div class="LogosAndText">
-<p class="A_PMediumBook">Поговорили с&nbsp;группой &laquo;Электрофорез&raquo; о&nbsp;том, как&nbsp;делать бюджетные промо-кампании</p>
-<%= image_tag "Logos.png", :class => "C_Logos" %>
-</div>
-</div>
-<div class="O_VideoCardsAndTitle">
-<h5 class="A_H5Medium">Интересные обложки</h5>
-    <div class="C_SquareCoverCards">
-    <div class="M_SquareCoverCardAdditional">
-        <%= image_tag "Janelle.png", :class => "A_VideoCardPic" %>
-            <div class="M_SquareCoverCard">
-            <h6 class="A_H6">Отражение религии в&nbsp;обложках</h6>
-            <%= image_tag holesbottom.sample, :class => "Q_Ellipse" %>
-                <div class="M_PersonSmall">
-                <%= image_tag "DanyaM.png", :class => "A_AvatarSmall" %>
-                <p class="A_PSmallMedium">
-                hautilusthewriter
-                </p>
-                </div>
-            </div>
-        </div>
-        <div class="M_SquareCoverCardAdditional">
-        <%= image_tag "Pistols.png", :class => "A_VideoCardPic" %>
-            <div class="M_SquareCoverCard">
-            <h6 class="A_H6">Современность в&nbsp;панк обложках Sex Pistols</h6>
-            <%= image_tag holesbottom.sample, :class => "Q_Ellipse" %>
-                <div class="M_PersonSmall">
-                <%= image_tag "DanyaP.png", :class => "A_AvatarSmall" %>
-                <p class="A_PSmallMedium">
-                ntizish
-                </p>
-                </div>
-            </div>
-        </div>
-        <div class="M_SquareCoverCardAdditional">
-        <%= image_tag "Lana.png", :class => "A_VideoCardPic" %>
-            <div class="M_SquareCoverCard">
-            <h6 class="A_H6">Глаза Lana Del Rey сквозь года</h6>
-            <%= image_tag holesbottom.sample, :class => "Q_Ellipse" %>
-                <div class="M_PersonSmall">
-                <%= image_tag "Sasha.png", :class => "A_AvatarSmall" %>
-                <p class="A_PSmallMedium">
-                shashushashushashu
-                </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="M_SquareCoverCardAdditional">
-        <%= image_tag "Harry.png", :class => "A_VideoCardPic" %>
-            <div class="M_SquareCoverCard">
-            <h6 class="A_H6" style="height: 41.6px">Fish-eye в обложках</h6>
-            <%= image_tag holesbottom.sample, :class => "Q_Ellipse" %>
-                <div class="M_PersonSmall">
-                <%= image_tag "Masha.png", :class => "A_AvatarSmall" %>
-                <p class="A_PSmallMedium">
-                qeugens
-                </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="M_SquareCoverCardAdditional">
-        <%= image_tag "StereoCover.png", :class => "A_VideoCardPic" %>
-            <div class="M_SquareCoverCard">
-            <h6 class="A_H6">Хиппи возвращаются, но&nbsp;только на&nbsp;вид</h6>
-            <%= image_tag holesbottom.sample, :class => "Q_Ellipse" %>
-                <div class="M_PersonSmall">
-                <%= image_tag "DanyaP.png", :class => "A_AvatarSmall" %>
-                <p class="A_PSmallMedium">
-                ntizish
-                </p>
-                </div>
             </div>
         </div>
     </div>
-</div>
 </div>

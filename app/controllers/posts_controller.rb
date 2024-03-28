@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_post, only: %i[ show edit update destroy toggle_like toggle_favourite ]
+  after_action :set_post, only: %i[ toggle_like toggle_favourite ]
   # load_and_authorize_resource
 
   # GET /posts or /posts.json
@@ -8,6 +9,7 @@ class PostsController < ApplicationController
     @posts = Post.paginate(page: params[:page])
 
     @title = "Поиск"
+
   end
 
   def by_tag
@@ -76,6 +78,39 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+
+  def toggle_favourite
+    post_user_ids = []
+
+    @post.users_who_favourited.each do |user|
+        post_user_ids << user.id
+    end
+
+    if post_user_ids.include?(current_user.id)
+      current_user.posts_i_favourited.delete(@post)
+    else
+      current_user.posts_i_favourited << @post
+    end
+
+    set_post
+  end
+
+  def toggle_like
+    post_user_ids = []
+
+    @post.users_who_liked.each do |user|
+        post_user_ids << user.id
+    end
+
+    if post_user_ids.include?(current_user.id)
+      current_user.posts_i_liked.delete(@post)
+    else
+      current_user.posts_i_liked << @post
+    end
+
+    set_post
   end
 
   # DELETE /posts/1 or /posts/1.json

@@ -1,6 +1,6 @@
-<%= form_for([@artist, @issue, @post, @post.comments.build], url: url) do |f| %>
+<%= form_with(model: Comment.new, url: artist_issue_post_comments_path(@artist, @issue, @post)) do |f| %>
 	<div class="InputAndButton">
-		<%= f.text_area :body, class: "A_CommentInput", placeholder: "Написать комментарий" %>
-		<%= f.submit class: "A_Button", value: "Отправить"%>
+	  <%= f.text_area :body, class: "A_CommentInput", placeholder: "Написать комментарий" %>
+	  <%= f.submit class: "A_Button", value: "Отправить"%>
 	</div>
-<% end %>
+  <% end %>

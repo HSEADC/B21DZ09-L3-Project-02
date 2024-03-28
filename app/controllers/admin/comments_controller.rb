@@ -13,35 +13,35 @@ class Admin::CommentsController < ApplicationController
 
     # GET /comments/new
     def new
-        @pin = Pin.find(params[:pin_id])
+        @post = Post.find(params[:post_id])
         @comment = Comment.new
     end
 
     # GET /comments/1/edit
     def edit
-        @pin = @comment.pin
+        @post = @comment.post
     end
 
     def create
         @artist = Artist.find(params[:artist_id])
         @issue = Issue.find(params[:issue_id])
         @post = Post.find(params[:post_id])
-		#@comment = @post.comments.create(params[:comment])
-		@comment = @post.comments.create(params[:comment].permit(:commenter, :body).merge(user_id: current_user.id))
-		redirect_to admin_artist_issue_post_url(:admin, @artist, @issue, @post)
-	end
+    #@comment = @post.comments.create(params[:comment])
+    @comment = @post.comments.create(params[:comment].permit(:commenter, :body).merge(user_id: current_user.id))
+    redirect_to admin_artist_issue_post_url(:admin, @artist, @issue, @post)
+  end
 
     def destroy
         @artist = Artist.find(params[:artist_id])
         @issue = Issue.find(params[:issue_id])
         @post = Post.find(params[:post_id])
         @comment = Comment.find(params[:id])
-		@comment.destroy
+    @comment.destroy
         respond_to do |format|
             format.html { redirect_to admin_artist_issue_post_url(:admin, @artist, @issue, @post), notice: "Comment was successfully destroyed." }
             format.json { head :no_content }
         end
-	end
+  end
 
     private
     # Use callbacks to share common setup or constraints between actions.

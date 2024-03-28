@@ -1,4 +1,6 @@
 class SupportController < ApplicationController
+
+  
   def request_support
     @support = Support.new(support_params)
 
@@ -12,6 +14,8 @@ class SupportController < ApplicationController
       end
     end
   end
+
+  
 
   private
 

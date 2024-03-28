@@ -19,6 +19,8 @@ class Ability
     # can :create, Issue
     # can :manage, Issue, user_id: user.id
     # can :create, Post
+    can :toggle_favourite, Post
+    can :toggle_like, Post
     can :manage, Post, user_id: user.id
     can :create, Comment
     can :manage, Comment, user_id: user.id
@@ -30,7 +32,7 @@ class Ability
     #   return unless user.admin?
     #   can :manage, :all
     #
-    # The first argument to `can` is the action you are giving the user
+    # The first argument to can is the action you are giving the user
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions
     # here are :read, :create, :update and :destroy.
